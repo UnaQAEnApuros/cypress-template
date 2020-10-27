@@ -1,0 +1,30 @@
+{
+  "name": "cypress-template",
+  "version": "1.0.0",
+  "description": "Example of E2E tests with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test": "cypress run",
+    "test:edge": "cypress run --browser edge --headless",
+    "verify": "cypress verify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estefafdez/cypress-template.git"
+  },
+  "keywords": [
+    "cypress",
+    "E2E",
+    "js"
+  ],
+  "author": "Estefania Fernández Muñoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estefafdez/cypress-template/issues"
+  },
+  "homepage": "https://github.com/estefafdez/cypress-template#readme",
+  "devDependencies": {
+    "cypress": "^5.5.0"
+  }
+}
