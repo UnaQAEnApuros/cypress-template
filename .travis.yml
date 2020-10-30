@@ -14,7 +14,6 @@ addons:
       - libxss1
       - libappindicator1
       - libindicator7
-      - microsoft-edge-dev
 
 before_install:
   # Setup Microsoft Repository
@@ -24,6 +23,7 @@ before_install:
   - sudo rm microsoft.gpg
   - sudo apt-get update
   - sudo apt-get upgrade
+  - sudo apt install microsoft-edge-dev
   
 cache:
   # cache both npm modules and Cypress binary
