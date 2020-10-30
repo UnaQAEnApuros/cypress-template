@@ -6,32 +6,31 @@ language: node_js
 node_js:
   - "10.15.3"
 
-addons:
-  apt:
-    packages:
-    - libgconf-2-4
-    - libxss1
-    - libappindicator1
-    - libindicator7
-
-cache:
-  # cache both npm modules and Cypress binary
-  directories:
-  - ~/.npm
-  - ~/.cache
-
 before_install:
   # Setup Microsoft Repository
   - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
   - sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
   - sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
   - sudo rm microsoft.gpg
-
+  
   # Update Ubuntu
   - sudo apt-get update && apt-get upgrade -y
+  
+addons:
+  apt:
+    update: true
+    packages:
+    - libgconf-2-4
+    - libxss1
+    - libappindicator1
+    - libindicator7
+    - microsoft-edge-dev
 
-  # Install Microsoft Edge
-  - sudo apt-get install microsoft-edge-dev -y
+cache:
+  # cache both npm modules and Cypress binary
+  directories:
+  - ~/.npm
+  - ~/.cache
 
 before_script:
   # Check Chrome version:
@@ -48,7 +47,7 @@ script:
   - npm install
   - npm run verify
   - npm run test:edge
-  
+
 after_success:
   - kill $(jobs -p) || true
 notifications:
