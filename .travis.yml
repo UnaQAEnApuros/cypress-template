@@ -60,6 +60,8 @@ notifications:
 
   slack: d-conspiratorios:xzIh8oGD67pRkmgHlnz8moKY
     template:
-      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} in PR <%{pull_request_url}|#%{pull_request_number}> by %{author} %{result} in %{duration}"
+      - "%{repository_slug} (%{commit}) : %{message}"
+      - "Build details: %{build_url}|#%{build_number}"
+      - "Result: %{result} in %{duration}"
 
   # export screenshots de mochawesome-report/assets 
