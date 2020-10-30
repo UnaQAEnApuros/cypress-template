@@ -49,7 +49,14 @@ script:
 
 after_success:
   - kill $(jobs -p) || true
+
 notifications:
   email:
-  on_failure: change
-  on_success: change
+    recipients:
+      - estefafdez@gmail.com
+    on_success: always 
+    on_failure: always 
+
+  slack: d-conspiratorios:xzIh8oGD67pRkmgHlnz8moKY
+
+  # export screenshots de mochawesome-report/assets 

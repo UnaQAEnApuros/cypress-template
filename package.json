@@ -4,10 +4,12 @@
   "description": "Example of E2E tests with Cypress",
   "main": "index.js",
   "scripts": {
+    "verify": "cypress verify",
     "open": "cypress open",
     "test": "cypress run",
     "test:edge": "cypress run --browser edge --headless",
-    "verify": "cypress verify"
+    "merge_reports": "mochawesome-merge --reportDir mochawesome-report > mochawesome-report/Final_Report.json",
+		"generate_mochawesome_report": "marge mochawesome-report/Final_Report.json"
   },
   "repository": {
     "type": "git",
