@@ -13,15 +13,14 @@ addons:
     - libxss1
     - libappindicator1
     - libindicator7
-    - microsoft-edge-dev
 
 cache:
   # cache both npm modules and Cypress binary
   directories:
   - ~/.npm
-   - ~/.cache
+  - ~/.cache
 
-before_script:
+before_install:
   # Setup Microsoft Repository
   - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
   - sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -29,8 +28,12 @@ before_script:
   - sudo rm microsoft.gpg
 
   # Update Ubuntu
- # - sudo apt-get update && apt-get upgrade -y
+  - sudo apt-get update && apt-get upgrade -y
 
+  # Install Microsoft Edge
+  - sudo apt-get install microsoft-edge-dev -y
+
+before_script:
   # Check Chrome version:
   - google-chrome --version
 
@@ -39,11 +42,13 @@ before_script:
 
   # Check Microsoft Edge Version:
   - microsoft-edge-dev --version  
+
 script:
   # Run Cypress
   - npm install
   - npm run verify
   - npm run test:edge
+  
 after_success:
   - kill $(jobs -p) || true
 notifications:
