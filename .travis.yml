@@ -16,7 +16,7 @@ addons:
 cache:
   # cache both npm modules and Cypress binary
   directories:
-    - ~/.npm
+  - ~/.npm
    - ~/.cache
 
 before_script:
