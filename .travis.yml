@@ -63,5 +63,7 @@ notifications:
       - "%{repository_slug} (%{commit}) : %{message}"
       - "Build details: %{build_url}|#%{build_number}"
       - "Result: %{result} in %{duration}"
+    on_success: always
+    on_failure: always
 
   # export screenshots de mochawesome-report/assets 
