@@ -13,6 +13,7 @@ addons:
     - libxss1
     - libappindicator1
     - libindicator7
+    - microsoft-edge-dev
 
 cache:
   # cache both npm modules and Cypress binary
@@ -28,10 +29,7 @@ before_script:
   - sudo rm microsoft.gpg
 
   # Update Ubuntu
-  - sudo apt-get update && apt-get upgrade -y
-
-  # Install Microsoft Edge
-  - sudo apt-get install microsoft-edge-dev -y
+ # - sudo apt-get update && apt-get upgrade -y
 
   # Check Chrome version:
   - google-chrome --version
