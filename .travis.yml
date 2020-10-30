@@ -7,6 +7,7 @@ node_js:
   - "10.15.3"
   
 addons:
+  artifacts: true
   apt:
     update: true
     packages:
@@ -58,5 +59,7 @@ notifications:
     on_failure: always 
 
   slack: d-conspiratorios:xzIh8oGD67pRkmgHlnz8moKY
+    template:
+      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} in PR <%{pull_request_url}|#%{pull_request_number}> by %{author} %{result} in %{duration}"
 
   # export screenshots de mochawesome-report/assets 
