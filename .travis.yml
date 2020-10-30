@@ -1,5 +1,4 @@
 os: linux
-dist: ubuntu
 
 language: node_js
 
@@ -58,12 +57,14 @@ notifications:
     on_success: always 
     on_failure: always 
 
-  slack: d-conspiratorios:xzIh8oGD67pRkmgHlnz8moKY
+  slack:
+    - rooms:
+      - d-conspiratorios:xzIh8oGD67pRkmgHlnz8moKY
+    on_success: always
+    on_failure: always
     template:
       - "%{repository_slug} (%{commit}) : %{message}"
       - "Build details: %{build_url}|#%{build_number}"
       - "Result: %{result} in %{duration}"
-    on_success: always
-    on_failure: always
 
   # export screenshots de mochawesome-report/assets 
