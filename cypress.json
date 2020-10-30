@@ -1,1 +1,17 @@
-{}
+{
+    "watchForFileChanges": false,
+    "video": false,
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+    "ignoreTestFiles": "",
+    "screenshotsFolder": "mochawesome-report/assets",
+    "chromeWebSecurity": false,
+    "firefoxGcInterval": {
+        "runMode": null,
+        "openMode": null
+    },
+    "retries": {
+        "runMode": 1,
+        "openMode": 0
+    }
+}

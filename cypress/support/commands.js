@@ -9,6 +9,9 @@
 // ***********************************************
 //
 //
+/* global Cypress, cy */
+const env = Cypress.env();
+
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 //

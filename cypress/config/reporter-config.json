@@ -1,0 +1,17 @@
+{
+    "reporterEnabled": "cypress-junit-reporter, mochawesome",
+    "cypressJunitReporterReporterOptions": {
+        "mochaFile": "report/junit.[hash].xml",
+        "testsuitesTitle": true,
+        "suiteTitleSeparatedBy": "."
+    },
+    "mochawesomeReporterOptions": {
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "ddmmyyyy_HHMMss"
+    },
+    "screenshotsFolder": "mochawesome-report/assets"
+}

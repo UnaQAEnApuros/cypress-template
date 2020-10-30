@@ -9,13 +9,26 @@
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
 
-// This function is called when a project is opened or re-opened (e.g. due to
-// the project's config changing)
+const fs = require('fs-extra');
+const path = require('path');
+
 
 /**
- * @type {Cypress.PluginConfig}
+ * Method to get the configuration files for each environment. 
+ * Documentation: https://docs.cypress.io/api/plugins/configuration-api.html#Switch-between-multiple-configuration-files
  */
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+
+function getConfigurationByFile(filename) {
+	const pathToConfigFile = path.resolve(__dirname, '../config', `${filename}.json`);
+	return fs.readJson(pathToConfigFile);
 }
+
+// This function is called when a project is opened or re-opened (e.g. due to
+// the project's config changing)
+module.exports = async (on, config) => {
+	const filename = config.env.configFile || 'qa'
+	const customConfig = await getConfigurationByFile(filename);
+	config = Object.assign(config, customConfig);
+	console.info('\n> Cypress config:', config);
+	return config;
+};
