@@ -22,7 +22,6 @@ before_install:
   - sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
   - sudo rm microsoft.gpg
   - sudo apt-get update
-  - sudo apt-get upgrade
   - sudo apt install microsoft-edge-dev
   
 cache:
