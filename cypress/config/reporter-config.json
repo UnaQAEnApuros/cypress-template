@@ -6,12 +6,12 @@
         "suiteTitleSeparatedBy": "."
     },
     "mochawesomeReporterOptions": {
-        "reportDir": " /home/travis/build/estefafdez/cypress-template/mochawesome-report",
+        "reportDir": "mochawesome-report",
         "quiet": true,
         "overwrite": false,
         "html": false,
         "json": true,
         "timestamp": "ddmmyyyy_HHMMss"
     },
-    "screenshotsFolder": " /home/travis/build/estefafdez/cypress-template/mochawesome-report/assets"
+    "screenshotsFolder": "mochawesome-report/assets"
 }

@@ -1,7 +1,9 @@
 {
     "env": {
-        "name": "qa",
-        "domain": "",
-        "baseURL": ""
+        "name": "qa"
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "cypress/config/reporter-config.json"
     }
 }
