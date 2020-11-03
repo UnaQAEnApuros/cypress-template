@@ -71,8 +71,8 @@ notifications:
       on_success: always
       on_failure: always
       template:
-        - "%{repository_slug} (%{commit}) : %{message}"
-        - "Result: %{result} in %{duration}"
-        - "Build URL: %{build_url}|#%{build_number}"
+        - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+        - "Execution time: *%{duration}*"
+        - "Message: %{message}"
 
   # export screenshots de mochawesome-report/assets 
