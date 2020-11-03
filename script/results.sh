@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/travis/build/estefafdez/cypress-template/cypress/mochawesome-report
+cd /home/travis/build/estefafdez/cypress-template/mochawesome-report
 
 TEST=`cat Final_Report.json | jq ".stats.tests"`
 PASSES=`cat Final_Report.json | jq ".stats.passes"`
