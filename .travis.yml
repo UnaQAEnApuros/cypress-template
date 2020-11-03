@@ -47,6 +47,15 @@ script:
   - npm run verify
   - npm run test:edge
 
+after_script:
+  # Create mochawesome report and json to get the results
+  - npm run merge_reports
+  - npm run generate_mochawesome_report
+  
+  # Display the results:
+  - chmod +x script/results.sh
+  - ./script/results.sh
+
 after_success:
   - kill $(jobs -p) || true
 
@@ -64,7 +73,7 @@ notifications:
       on_failure: always
       template:
         - "%{repository_slug} (%{commit}) : %{message}"
-        - "Build details: %{build_url}|#%{build_number}"
         - "Result: %{result} in %{duration}"
+        - "Build URL: %{build_url}|#%{build_number}"
 
   # export screenshots de mochawesome-report/assets 
