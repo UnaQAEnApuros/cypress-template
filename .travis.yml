@@ -6,7 +6,8 @@ node_js:
   - "10.15.3"
   
 addons:
-  artifacts: true
+  artifacts:
+    working_dir: mochawesome-report
   apt:
     update: true
     packages:
