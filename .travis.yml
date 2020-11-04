@@ -53,7 +53,8 @@ after_script:
   
   # Display the results:
   - chmod +x script/results.sh
-  - ./script/results.sh
+  - ./script/results.sh >> RESULTS
+  - echo $RESULTS
 
 after_success:
   - kill $(jobs -p) || true
@@ -74,3 +75,4 @@ notifications:
         - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
         - "Execution time: *%{duration}*"
         - "Message: %{message}"
+        - "Test Results: $RESULTS"
