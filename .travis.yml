@@ -23,6 +23,9 @@ before_install:
   - sudo rm microsoft.gpg
   - sudo apt-get update
   - sudo apt install microsoft-edge-dev
+
+  # Encrypt Slack Token
+  - travis encrypt "d-conspiratorios:xzIh8oGD67pRkmgHlnz8moKY" --add notifications.slack.rooms
   
 cache:
   # cache both npm modules and Cypress binary
