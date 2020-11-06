@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "verify": "cypress verify",
-    "open": "cypress open",
-    "test": "cypress run",
+    "open": "cypress open --env configFile=qa",
+    "test": "cypress run --env configFile=qa",
     "test:edge": "cypress run --env configFile=qa --browser edge --headless",
     "merge_reports": "mochawesome-merge --reportDir mochawesome-report > mochawesome-report/Final_Report.json",
-		"generate_mochawesome_report": "marge mochawesome-report/Final_Report.json"
+    "generate_mochawesome_report": "marge mochawesome-report/Final_Report.json"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,8 @@
     "cypress-log-to-output": "^1.1.2",
     "cypress-multi-reporters": "^1.4.0",
     "cypress-wait-until": "^1.7.1",
-    "cypress-xpath": "^1.6.0",
-    "mochawesome": "^6.1.1"
+    "cypress-xpath": "^1.6.1",
+    "mochawesome": "^6.2.1"
   },
   "dependencies": {
     "mochawesome-merge": "^4.2.0",

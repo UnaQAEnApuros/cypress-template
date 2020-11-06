@@ -1,6 +1,7 @@
 {
     "env": {
-        "name": "qa"
+        "name": "qa", 
+        "apiURL": "https://reqres.in"
     },
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
