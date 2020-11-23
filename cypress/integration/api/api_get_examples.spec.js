@@ -3,7 +3,7 @@
 const env = Cypress.env();
 
 describe('API GET 200 Request', function () {
-    it('[TC0001] should get a 200 response after a GET request for the complete list of users', function() {
+    it('[CYEX-1] should get a 200 response after a GET request for the complete list of users', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/users?page=2'
@@ -15,11 +15,13 @@ describe('API GET 200 Request', function () {
             expect(response.body).property('total').to.equal(12);
             expect(response.body).property('total_pages').to.equal(2);
             expect(response.body).property('data');
-            expect(response.body).property('ad');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
-    it('[TC0002] should get a 200 response after a GET request for a single user', function() {
+    it('[CYEX-2] should get a 200 response after a GET request for a single user', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/users/2'
@@ -33,14 +35,13 @@ describe('API GET 200 Request', function () {
             expect(response.body.data).property('last_name').to.equal('Weaver');
             expect(response.body.data).property('avatar').to.equal('https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg');
             
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
-    it('[TC0003] should get a 404 response after a GET request for a single user not found', function() {
+    it('[CYEX-3] should get a 404 response after a GET request for a single user not found', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/users/23', 
@@ -51,7 +52,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0004] should get a 200 response after a GET request for a list of resources', function() {
+    it('[CYEX-4] should get a 200 response after a GET request for a list of resources', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown'
@@ -65,14 +66,13 @@ describe('API GET 200 Request', function () {
 
             expect(response.body).property('data');
 
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
-    it('[TC0005] should get a 200 response after a GET request for a single resource from a list', function() {
+    it('[CYEX-5] should get a 200 response after a GET request for a single resource from a list', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown/2'
@@ -86,14 +86,13 @@ describe('API GET 200 Request', function () {
             expect(response.body.data).property('color').to.equal('#C74375');
             expect(response.body.data).property('pantone_value').to.equal('17-2031');
             
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
-    it('[TC0006] should get a 404 response after a GET request for a single resource from a list not found', function() {
+    it('[CYEX-6] should get a 404 response after a GET request for a single resource from a list not found', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown/23', 
@@ -104,7 +103,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0007] should get a delay response 200 response after a GET request for a single resource from a list', function() {
+    it('[CYEX-7] should get a delay response 200 response after a GET request for a single resource from a list', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown/2?delay=3'
@@ -118,10 +117,9 @@ describe('API GET 200 Request', function () {
             expect(response.body.data).property('color').to.equal('#C74375');
             expect(response.body.data).property('pantone_value').to.equal('17-2031');
             
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 });
