@@ -15,7 +15,9 @@ describe('API GET 200 Request', function () {
             expect(response.body).property('total').to.equal(12);
             expect(response.body).property('total_pages').to.equal(2);
             expect(response.body).property('data');
-            expect(response.body).property('ad');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
@@ -33,10 +35,9 @@ describe('API GET 200 Request', function () {
             expect(response.body.data).property('last_name').to.equal('Weaver');
             expect(response.body.data).property('avatar').to.equal('https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg');
             
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
@@ -65,10 +66,9 @@ describe('API GET 200 Request', function () {
 
             expect(response.body).property('data');
 
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
@@ -86,10 +86,9 @@ describe('API GET 200 Request', function () {
             expect(response.body.data).property('color').to.equal('#C74375');
             expect(response.body.data).property('pantone_value').to.equal('17-2031');
             
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 
@@ -118,10 +117,9 @@ describe('API GET 200 Request', function () {
             expect(response.body.data).property('color').to.equal('#C74375');
             expect(response.body.data).property('pantone_value').to.equal('17-2031');
             
-            expect(response.body).property('ad');
-            expect(response.body.ad).property('company').to.equal('StatusCode Weekly');
-            expect(response.body.ad).property('url').to.equal('http://statuscode.org/');
-            expect(response.body.ad).property('text').to.equal('A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.');
+            expect(response.body).property('support');
+            expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
+            expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
         });
     });
 });
