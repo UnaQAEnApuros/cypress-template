@@ -3,7 +3,7 @@
 const env = Cypress.env();
 
 describe('API GET 200 Request', function () {
-    it('[TC0001] should get a 200 response after a GET request for the complete list of users', function() {
+    it('[CYEX-1] should get a 200 response after a GET request for the complete list of users', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/users?page=2'
@@ -21,7 +21,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0002] should get a 200 response after a GET request for a single user', function() {
+    it('[CYEX-2] should get a 200 response after a GET request for a single user', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/users/2'
@@ -41,7 +41,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0003] should get a 404 response after a GET request for a single user not found', function() {
+    it('[CYEX-3] should get a 404 response after a GET request for a single user not found', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/users/23', 
@@ -52,7 +52,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0004] should get a 200 response after a GET request for a list of resources', function() {
+    it('[CYEX-4] should get a 200 response after a GET request for a list of resources', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown'
@@ -72,7 +72,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0005] should get a 200 response after a GET request for a single resource from a list', function() {
+    it('[CYEX-5] should get a 200 response after a GET request for a single resource from a list', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown/2'
@@ -92,7 +92,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0006] should get a 404 response after a GET request for a single resource from a list not found', function() {
+    it('[CYEX-6] should get a 404 response after a GET request for a single resource from a list not found', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown/23', 
@@ -103,7 +103,7 @@ describe('API GET 200 Request', function () {
         });
     });
 
-    it('[TC0007] should get a delay response 200 response after a GET request for a single resource from a list', function() {
+    it('[CYEX-7] should get a delay response 200 response after a GET request for a single resource from a list', function() {
         cy.request({
             method: 'GET',
             url: env.apiURL + '/api/unknown/2?delay=3'
