@@ -17,7 +17,7 @@
         "apiToken": "9232a538912edc818f7e11a897beda7222805538",
         "projectCode": "CYEX",
         "runId": 2,
-        "logging": false
+        "logging": true
     },
     "screenshotsFolder": "mochawesome-report/assets"
 }
