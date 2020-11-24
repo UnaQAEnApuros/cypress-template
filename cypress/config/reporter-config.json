@@ -1,5 +1,5 @@
 {
-    "reporterEnabled": "cypress-junit-reporter, mochawesome",
+    "reporterEnabled": "cypress-junit-reporter, mochawesome, cypress-qase-reporter",
     "cypressJunitReporterReporterOptions": {
         "mochaFile": "report/junit.[hash].xml",
         "testsuitesTitle": true,
@@ -12,6 +12,12 @@
         "html": false,
         "json": true,
         "timestamp": "ddmmyyyy_HHMMss"
+    },
+    "cypress-qase-reporterOptions": {
+        "apiToken": "9232a538912edc818f7e11a897beda7222805538",
+        "projectCode": "CYEX",
+        "runId": 2,
+        "logging": false
     },
     "screenshotsFolder": "mochawesome-report/assets"
 }
