@@ -44,7 +44,7 @@ script:
   # Run Cypress
   - npm install
   - npm run verify
-  - npm run test:edge
+  - npm run test
 
 after_script:
   # Create mochawesome report and json to get the results
