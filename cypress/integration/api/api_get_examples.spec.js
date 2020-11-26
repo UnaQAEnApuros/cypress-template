@@ -44,18 +44,6 @@ describe('API GET 200 Request', function () {
         });
     }));
 
-    qase([3],
-    it('should get a 404 response after a GET request for a single user not found', function() {
-        cy.request({
-            method: 'GET',
-            url: env.apiURL + '/api/users/23', 
-            failOnStatusCode: false
-        })
-        .then((response) => {
-            expect(response.status).to.eq(404);
-        });
-    }));
-
     qase([4],
     it('should get a 200 response after a GET request for a list of resources', function() {
         cy.request({
@@ -98,18 +86,6 @@ describe('API GET 200 Request', function () {
         });
     }));
 
-    qase([6],
-    it('should get a 404 response after a GET request for a single resource from a list not found', function() {
-        cy.request({
-            method: 'GET',
-            url: env.apiURL + '/api/unknown/23', 
-            failOnStatusCode: false
-        })
-        .then((response) => {
-            expect(response.status).to.eq(404);
-        });
-    }));
-
     qase([7],
     it('should get a delay response 200 response after a GET request for a single resource from a list', function() {
         cy.request({
@@ -128,6 +104,33 @@ describe('API GET 200 Request', function () {
             expect(response.body).property('support');
             expect(response.body.support).property('url').to.equal("https://reqres.in/#support-heading");
             expect(response.body.support).property('text').to.equal("To keep ReqRes free, contributions towards server costs are appreciated!");
+        });
+    }));
+});
+
+describe('API GET 4xx Request', function () {
+
+    qase([3],
+    it('should get a 404 response after a GET request for a single user not found', function() {
+        cy.request({
+            method: 'GET',
+            url: env.apiURL + '/api/users/23', 
+            failOnStatusCode: false
+        })
+        .then((response) => {
+            expect(response.status).to.eq(404);
+        });
+    }));
+
+    qase([6],
+    it('should get a 404 response after a GET request for a single resource from a list not found', function() {
+        cy.request({
+            method: 'GET',
+            url: env.apiURL + '/api/unknown/23', 
+            failOnStatusCode: false
+        })
+        .then((response) => {
+            expect(response.status).to.eq(404);
         });
     }));
 });
