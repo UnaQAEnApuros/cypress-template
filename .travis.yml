@@ -53,7 +53,8 @@ after_script:
   
   # Display the results:
   - chmod +x script/results.sh
-  - results=$(./script/results.sh )
+  - results=$(./script/results.sh)
+  - cat $results
 
 after_success:
   - kill $(jobs -p) || true
