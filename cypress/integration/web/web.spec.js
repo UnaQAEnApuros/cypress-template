@@ -2,7 +2,7 @@
 /// <reference types="Cypress" />
 const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../pageobjects/HomePage';
+import HomePage from '../../support/pageobjects/HomePage';
 
 describe('Web Example', function () {
 
