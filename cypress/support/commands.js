@@ -11,6 +11,7 @@
 //
 /* global Cypress, cy */
 const env = Cypress.env();
+import 'cypress-wait-until';
 
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
