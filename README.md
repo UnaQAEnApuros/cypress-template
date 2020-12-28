@@ -19,3 +19,5 @@ TODO: Links to have a look at POM
 
 - https://medium.com/reactbrasil/deep-diving-pageobject-pattern-and-using-it-with-cypress-e60b9d7d0d91
 - https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/
+- https://www.toolsqa.com/cypress/page-object-pattern-in-cypress/ --> where to add the PO folder. 
+- https://github.com/Hypercubed/cypress-page-object-pattern
