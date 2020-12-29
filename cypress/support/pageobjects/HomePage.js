@@ -1,6 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
-import SimpleFormDemoPage from './SimpleFormDemoPage';
+import SimpleFormDemoPage from './inputforms/SimpleFormDemoPage';
 
 const env = Cypress.env();
 
