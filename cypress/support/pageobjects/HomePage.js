@@ -1,6 +1,13 @@
 import Header from './Header';
 import Footer from './Footer';
-import SimpleFormDemoPage from './SimpleFormDemoPage';
+
+import AjaxFormSubmitPage from './inputforms/AjaxFormSubmitPage';
+import CheckboxDemoPage from './inputforms/CheckboxDemoPage';
+import InputFormSubmitPage from './inputforms/InputFormSubmitPage';
+import JQuerySelectDropdownPage from './inputforms/JQuerySelectDropdownPage';
+import RadioButtonsDemoPage from './inputforms/RadioButtonsDemoPage';
+import SelectDropdownListPage from './inputforms/SelectDropdownListPage';
+import SimpleFormDemoPage from './inputforms/SimpleFormDemoPage';
 
 const env = Cypress.env();
 
@@ -44,6 +51,10 @@ class HomePage {
     });
   }
 
+  /*--------------------------------------------------------------------* 
+  |	Input Form Submenu
+  *---------------------------------------------------------------------*/
+
   /**
    * Method to click on the Simple Form Demo option on the header menu. 
    */
@@ -54,6 +65,201 @@ class HomePage {
     const simpleFormDemo = new SimpleFormDemoPage();
     return simpleFormDemo;
   }
+
+  /**
+   * Method to click on the Checkbox Demo option on the header menu. 
+   */
+  clickOnCheckboxDemoLinkHeader(){
+    this.header.getInputForm().click();
+    this.header.getCheckboxDemo().click();
+
+    const checkboxDemo = new CheckboxDemoPage();
+    return checkboxDemo;
+  }
+
+  /**
+   * Method to click on the Radio Buttons Demo option on the header menu. 
+   */
+  clickOnRadioButtonsDemoLinkHeader(){
+    this.header.getInputForm().click();
+    this.header.getRadioButtonsDemo().click();
+
+    const radioButtonsDemo = new RadioButtonsDemoPage();
+    return radioButtonsDemo;
+  }
+
+  /**
+   * Method to click on the Select Dropdown List option on the header menu. 
+   */
+  clickOnSelectDropdownListLinkHeader(){
+    this.header.getInputForm().click();
+    this.header.getSelectDropdownList().click();
+
+    const selectDropdownList = new SelectDropdownListPage();
+    return selectDropdownList;
+  }
+
+  /**
+   * Method to click on the Input Form Submit option on the header menu. 
+   */
+  clickOnInputFormSubmitLinkHeader(){
+    this.header.getInputForm().click();
+    this.header.getInputFormSubmit().click();
+
+    const inputFormSubmit = new InputFormSubmitPage();
+    return inputFormSubmit;
+  }
+
+  /**
+   * Method to click on the Ajax Form Submit option on the header menu. 
+   */
+  clickOnAjaxFormSubmitLinkHeader(){
+    this.header.getInputForm().click();
+    this.header.getAjaxFormSubmit().click();
+
+    const ajaxFormSubmit = new AjaxFormSubmitPage();
+    return ajaxFormSubmit;
+  }
+
+  /**
+   * Method to click on the JQuery Select option on the header menu. 
+   */
+  clickOnAjaxFormSubmitLinkHeader(){
+    this.header.getInputForm().click();
+    this.header.getJQuerySelectDropdown().click();
+
+    const jQuerySelectDropdown = new JQuerySelectDropdownPage();
+    return jQuerySelectDropdown;
+  }
+
+  /*--------------------------------------------------------------------* 
+  |	Date Pickers Submenu
+  *---------------------------------------------------------------------*/
+
+  /**
+   * getDatePickers
+   * 
+   *  Bootstrap Date Picker 
+   * getBootstrapDatePicker
+   * 
+   * JQuery Date Picker
+   * getJQueryDatePicker
+   * 
+   */
+
+    /*--------------------------------------------------------------------* 
+    |	Table Submenu
+    *---------------------------------------------------------------------*/
+
+  /**
+   * getTable
+   * 
+   * Table Pagination
+   * getTablePagination
+   * 
+   * Table Data Search
+   * getTableDataSearch
+   * 
+   * Table Filter
+   * getTableFilter
+   * 
+   * Table Sort & Search
+   * getTableSortAndSearch
+   * 
+   * Table Data Download
+   * getTableDataDownload
+   * 
+   */
+
+    /*--------------------------------------------------------------------* 
+    |	Demo Home
+    *---------------------------------------------------------------------*/
+
+    /**
+     * getDemoHome
+     */
+
+    /*--------------------------------------------------------------------* 
+    |	Progress Bar Submenu
+    *---------------------------------------------------------------------*/
+
+    /**
+     * getProgressBar
+     * 
+     * JQuery Download Progress bars
+     * getJQueryDownloadProgressBars
+     * 
+     * Bootstrap Progress bar
+     * getBootstrapProgressBar
+     * 
+     * Drag & Drop Sliders
+     * getDragAndDropSliders
+     * 
+     */
+
+
+    /*--------------------------------------------------------------------* 
+    |	Alerts & Modals Submenu
+    *---------------------------------------------------------------------*/
+
+    /**
+     * getAlertsAndModals
+     * 
+     * Bootstrap Alerts
+     * getBootstrapAlerts
+     * 
+     * Bootstrap Modals
+     * getBootstrapModals
+     * 
+     * Window Popup Modal
+     * getWindowPopupModal
+     * 
+     * Progress Bar Modal
+     * getProgressBarModal
+     * 
+     * Javascript Alerts
+     * getJavascriptAlerts
+     * 
+     * File Download
+     * getFileDownload
+     * 
+     */
+    
+
+    /*--------------------------------------------------------------------* 
+    |	List Box Submenu
+    *---------------------------------------------------------------------*/
+
+    /**
+     * getListBox
+     * 
+     * Bootstrap List
+     * getBootstrapListBox
+     * 
+     * JQuery List Box
+     * getJQueryListBox
+     * 
+     * Data List Filter
+     * getDataListFilter
+     */
+
+
+    /*--------------------------------------------------------------------* 
+    |	Get Others Submenu
+    *---------------------------------------------------------------------*/
+
+    /**
+     * getOthers
+     * 
+     * Drag and Drop
+     * getDragAndDrop
+     * 
+     * Dynamic Data Loading
+     * getDynamicDataLoading
+     * 
+     * Charts Demo dropdown
+     * getChartsDemo
+     */
 }
 
 export default HomePage;
