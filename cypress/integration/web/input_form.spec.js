@@ -25,42 +25,42 @@ describe('Web Example', function () {
         simpleFormDemo.isReady();
     }));
 
-    qase([],
+    qase([18],
     it('shoud visit the web and click on the Checkbox Demo Link', function() {
         home.closePopUp();
         const checkboxDemo = home.clickOnCheckboxDemoLinkHeader();
         checkboxDemo.isReady();
     }));
 
-    qase([],
+    qase([19],
     it('shoud visit the web and click on the Radio Buttons Demo Link', function() {
         home.closePopUp();
         const radioButtonsDemo = home.clickOnRadioButtonsDemoLinkHeader();
         radioButtonsDemo.isReady();
     }));
 
-    qase([],
+    qase([20],
     it('shoud visit the web and click on the Select Dropdown Link', function() {
         home.closePopUp();
         const selectDropdownList = home.clickOnSelectDropdownListLinkHeader();
         selectDropdownList.isReady();
     }));
 
-    qase([],
+    qase([21],
     it('shoud visit the web and click on the Input Form Submit Link', function() {
         home.closePopUp();
         const inputFormSubmit = home.clickOnInputFormSubmitLinkHeader();
         inputFormSubmit.isReady();
     }));
 
-    qase([],
+    qase([22],
     it('shoud visit the web and click on the Ajax Form Submit Link', function() {
         home.closePopUp();
         const ajaxFormSubmit = home.clickOnAjaxFormSubmitLinkHeader();
         ajaxFormSubmit.isReady();
     }));
 
-    qase([],
+    qase([23],
     it('shoud visit the web and click on the JQuery Select Link', function() {
         home.closePopUp();
         const jQuerySelectDropdown = home.clickOnAjaxFormSubmitLinkHeader();
