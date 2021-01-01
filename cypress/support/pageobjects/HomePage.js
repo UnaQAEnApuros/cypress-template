@@ -160,15 +160,22 @@ class HomePage {
     return jQueryDatePicker;
   }
 
-    /*--------------------------------------------------------------------* 
-    |	Table Submenu
-    *---------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------* 
+  |	Table Submenu
+  *---------------------------------------------------------------------*/
 
   /**
-   * getTable
-   * 
-   * Table Pagination
-   * getTablePagination
+   * Method to click on the Table Pagination option on the header menu. 
+   */
+  clickOnTablePaginationLinkHeader(){
+    this.header.getTable().click();
+    this.header.getTablePagination().click();
+
+    const tablePaginationPage = new TablePaginationPage();
+    return tablePaginationPage;
+  }
+
+  /**
    * 
    * Table Data Search
    * getTableDataSearch
