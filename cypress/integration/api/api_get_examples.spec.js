@@ -2,9 +2,8 @@
 /// <reference types="Cypress" />
 const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-const specTitle = require("cypress-sonarqube-reporter/specTitle");
 
-describe(specTitle('API GET 200 Request'), function () {
+describe('API GET 200 Request', function () {
     qase([1],
     it('should get a 200 response after a GET request for the complete list of users', function() {
         cy.request({
@@ -109,7 +108,7 @@ describe(specTitle('API GET 200 Request'), function () {
     }));
 });
 
-describe(specTitle('API GET 4xx Request'), function () {
+describe('API GET 4xx Request', function () {
 
     qase([3],
     it('should get a 404 response after a GET request for a single user not found', function() {

@@ -3,9 +3,8 @@
 const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
 import HomePage from '../../support/pageobjects/HomePage';
-const specTitle = require("cypress-sonarqube-reporter/specTitle");
 
-describe(specTitle('Input Form Tests'), function () {
+describe('Input Form Tests', function () {
 
     const home = new HomePage();
 

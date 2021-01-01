@@ -2,9 +2,8 @@
 /// <reference types="Cypress" />
 const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-const specTitle = require("cypress-sonarqube-reporter/specTitle");
 
-describe(specTitle('API PATCH 200 Request'), function () {
+describe('API PATCH 200 Request', function () {
     qase([14],
     it('should get a 200 response after a PATCH request to update the user data', function() {
         cy.request({
