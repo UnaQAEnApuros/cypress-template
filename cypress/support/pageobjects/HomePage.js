@@ -10,6 +10,7 @@ import SelectDropdownListPage from './inputforms/SelectDropdownListPage';
 import SimpleFormDemoPage from './inputforms/SimpleFormDemoPage';
 import BootstrapDatePickerPage from './datepickers/BootstrapDatePickerPage'
 import JQueryDatePickerPage from './datepickers/JQueryDatePickerPage'
+import TablePaginationPage from './table/TablePaginationPage'
 
 const env = Cypress.env();
 
