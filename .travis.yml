@@ -16,7 +16,8 @@ addons:
       - libindicator7
   sonarcloud:
     organization: "estefafdez"
-    token: ${SONAR_TOKEN}
+    token:
+       secure: ${SONAR_TOKEN}
 
 before_install:
   # Setup Microsoft Repository
