@@ -8,6 +8,8 @@ import JQuerySelectDropdownPage from './inputforms/JQuerySelectDropdownPage';
 import RadioButtonsDemoPage from './inputforms/RadioButtonsDemoPage';
 import SelectDropdownListPage from './inputforms/SelectDropdownListPage';
 import SimpleFormDemoPage from './inputforms/SimpleFormDemoPage';
+import BootstrapDatePickerPage from './datepickers/BootstrapDatePickerPage'
+import JQueryDatePickerPage from './datepickers/JQueryDatePickerPage'
 
 const env = Cypress.env();
 
@@ -137,15 +139,26 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * getDatePickers
-   * 
-   *  Bootstrap Date Picker 
-   * getBootstrapDatePicker
-   * 
-   * JQuery Date Picker
-   * getJQueryDatePicker
-   * 
+   * Method to click on the Bootstrap Date Picker option on the header menu. 
    */
+  clickOnBootstrapDatePickerLinkHeader(){
+    this.header.getDatePickers().click();
+    this.header.getBootstrapDatePicker().click();
+
+    const bootstrapDatePicker = new BootstrapDatePickerPage();
+    return bootstrapDatePicker;
+  }
+
+  /**
+   * Method to click on the JQuery Date Picker option on the header menu. 
+   */
+  clickOnJQueryDatePickerLinkHeader(){
+    this.header.getDatePickers().click();
+    this.header.getJQueryDatePicker().click();
+
+    const jQueryDatePicker = new JQueryDatePickerPage();
+    return jQueryDatePicker;
+  }
 
     /*--------------------------------------------------------------------* 
     |	Table Submenu
