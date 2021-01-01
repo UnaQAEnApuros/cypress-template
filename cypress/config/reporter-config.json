@@ -1,5 +1,5 @@
 {
-    "reporterEnabled": "cypress-junit-reporter, mochawesome, cypress-qase-reporter",
+    "reporterEnabled": "cypress-junit-reporter, mochawesome, cypress-qase-reporter, cypress-sonarqube-reporter",
     "cypressJunitReporterReporterOptions": {
         "mochaFile": "report/junit.[hash].xml",
         "testsuitesTitle": true,

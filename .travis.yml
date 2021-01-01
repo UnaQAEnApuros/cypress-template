@@ -14,6 +14,10 @@ addons:
       - libxss1
       - libappindicator1
       - libindicator7
+  sonarcloud:
+    organization: "estefafdez"
+    token:
+      secure: "XWFVCYA7HHN/iiavSBmZzjRDMIpXCO7JsTnfmG5DzvVxG9QN9bBG8Drc83oNh4OTvj/1Im9wZ6acioofv76tWuaNmg2pfTHblg4kBflvy5hQiP1wAo0HugTxxlOW5vqqE48U8HVU27CztxdDbFG0ixv4F0n0dZ0MwgWzEyO5GVqYejlluMt1+gJle/2vhIzDGGwMS08/b5LqNPGWabVt1vRLoHSvzczwkaeXe3L9zYiRZggJAvDNtomumKShuEgyGxSS08OgFOZ8w0NQJ7eBTe9rCLG+/68pSIcd3jJ0Xk5e5zPM+sFzp1E4fiYTh/vQjzfhgUqV/mxozORBiLL6oE6o6d6NdPg37Po7d81zH8d2GAzM8hWUtxLF42x3UWfZT9bz4fSxdjgLf0Rx1ZL5lTLu6xGGAWqMWF6dag4z2yHOOabmwKS4RVdyRnhJgEKmiermmPqcTejfCWkQ9bKBHe5t2R1ZSNdsY/DJNO9ZduKQQR1nGO6Bpc2uDOzoWlzemhXBOzreBLi1NtBol/tiC3IAjDYyQInTlFGhP2VuAsy/fnbGAA7dNmwP+Z5CWEPBrKrqS4zg3rVeTRKouG4m4vDAb7yS0nQog+gNEaWSFqTJf3rW1l590RQL3PYOvyzWeMCdB+rX/t0h7lZKw2KfS635WaLOTmLUQcboImraidE="
 
 before_install:
   # Setup Microsoft Repository

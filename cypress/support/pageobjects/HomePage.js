@@ -21,6 +21,8 @@ import TableFilterPage from './table/TableFilterPage';
 import TablePaginationPage from './table/TablePaginationPage';
 import TableSortAndSearchPage from './table/TableSortAndSearchPage';
 
+// Progress Bar
+
 
 const env = Cypress.env();
 
@@ -226,7 +228,7 @@ class HomePage {
     this.header.getTable().click();
     this.header.getTableDataDownload().click();
 
-    const tableDataDownload = new TTableDataDownloadPage();
+    const tableDataDownload = new TableDataDownloadPage();
     return tableDataDownload;
   }
 
@@ -234,19 +236,29 @@ class HomePage {
   |	Demo Home
   *---------------------------------------------------------------------*/
 
-    /**
-     * getDemoHome
-     */
+  /**
+   * Method to click on the Demo Home Link option on the header menu. 
+   */
+  clickOnDemoHomeLinkHeader(){
+    this.header.getDemoHome().click();
+  }
 
-    /*--------------------------------------------------------------------* 
-    |	Progress Bar Submenu
-    *---------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------* 
+  |	Progress Bar Submenu
+  *---------------------------------------------------------------------*/
+
+  /**
+   * Method to click on the JQuery Download Progress bars option on the header menu. 
+   */
+  clickOnJQueryDownloadProgressBarsLinkHeader(){
+    this.header.getProgressBar().click();
+    this.header.getTableDataDownload().click();
+
+    const jQueryDownloadProgressBars = new JQueryDownloadProgressBarsPage();
+    return jQueryDownloadProgressBars;
+  }
 
     /**
-     * getProgressBar
-     * 
-     * JQuery Download Progress bars
-     * getJQueryDownloadProgressBars
      * 
      * Bootstrap Progress bar
      * getBootstrapProgressBar

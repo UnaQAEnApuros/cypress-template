@@ -2,8 +2,9 @@
 /// <reference types="Cypress" />
 const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
+const specTitle = require("cypress-sonarqube-reporter/specTitle");
 
-describe('API POST 200 Request', function () {
+describe(specTitle('API POST 200 Request'), function () {
     qase([8],
     it('should get a 201 response after a POST request to create a new user', function() {
         cy.request({
@@ -57,7 +58,7 @@ describe('API POST 200 Request', function () {
     }));
 });
 
-describe('API POST 4xx Request', function () {
+describe(specTitle('API POST 4xx Request'), function () {
 
     qase([10],
     it('should get a 400 response after a POST request to register a new user without a password set unsuccessfully', function() {

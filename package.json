@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "cypress-qase-reporter": "^1.1.1",
+    "cypress-sonarqube-reporter": "^1.7.1",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.1.0",
     "pretty-console-colors": "^2.0.0"
