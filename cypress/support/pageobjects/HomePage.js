@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 
+// Input Forms imports
 import AjaxFormSubmitPage from './inputforms/AjaxFormSubmitPage';
 import CheckboxDemoPage from './inputforms/CheckboxDemoPage';
 import InputFormSubmitPage from './inputforms/InputFormSubmitPage';
@@ -8,6 +9,18 @@ import JQuerySelectDropdownPage from './inputforms/JQuerySelectDropdownPage';
 import RadioButtonsDemoPage from './inputforms/RadioButtonsDemoPage';
 import SelectDropdownListPage from './inputforms/SelectDropdownListPage';
 import SimpleFormDemoPage from './inputforms/SimpleFormDemoPage';
+
+// Date Pickers imports
+import BootstrapDatePickerPage from './datepickers/BootstrapDatePickerPage';
+import JQueryDatePickerPage from './datepickers/JQueryDatePickerPage';
+
+// Table imports
+import TableDataDownloadPage from './table/TableDataDownloadPage';
+import TableDataSearchPage from './table/TableDataSearchPage';
+import TableFilterPage from './table/TableFilterPage';
+import TablePaginationPage from './table/TablePaginationPage';
+import TableSortAndSearchPage from './table/TableSortAndSearchPage';
+
 
 const env = Cypress.env();
 
@@ -137,43 +150,89 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * getDatePickers
-   * 
-   *  Bootstrap Date Picker 
-   * getBootstrapDatePicker
-   * 
-   * JQuery Date Picker
-   * getJQueryDatePicker
-   * 
+   * Method to click on the Bootstrap Date Picker option on the header menu. 
    */
+  clickOnBootstrapDatePickerLinkHeader(){
+    this.header.getDatePickers().click();
+    this.header.getBootstrapDatePicker().click();
 
-    /*--------------------------------------------------------------------* 
-    |	Table Submenu
-    *---------------------------------------------------------------------*/
+    const bootstrapDatePicker = new BootstrapDatePickerPage();
+    return bootstrapDatePicker;
+  }
 
   /**
-   * getTable
-   * 
-   * Table Pagination
-   * getTablePagination
-   * 
-   * Table Data Search
-   * getTableDataSearch
-   * 
-   * Table Filter
-   * getTableFilter
-   * 
-   * Table Sort & Search
-   * getTableSortAndSearch
-   * 
-   * Table Data Download
-   * getTableDataDownload
-   * 
+   * Method to click on the JQuery Date Picker option on the header menu. 
    */
+  clickOnJQueryDatePickerLinkHeader(){
+    this.header.getDatePickers().click();
+    this.header.getJQueryDatePicker().click();
 
-    /*--------------------------------------------------------------------* 
-    |	Demo Home
-    *---------------------------------------------------------------------*/
+    const jQueryDatePicker = new JQueryDatePickerPage();
+    return jQueryDatePicker;
+  }
+
+  /*--------------------------------------------------------------------* 
+  |	Table Submenu
+  *---------------------------------------------------------------------*/
+
+  /**
+   * Method to click on the Table Pagination option on the header menu. 
+   */
+  clickOnTablePaginationLinkHeader(){
+    this.header.getTable().click();
+    this.header.getTablePagination().click();
+
+    const tablePagination = new TablePaginationPage();
+    return tablePagination;
+  }
+
+  /**
+   * Method to click on the Table Data Search option on the header menu. 
+   */
+  clickOnTableDataSearchLinkHeader(){
+    this.header.getTable().click();
+    this.header.getTableDataSearch().click();
+
+    const tableDataSearch = new TableDataSearchPage();
+    return tableDataSearch;
+  }
+
+  /**
+   * Method to click on the Table Filter option on the header menu. 
+   */
+  clickOnTableFilterLinkHeader(){
+    this.header.getTable().click();
+    this.header.getTableFilter().click();
+
+    const tableFilter = new TableFilterPage();
+    return tableFilter;
+  }
+
+  /**
+   * Method to click on the Table Sort & Search option on the header menu. 
+   */
+  clickOnTableSortAndSearchLinkHeader(){
+    this.header.getTable().click();
+    this.header.getTableSortAndSearch().click();
+
+    const tableSortAndSearch = new TableSortAndSearchPage();
+    return tableSortAndSearch;
+  }
+
+  /**
+   * Method to click on the Table Data Download option on the header menu. 
+   */
+  clickOnTableDataDownloadLinkHeader(){
+    this.header.getTable().click();
+    this.header.getTableDataDownload().click();
+
+    const tableDataDownload = new TTableDataDownloadPage();
+    return tableDataDownload;
+  }
+
+  /*--------------------------------------------------------------------* 
+  |	Demo Home
+  *---------------------------------------------------------------------*/
 
     /**
      * getDemoHome
