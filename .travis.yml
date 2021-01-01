@@ -49,7 +49,7 @@ script:
   - npm install
   - npm run verify
   - npm run test
-  - sonar-scanner
+  #- sonar-scanner
 
 after_script:
   # Create mochawesome report and json to get the results
