@@ -8,6 +8,7 @@ jobs:
         uses: actions/checkout@v1
 
       # Install, verify and run the Cypress tests. 
+      
       # Install cypress
       - run: npm install
 
