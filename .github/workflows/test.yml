@@ -11,15 +11,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
 
-      # Install cypress
-      - run: npm install
-
-      # Verified Cypress
-      - run: npm run verify
-
-      # Run the tests on electron headless
-      - run: npm run test
-
       # Analyze the project with Sonar. 
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
       - name: SonarCloud Scan
