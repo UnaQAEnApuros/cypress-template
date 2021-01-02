@@ -7,7 +7,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Install, verify and run the Cypress tests. 
+      # Install, verify and run the Cypress tests. 
       # Install cypress
       - run: npm install
 
@@ -25,11 +25,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - name: Create Mochawesome Report and JSON to get the results
+      # Create Mochawesome Report and JSON to get the results
       - run: npm run merge_reports
       - run: npm run generate_mochawesome_report
   
-      - name: Display the results
+      # Display the results
       - run: chmod +x script/results.sh
       - run: ./script/results.sh 
 
