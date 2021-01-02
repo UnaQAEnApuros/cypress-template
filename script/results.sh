@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# TRAVIS: cd /home/travis/build/estefafdez/cypress-template/mochawesome-report
 cd /home/runner/work/cypress-template/cypress-template/mochawesome-report
 
 TEST=`cat Final_Report.json | jq ".stats.tests"`
