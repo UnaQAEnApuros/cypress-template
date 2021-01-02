@@ -10,18 +10,6 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
-
-      # Analyze the project with Sonar. 
-      # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
-      - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.projectVersion=1.0.1
-
       # Create mochawesome report and json to get the results
       - run: npm run merge_reports
       - run: npm run generate_mochawesome_report
@@ -30,6 +18,14 @@ jobs:
       - run: chmod +x script/results.sh
       - run: ./script/results.sh 
 
+      # Analyze the project with Sonar. 
+      # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
