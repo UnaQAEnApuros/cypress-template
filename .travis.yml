@@ -14,6 +14,10 @@ addons:
       - libxss1
       - libappindicator1
       - libindicator7
+  sonarcloud:
+    organization: "estefafdez"
+    token:
+       secure: ${SONAR_TOKEN}
 
 before_install:
   # Setup Microsoft Repository
@@ -45,6 +49,7 @@ script:
   - npm install
   - npm run verify
   - npm run test
+  #- sonar-scanner
 
 after_script:
   # Create mochawesome report and json to get the results
@@ -67,7 +72,7 @@ notifications:
 
   slack:
     - rooms:
-      - secure: mEKmNXyP8jEUJBhyN/ydvzSHKnFMTD7dGBvr02a3NGYqPIxOfgXnZYdoZY/WR6879j/92OCMoy6Jn3T+3/zqADShYwMkAUfiP1DOLE8tAO0rCHBtlNvhKRmJen4l7GWukfHP7Bb2ueYf9SWrPWfx8VNYeeaTAcLZeUHXNDb+ZiE7xFftKipUWAWIFG/nak27joQ6dCGqK6tB7SYI2/xmCbYicGybFtgKN1vMszxSue5C3kvAq/9ISnL+rTs63Cn/u9XPXiIxxZytqXIMvI/VcTj+nv34/Q8KJs1w1uGuBdLTSEBsa0lMlZBUU6LyLlAAvJhhUCkW9HpNYhBMtDiyvnlldOukExXIsU83MLhDcPIMZ2ey2+IGPWp+MvM8jssFqF7ne7A7RV6xVL5ZZLUp7IBokh+IDhEo9frDgfdqGD8dcfcj/qgo+7kOHNcI5+IFlbv6ca2T6aAWsMv3e4FkFSPgipDDlWv55hoeTQZZqflFlxJ5KUAGjpZbJ2YW7FzoecOVfI2agedni/VC6E8rYbZDNGbdxkwoCjCJl5v+gGqBJiyIND8a7vBMptbzhG08xMLLlfWzmA7KdpHEInIV0NZEiY9mDb6SOzuaGcyqrtzKZQ0DX0YVzezicUcll2IiSGUuzllhxiPobOGEAuvDFME/HtZ6k1D2nVRbLN/HtSE=
+      - secure: ${SLACK_TOKEN}
       on_success: always
       on_failure: always
       template:
