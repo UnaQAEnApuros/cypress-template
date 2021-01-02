@@ -1,27 +1,45 @@
-name: Test Cypress
-
-on:
-  push:
-    branches: all
-  pull_request:
-    branches: [ main ]
-
+name: End-to-end tests with Cypress
+on: [push]
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
+  cypress-run:
+    runs-on: ubuntu-16.04
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run verify
-    - run: npm run test
-    - run: sonar-scanner
+      - name: Checkout
+        uses: actions/checkout@v1
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+
+      # Install cypress
+      - run: npm install
+
+      # Verified Cypress
+      - run: npm run verify
+
+      # Run the tests on electron headless
+      - run: npm run test
+
+      # Analyze the project with Sonar. 
+      # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
+      - run: sonar-scanner
+
+      # Create mochawesome report and json to get the results
+      - run: npm run merge_reports
+      - run: npm run generate_mochawesome_report
+  
+      # Display the results:
+      - run: chmod +x script/results.sh
+      - run: ./script/results.sh 
+
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: report
+          path: report
+      # Test run video was always captured, so this action uses "always()" condition
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: mochawesome
+          path: mochawesome-report
