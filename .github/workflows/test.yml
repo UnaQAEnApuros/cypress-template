@@ -39,3 +39,11 @@ jobs:
         with:
           name: mochawesome
           path: mochawesome-report
+      - name: Slack Notify
+        uses: rtCamp/action-slack-notify@v2.1.2
+        env:
+          SLACK_CHANNEL: travis-ci
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+
+
