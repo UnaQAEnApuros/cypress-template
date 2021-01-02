@@ -18,7 +18,11 @@ jobs:
 
       # Analyze the project with Sonar. 
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
-      - run: sonar-scanner
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       # Create mochawesome report and json to get the results
       - run: npm run merge_reports
