@@ -12,5 +12,6 @@
     "retries": {
         "runMode": 1,
         "openMode": 0
-    }
+    }, 
+    "pageLoadTimeout": 7000
 }
