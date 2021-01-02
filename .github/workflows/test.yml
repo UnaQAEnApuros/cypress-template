@@ -25,7 +25,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
