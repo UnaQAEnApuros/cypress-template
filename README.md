@@ -6,6 +6,10 @@ Travis CI build results:
 
 [![Build Status](https://travis-ci.org/estefafdez/cypress-template.svg?branch=main)](https://travis-ci.org/estefafdez/cypress-template)
 
+## SonarCloud analysis:
+
+https://sonarcloud.io/dashboard?id=estefafdez_cypress-template
+
 ## Test Plan of this project. 
 
 Every test plan defined for this project will be added into the Qase tool. 
