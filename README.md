@@ -6,6 +6,10 @@ Travis CI build results:
 
 [![Build Status](https://travis-ci.org/estefafdez/cypress-template.svg?branch=main)](https://travis-ci.org/estefafdez/cypress-template)
 
+Github Action build results: 
+
+![End-to-end tests with Cypress](https://github.com/estefafdez/cypress-template/workflows/End-to-end%20tests%20with%20Cypress/badge.svg)
+
 ## Test Plan of this project. 
 
 Every test plan defined for this project will be added into the Qase tool. 
