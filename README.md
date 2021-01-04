@@ -6,6 +6,10 @@ Travis CI build results:
 
 [![Build Status](https://travis-ci.org/estefafdez/cypress-template.svg?branch=main)](https://travis-ci.org/estefafdez/cypress-template)
 
+Github Actions build results: 
+
+![End-to-end tests with Cypress](https://github.com/estefafdez/cypress-template/workflows/End-to-end%20tests%20with%20Cypress/badge.svg)
+
 ## SonarCloud analysis:
 
 https://sonarcloud.io/dashboard?id=estefafdez_cypress-template
@@ -17,6 +21,7 @@ Every test plan defined for this project will be added into the Qase tool.
 If you want to collaborate with it, please add a PR to the repo. Thanks! 
 
 [1. API Tests Test Plan](https://app.qase.io/project/CYEX)
+[2. Web Tests Test Plan](https://app.qase.io/project/CYEX)
 
 
 TODO: Links to have a look at POM
