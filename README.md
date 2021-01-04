@@ -6,9 +6,13 @@ Travis CI build results:
 
 [![Build Status](https://travis-ci.org/estefafdez/cypress-template.svg?branch=main)](https://travis-ci.org/estefafdez/cypress-template)
 
-Github Action build results: 
+Github Actions build results: 
 
 ![End-to-end tests with Cypress](https://github.com/estefafdez/cypress-template/workflows/End-to-end%20tests%20with%20Cypress/badge.svg)
+
+## SonarCloud analysis:
+
+https://sonarcloud.io/dashboard?id=estefafdez_cypress-template
 
 ## Test Plan of this project. 
 
