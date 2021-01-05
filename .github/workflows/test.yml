@@ -20,7 +20,8 @@ jobs:
   
       # Display the results:
       - run: chmod +x script/results.sh
-      - run: ./script/results.sh 
+      - run: TEST_RESULTS = $(./script/results.sh) 
+      - run: echo $TEST_RESULTS
 
       # Analyze the project with Sonar. 
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
@@ -46,5 +47,5 @@ jobs:
           SLACK_CHANNEL: travis-ci
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_ICON: https://github.com/estefafdez/cypress-template/blob/main/script/github.png
-          SLACK_MESSAGE: 'Post Content :rocket:'
+          SLACK_MESSAGE: echo $TEST_RESULTS
           SLACK_USERNAME: githubActions
