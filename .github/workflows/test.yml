@@ -57,10 +57,8 @@ jobs:
         uses: rtCamp/action-slack-notify@v2.1.2
         if: always()
         env:
-          SLACK_COLOR: "${{ job.status }} === 'success' ? 'good' : 'danger'"
           SLACK_CHANNEL: travis-ci
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_ICON: https://github.com/estefafdez/cypress-template/blob/main/script/github.png
           SLACK_USERNAME: "Github Actions"
           SLACK_FOOTER: 'Github project: https://github.com/estefafdez/cypress-template'
-          SLACK_MESSAGE: "This job has ${{ job.status }} === 'success' ? 'passed!' : 'failed. :('"
