@@ -20,7 +20,7 @@ jobs:
   
       # Display the results:
       - run: chmod +x script/results.sh
-      - run: ./script/results.sh 
+      - run: ./script/results.sh
 
       # Analyze the project with Sonar. 
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
@@ -29,22 +29,38 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      # Upload artifacts with the tests results
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
           name: report
           path: report
+      
       # Test run video was always captured, so this action uses "always()" condition
       - uses: actions/upload-artifact@v1
         if: always()
         with:
           name: mochawesome
           path: mochawesome-report
+
+      # Publish Test Results
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1.6
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: report/*.xml
+      
+      # Slack Notify
       - name: Slack Notify
         uses: rtCamp/action-slack-notify@v2.1.2
+        if: always()
         env:
+          SLACK_COLOR: "${{ job.status }} === 'success' ? 'good' : 'danger'"
           SLACK_CHANNEL: travis-ci
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_MESSAGE: 'Post Content :rocket:'
-          SLACK_USERNAME: githubActions
+          SLACK_ICON: https://github.com/estefafdez/cypress-template/blob/main/script/github.png
+          SLACK_USERNAME: "Github Actions"
+          SLACK_FOOTER: 'Github project: https://github.com/estefafdez/cypress-template'
+          SLACK_MESSAGE: "This job has ${{ job.status }} === 'success' ? 'passed!' : 'failed. :('"
