@@ -62,3 +62,4 @@ jobs:
           SLACK_ICON: https://github.com/estefafdez/cypress-template/blob/main/script/github.png
           SLACK_USERNAME: "Github Actions"
           SLACK_FOOTER: 'Github project: https://github.com/estefafdez/cypress-template'
+          SLACK_TITLE: "Test Suite Results:"
