@@ -20,7 +20,8 @@ jobs:
   
       # Display the results:
       - run: chmod +x script/results.sh
-      - run: ./script/results.sh
+      - id: vars
+        run: echo ::set-output name=testResult::$(./script/results.sh)
 
       # Analyze the project with Sonar. 
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
@@ -63,3 +64,4 @@ jobs:
           SLACK_USERNAME: "Github Actions"
           SLACK_FOOTER: 'Github project: https://github.com/estefafdez/cypress-template'
           SLACK_TITLE: "Test Suite Results:"
+          SLACK_MESSAGE: ${{ steps.vars.outputs.testResult }}
