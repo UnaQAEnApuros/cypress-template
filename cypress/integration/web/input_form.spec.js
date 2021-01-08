@@ -8,18 +8,17 @@ describe('Input Form Tests', function () {
 
     const home = new HomePage();
 
-    beforeEach(function() {
-        home.visit();
-        home.isReady();
-    });
-
     qase([16],
     it('should visit the web and close the popup', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
     }));
 
     qase([17],
     it('should visit the web and click on the Simple Form Demo Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader();
         simpleFormDemo.isReady();
@@ -27,6 +26,8 @@ describe('Input Form Tests', function () {
 
     qase([18],
     it('should visit the web and click on the Checkbox Demo Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const checkboxDemo = home.clickOnCheckboxDemoLinkHeader();
         checkboxDemo.isReady();
@@ -34,6 +35,8 @@ describe('Input Form Tests', function () {
 
     qase([19],
     it('should visit the web and click on the Radio Buttons Demo Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const radioButtonsDemo = home.clickOnRadioButtonsDemoLinkHeader();
         radioButtonsDemo.isReady();
@@ -41,6 +44,8 @@ describe('Input Form Tests', function () {
 
     qase([20],
     it('should visit the web and click on the Select Dropdown Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const selectDropdownList = home.clickOnSelectDropdownListLinkHeader();
         selectDropdownList.isReady();
@@ -48,6 +53,8 @@ describe('Input Form Tests', function () {
 
     qase([21],
     it('should visit the web and click on the Input Form Submit Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const inputFormSubmit = home.clickOnInputFormSubmitLinkHeader();
         inputFormSubmit.isReady();
@@ -55,6 +62,8 @@ describe('Input Form Tests', function () {
 
     qase([22],
     it('should visit the web and click on the Ajax Form Submit Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const ajaxFormSubmit = home.clickOnAjaxFormSubmitLinkHeader();
         ajaxFormSubmit.isReady();
@@ -62,6 +71,8 @@ describe('Input Form Tests', function () {
 
     qase([23],
     it('should visit the web and click on the JQuery Select Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const jQuerySelectDropdown = home.clickOnAjaxFormSubmitLinkHeader();
         jQuerySelectDropdown.isReady();

@@ -8,13 +8,10 @@ describe('Progress Bar Tests', function () {
 
     const home = new HomePage();
 
-    beforeEach(function() {
-        home.visit();
-        home.isReady();
-    });
-
     qase([26],
     it('should visit the web and click on the JQuery Download Progress bars Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const jqueryDownloadProgressBar = home.clickOnJQueryDownloadProgressBarsLinkHeader();
         jqueryDownloadProgressBar.isReady();
@@ -22,6 +19,8 @@ describe('Progress Bar Tests', function () {
 
     qase([27],
     it('should visit the web and click on the Bootstrap Progress bar Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const bootstrapProgressBar = home.clickOnBootstrapProgressBarLinkHeader();
         bootstrapProgressBar.isReady();
@@ -29,6 +28,8 @@ describe('Progress Bar Tests', function () {
 
     qase([28],
     it('should visit the web and click on the Drag & Drop Sliders Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const dragAndDropSlider = home.clickOnDragAndDropSlidersLinkHeader();
         dragAndDropSlider.isReady();

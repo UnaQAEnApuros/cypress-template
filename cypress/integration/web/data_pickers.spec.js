@@ -8,13 +8,10 @@ describe('Data Pickers Tests', function () {
 
     const home = new HomePage();
 
-    beforeEach(function() {
-        home.visit();
-        home.isReady();
-    });
-
     qase([24],
     it('should visit the web and click on the Bootstrap Date Picker Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const bootstrapDatePickers = home.clickOnBootstrapDatePickerLinkHeader();
         bootstrapDatePickers.isReady();
@@ -22,6 +19,8 @@ describe('Data Pickers Tests', function () {
 
     qase([25],
     it('should visit the web and click on the JQuery Date Picker Link', function() {
+        home.visit();
+        home.isReady();
         home.closePopUp();
         const jqueryDatePickers = home.clickOnJQueryDatePickerLinkHeader();
         jqueryDatePickers.isReady();
