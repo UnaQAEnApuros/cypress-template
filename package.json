@@ -39,7 +39,7 @@
     "mochawesome": "^6.2.1"
   },
   "dependencies": {
-    "cypress-qase-reporter": "^1.1.1",
+    "cypress-qase-reporter": "^1.1.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.1.0",
     "pretty-console-colors": "^2.0.0"
