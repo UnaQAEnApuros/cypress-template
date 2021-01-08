@@ -22,6 +22,9 @@ import TablePaginationPage from './table/TablePaginationPage';
 import TableSortAndSearchPage from './table/TableSortAndSearchPage';
 
 // Progress Bar
+import BootstrapProgressBarPage from './progressbar/BootstrapProgressBarPage';
+import DragAndDropSlidersPage from './progressbar/DragAndDropSlidersPage';
+import JQueryDownloadProgressBarsPage from './progressbar/JQueryDownloadProgressBarsPage';
 
 
 const env = Cypress.env();
@@ -258,16 +261,27 @@ class HomePage {
     return jQueryDownloadProgressBars;
   }
 
-    /**
-     * 
-     * Bootstrap Progress bar
-     * getBootstrapProgressBar
-     * 
-     * Drag & Drop Sliders
-     * getDragAndDropSliders
-     * 
-     */
+  /**
+   * Method to click on the Bootstrap Progress bar option on the header menu. 
+   */
+  clickOnBootstrapProgressBarLinkHeader(){
+    this.header.getProgressBar().click();
+    this.header.getBootstrapProgressBar().click();
 
+    const bootstrapProgressBar = new BootstrapProgressBarPage();
+    return bootstrapProgressBar;
+  }
+
+  /**
+   * Method to click on the Drag & Drop Sliders option on the header menu. 
+   */
+  clickOnDragAndDropSlidersLinkHeader(){
+    this.header.getProgressBar().click();
+    this.header.getDragAndDropSliders().click();
+
+    const dragAndDropSliders = new DragAndDropSlidersPage();
+    return dragAndDropSliders;
+  }
 
     /*--------------------------------------------------------------------* 
     |	Alerts & Modals Submenu
