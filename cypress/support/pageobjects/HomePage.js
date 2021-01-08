@@ -255,7 +255,7 @@ class HomePage {
    */
   clickOnJQueryDownloadProgressBarsLinkHeader(){
     this.header.getProgressBar().click();
-    this.header.getTableDataDownload().click();
+    this.header.getJQueryDownloadProgressBars().click();
 
     const jQueryDownloadProgressBars = new JQueryDownloadProgressBarsPage();
     return jQueryDownloadProgressBars;
