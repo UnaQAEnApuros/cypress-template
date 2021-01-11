@@ -26,9 +26,6 @@ function getConfigurationByFile(filename) {
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 module.exports = async (on, config) => {
-	require('@cypress/code-coverage/task')(on, config)
-    on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
-
 	const filename = config.env.configFile || 'qa'
 	const customConfig = await getConfigurationByFile(filename);
 	config = Object.assign(config, customConfig);
