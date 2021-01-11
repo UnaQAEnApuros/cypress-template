@@ -28,7 +28,6 @@
   "homepage": "https://github.com/estefafdez/cypress-template#readme",
   "devDependencies": {
     "@bahmutov/cy-api": "^1.4.3",
-    "@cypress/code-coverage": "^3.9.0",
     "@cypress/skip-test": "^2.5.1",
     "@testing-library/cypress": "^7.0.3",
     "cypress": "^6.2.1",
@@ -40,13 +39,10 @@
     "mochawesome": "^6.2.1"
   },
   "dependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "cypress-qase-reporter": "^1.1.2",
-    "istanbul-lib-coverage": "^3.0.0",
     "mocha": "^8.2.1",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.1.0",
-    "nyc": "^15.1.0",
     "pretty-console-colors": "^2.0.0"
   }
 }
