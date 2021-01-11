@@ -4,8 +4,8 @@ class JavascriptAlertsPage {
     * Method to check if the JavascriptAlertsPage is visible
     */
     isReady(){
-        cy.url().should('eq', '');
-        cy.get('h1').contains('').should('be.visible');
+        cy.url().should('eq', 'https://www.seleniumeasy.com/test/javascript-alert-box-demo.html');
+        cy.get('h3').contains('JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.').should('be.visible');
     }
 
 

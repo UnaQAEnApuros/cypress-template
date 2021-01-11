@@ -4,8 +4,7 @@ class ChartsDemoDropdownPage {
     * Method to check if the ChartsDemoDropdownPage is visible
     */
     isReady(){
-        cy.url().should('eq', '');
-        cy.get('h1').contains('').should('be.visible');
+        cy.url().should('eq', 'https://www.seleniumeasy.com/test/charts-mouse-hover-demo.html');
     }
 
 
