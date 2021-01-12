@@ -26,6 +26,23 @@ import BootstrapProgressBarPage from './progressbar/BootstrapProgressBarPage';
 import DragAndDropSlidersPage from './progressbar/DragAndDropSlidersPage';
 import JQueryDownloadProgressBarsPage from './progressbar/JQueryDownloadProgressBarsPage';
 
+// Alerts & Modals
+import BootstrapAlertsPage from './alertsandmodals/BootstrapAlertsPage';
+import BootstrapModalsPage from './alertsandmodals/BootstrapModalsPage';
+import FileDownloadPage from './alertsandmodals/FileDownloadPage';
+import JavascriptAlertsPage from './alertsandmodals/JavascriptAlertsPage';
+import ProgressBarModalPage from './alertsandmodals/ProgressBarModalPage';
+import WindowPopupModalPage from './alertsandmodals/WindowPopupModalPage';
+
+// List Box
+import BootstrapListPage from './listbox/BootstrapListPage';
+import DataListFilterPage from './listbox/DataListFilterPage';
+import JQueryListBoxPage from './listbox/JQueryListBoxPage';
+
+// Get Others
+import ChartsDemoDropdownPage from './others/ChartsDemoDropdownPage';
+import DragAndDropPage from './others/DragAndDropPage';
+import DynamicDataLoadingPage from './others/DynamicDataLoadingPage';
 
 const env = Cypress.env();
 
@@ -283,68 +300,149 @@ class HomePage {
     return dragAndDropSliders;
   }
 
-    /*--------------------------------------------------------------------* 
-    |	Alerts & Modals Submenu
-    *---------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------* 
+  |	Alerts & Modals Submenu
+  *---------------------------------------------------------------------*/
 
-    /**
-     * getAlertsAndModals
-     * 
-     * Bootstrap Alerts
-     * getBootstrapAlerts
-     * 
-     * Bootstrap Modals
-     * getBootstrapModals
-     * 
-     * Window Popup Modal
-     * getWindowPopupModal
-     * 
-     * Progress Bar Modal
-     * getProgressBarModal
-     * 
-     * Javascript Alerts
-     * getJavascriptAlerts
-     * 
-     * File Download
-     * getFileDownload
-     * 
-     */
-    
+  /**
+   * Method to click on the Bootstrap Alerts option on the header menu. 
+   */
+  clickOnBootstrapAlertsLinkHeader(){
+    this.header.getAlertsAndModals().click();
+    this.header.getBootstrapAlerts().click();
 
-    /*--------------------------------------------------------------------* 
-    |	List Box Submenu
-    *---------------------------------------------------------------------*/
+    const bootstrapAlerts = new BootstrapAlertsPage();
+    return bootstrapAlerts;
+  }
 
-    /**
-     * getListBox
-     * 
-     * Bootstrap List
-     * getBootstrapListBox
-     * 
-     * JQuery List Box
-     * getJQueryListBox
-     * 
-     * Data List Filter
-     * getDataListFilter
-     */
+  /**
+   * Method to click on the Bootstrap Modals option on the header menu. 
+   */
+  clickOnBootstrapModalsLinkHeader(){
+    this.header.getAlertsAndModals().click();
+    this.header.getBootstrapModals().click();
 
+    const bootstrapModals = new BootstrapModalsPage();
+    return bootstrapModals;
+  }
 
-    /*--------------------------------------------------------------------* 
-    |	Get Others Submenu
-    *---------------------------------------------------------------------*/
+  /**
+   * Method to click on the Window Popup Modal option on the header menu. 
+   */
+  clickOnWindowPopupModalLinkHeader(){
+    this.header.getAlertsAndModals().click();
+    this.header.getWindowPopupModal().click();
 
-    /**
-     * getOthers
-     * 
-     * Drag and Drop
-     * getDragAndDrop
-     * 
-     * Dynamic Data Loading
-     * getDynamicDataLoading
-     * 
-     * Charts Demo dropdown
-     * getChartsDemo
-     */
+    const windowPopupModal = new WindowPopupModalPage();
+    return windowPopupModal;
+  }
+
+  /**
+   * Method to click on the Progress Bar Modal option on the header menu. 
+   */
+  clickOnProgressBarModalLinkHeader(){
+    this.header.getAlertsAndModals().click();
+    this.header.getProgressBarModal().click();
+
+    const progressBarModal = new ProgressBarModalPage();
+    return progressBarModal;
+  }
+
+  /**
+   * Method to click on the Javascript Alerts option on the header menu. 
+   */
+  clickOnJavascriptAlertsLinkHeader(){
+    this.header.getAlertsAndModals().click();
+    this.header.getJavascriptAlerts().click();
+
+    const javascriptAlerts = new JavascriptAlertsPage();
+    return javascriptAlerts;
+  }
+
+  /**
+   * Method to click on the File Download option on the header menu. 
+   */
+  clickOnFileDownloadLinkHeader(){
+    this.header.getAlertsAndModals().click();
+    this.header.getFileDownload().click();
+
+    const fileDownload = new FileDownloadPage();
+    return fileDownload;
+  }
+
+  /*--------------------------------------------------------------------* 
+  |	List Box Submenu
+  *---------------------------------------------------------------------*/
+
+  /**
+   * Method to click on the Bootstrap List option on the header menu. 
+   */
+  clickOnBootstrapListLinkHeader(){
+    this.header.getListBox().click();
+    this.header.getBootstrapListBox().click();
+
+    const bootstrapList = new BootstrapListPage();
+    return bootstrapList;
+  }
+
+  /**
+   * Method to click on the JQuery List Box option on the header menu. 
+   */
+  clickOnJQueryListBoxLinkHeader(){
+    this.header.getListBox().click();
+    this.header.getJQueryListBox().click();
+
+    const jQueryListBox = new JQueryListBoxPage();
+    return jQueryListBox;
+  }
+
+  /**
+   * Method to click on the Data List Filter option on the header menu. 
+   */
+  clickOnDataListFilterLinkHeader(){
+    this.header.getListBox().click();
+    this.header.getDataListFilter().click();
+
+    const dataListFilter = new DataListFilterPage();
+    return dataListFilter;
+  }
+  
+  /*--------------------------------------------------------------------* 
+  |	Get Others Submenu
+  *---------------------------------------------------------------------*/
+
+  /**
+   * Method to click on the Drag and Drop option on the header menu. 
+   */
+  clickOnDragAndDropLinkHeader(){
+    this.header.getOthers().click();
+    this.header.getDragAndDrop().click();
+
+    const dragAndDrop = new DragAndDropPage();
+    return dragAndDrop;
+  }
+
+  /**
+   * Method to click on the Dynamic Data Loading option on the header menu. 
+   */
+  clickOnDynamicDataLoadingLinkHeader(){
+    this.header.getOthers().click();
+    this.header.getDynamicDataLoading().click();
+
+    const dynamicDataLoading = new DynamicDataLoadingPage();
+    return dynamicDataLoading;
+  }
+
+  /**
+   * Method to click on the Charts Demo dropdown option on the header menu. 
+   */
+  clickOnChartsDemoDropdownLinkHeader(){
+    this.header.getOthers().click();
+    this.header.getChartsDemo().click();
+
+    const chartsDemoDropdown = new ChartsDemoDropdownPage();
+    return chartsDemoDropdown;
+  }
 }
 
 export default HomePage;
