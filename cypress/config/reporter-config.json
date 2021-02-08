@@ -16,6 +16,7 @@
     "cypress-qase-reporterOptions": {
         "apiToken": "1b04d4873fa95fc7fce9fa2c1103db0db7d84823",
         "projectCode": "CYEX",
+        "runId": 4,
         "logging": true
     },
     "screenshotsFolder": "mochawesome-report/assets"
