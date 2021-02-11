@@ -36,7 +36,7 @@
     "cypress-multi-reporters": "^1.4.0",
     "cypress-qase-reporter": "^1.2.0",
     "cypress-wait-until": "^1.7.1",
-    "cypress-xpath": "^1.6.1",
+    "cypress-xpath": "^1.6.2",
     "mochawesome": "^6.2.1"
   },
   "dependencies": {
