@@ -12,8 +12,13 @@ jobs:
         uses: actions/checkout@v1
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v2
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: actions/github-script@v3
+        with:
+          script: npm Install
+          script: npm run test
       # Create mochawesome report and json to get the results
       - run: npm run merge_reports
       - run: npm run generate_mochawesome_report
