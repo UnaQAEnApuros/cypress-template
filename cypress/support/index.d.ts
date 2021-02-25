@@ -45,4 +45,10 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 	return false
 });
 
+/**
+ * Method to avoid a failure on the tests due to uncaught exceptions.
+ * More info here: https://docs.cypress.io/guides/references/error-messages.html#Uncaught-exceptions-from-your-application
+ */
+Cypress.on('uncaught:exception', () => false);
+
 
