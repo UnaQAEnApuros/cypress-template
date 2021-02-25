@@ -47,6 +47,8 @@ import DynamicDataLoadingPage from './others/DynamicDataLoadingPage';
 const env = Cypress.env();
 
 class HomePage {
+  footer: any;
+  header: any;
 
   /**
    * Homepage constructor. We need to create a new instance of the Header and the Footer. 
