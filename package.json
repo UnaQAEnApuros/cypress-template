@@ -18,7 +18,8 @@
   "keywords": [
     "cypress",
     "E2E",
-    "js"
+    "js",
+    "ts"
   ],
   "author": "Estefania Fernández Muñoz",
   "license": "ISC",
