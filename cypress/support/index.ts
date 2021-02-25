@@ -29,7 +29,7 @@ require('cypress-xpath');
 require('mochawesome/addContext');
 require('@cypress/skip-test/support')
 
-declare const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report
+const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report
 
 Cypress.on('test:after:run', (test, runnable) => {
 	if (test.state === 'failed') {

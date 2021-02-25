@@ -5,6 +5,8 @@
       "types": ["cypress", "node", "cypress-wait-until"], 
       "typeRoots": [ "../node_modules/@types" ], 
       "moduleResolution": "node",
+      "module": "es6",
+      "allowJs": true
     },
     "jsdoc": "jsdoc",
     "include": [
