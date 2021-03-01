@@ -14,14 +14,6 @@ jobs:
       # and run all Cypress tests
       - run: npm install
       - run: npm run test
-      # Create mochawesome report and json to get the results
-      - run: npm run merge_reports
-      - run: npm run generate_mochawesome_report
-  
-      # Display the results:
-      - run: chmod +x script/results.sh
-      - id: vars
-        run: echo ::set-output name=testResult::$(./script/results.sh)
 
       # Analyze the project with Sonar. 
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
@@ -44,6 +36,15 @@ jobs:
         with:
           name: mochawesome
           path: mochawesome-report
+      
+      # Create mochawesome report and json to get the results
+      - run: npm run merge_reports
+      - run: npm run generate_mochawesome_report
+
+      # Display the results:
+      - run: chmod +x script/results.sh
+      - id: vars
+        run: echo ::set-output name=testResult::$(./script/results.sh)
 
       # Publish Test Results
       - name: Publish Unit Test Results
