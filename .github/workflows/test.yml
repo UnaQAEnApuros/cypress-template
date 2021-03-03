@@ -19,6 +19,7 @@ jobs:
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
+        if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -30,21 +31,21 @@ jobs:
           name: report
           path: report
       
+      # Create mochawesome report and json to get the results
+      - run: npm run merge_reports
+      - run: npm run generate_mochawesome_report
+
+       # Display the results:
+      - run: chmod +x script/results.sh
+      - id: vars
+        run: echo ::set-output name=testResult::$(./script/results.sh)
+
       # Test run video was always captured, so this action uses "always()" condition
       - uses: actions/upload-artifact@v1
         if: always()
         with:
           name: mochawesome
           path: mochawesome-report
-      
-      # Create mochawesome report and json to get the results
-      - run: npm run merge_reports
-      - run: npm run generate_mochawesome_report
-
-      # Display the results:
-      - run: chmod +x script/results.sh
-      - id: vars
-        run: echo ::set-output name=testResult::$(./script/results.sh)
 
       # Publish Test Results
       - name: Publish Unit Test Results
