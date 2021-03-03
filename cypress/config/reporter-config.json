@@ -14,7 +14,7 @@
         "timestamp": "ddmmyyyy_HHMMss"
     },
     "cypressQaseReporterReporterOptions": {
-        "apiToken": "QASE_API_KEY",
+        "apiToken": "",
         "projectCode": "CYEX",
         "logging": true
     },
