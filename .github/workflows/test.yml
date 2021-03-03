@@ -15,7 +15,7 @@ jobs:
       - name: Replace API Key Qase
         uses: deef0000dragon1/json-edit-action/@v1
         env:
-          KEY: QASE_API_KEY
+          KEY: apiToken
           VALUE: ${{ secrets.QASE_API_TOKEN }}
           FILE: cypress/config/reporter-config.json
 
