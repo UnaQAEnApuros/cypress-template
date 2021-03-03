@@ -20,7 +20,7 @@ jobs:
           FILE: cypress/config/reporter-config.json
 
       # Check the changes
-      - run: cat config/reporter-config.json
+      - run: cat cypress/config/reporter-config.json
 
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
