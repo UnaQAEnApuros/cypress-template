@@ -13,11 +13,11 @@ jobs:
       
       # Replace API Key from Qase
       - name: Replace API Key Qase
-        uses: MerthinTechnologies/edit-json-action@v1
+        uses: jwsi/secret-parser@v1
         with:
-          filename: 'cypress/config/reporter-config.json'
-          key: 'apiToken'
-          value: ${{ secrets.QASE_API_TOKEN }}
+          filename: cypress/config/reporter-config.json
+          secret-name: apiToken
+          secret-value: ${{ secrets.QASE_API_TOKEN }}
 
       # Check the changes
       - run: cat cypress/config/reporter-config.json
