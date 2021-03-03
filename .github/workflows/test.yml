@@ -10,6 +10,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      
+      # Replace API Key from Qase
+      - name: manifest Version
+        uses: deef0000dragon1/json-edit-action/@v1
+        env:
+          KEY: QASE_API_KEY
+          VALUE: ${{ secrets.QASE_API_TOKEN }}
+          FILE: config/reporter-config.json
+
+      # Check the changes
+      - run: cat config/reporter-config.json
+      
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - run: npm install
