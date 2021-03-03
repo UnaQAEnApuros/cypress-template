@@ -20,12 +20,16 @@ jobs:
           secret-value: ${{ secrets.QASE_API_TOKEN }}
 
       # Check the changes
-      - run: cat cypress/config/reporter-config.json
+      - name: Check reporter config file
+        run: cat cypress/config/reporter-config.json
 
       # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - run: npm install
-      - run: npm run test
+      - name: Install dependencies
+        run: npm install
+
+      # Run all Cypress tests
+      - name: Run the tests
+        run: npm run test
 
       # Analyze the project with Sonar. 
       # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
@@ -44,11 +48,15 @@ jobs:
           path: report
       
       # Create mochawesome report and json to get the results
-      - run: npm run merge_reports
-      - run: npm run generate_mochawesome_report
+      - name: Merge mochawesome report
+        run: npm run merge_reports
+
+      - name: Generate mochawesome report. 
+        run: npm run generate_mochawesome_report
 
        # Display the results:
-      - run: chmod +x script/results.sh
+      - name: Display results
+        run: chmod +x script/results.sh
       - id: vars
         run: echo ::set-output name=testResult::$(./script/results.sh)
 
