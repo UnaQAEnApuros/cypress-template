@@ -27,7 +27,7 @@ describe('Others Tests', function () {
     }));
 
     qase([45],
-    it('should visit the web and click on the Charts Demo Link', function() {
+    it.skip('should visit the web and click on the Charts Demo Link', function() {
         home.visit();
         home.isReady();
         home.closePopUp();
