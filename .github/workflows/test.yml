@@ -10,18 +10,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      
+
       # Replace API Key from Qase
-      - name: Replace API Key Qase
-        uses: jwsi/secret-parser@v1
-        with:
-          filename: cypress/config/reporter-config.json
-          secret-name: apiToken
-          secret-value: ${{ secrets.QASE_API_TOKEN }}
+      # - name: Replace API Key Qase
+      #   uses: jwsi/secret-parser@v1
+      #   with:
+      #     filename: cypress/config/reporter-config.json
+      #     secret-name: apiToken
+      #     secret-value: ${{ secrets.QASE_API_TOKEN }}
 
       # Check the changes
-      - name: Check reporter config file
-        run: cat cypress/config/reporter-config.json
+      # - name: Check reporter config file
+      #   run: cat cypress/config/reporter-config.json
 
       # Install NPM dependencies, cache them correctly
       - name: Install dependencies
@@ -31,8 +31,8 @@ jobs:
       - name: Run the tests
         run: npm run test
 
-      # Analyze the project with Sonar. 
-      # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template 
+      # Analyze the project with Sonar.
+      # The result will be displayed in: https://sonarcloud.io/dashboard?id=estefafdez_cypress-template
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         if: always()
@@ -46,15 +46,15 @@ jobs:
         with:
           name: report
           path: report
-      
+
       # Create mochawesome report and json to get the results
       - name: Merge mochawesome report
         run: npm run merge_reports
 
-      - name: Generate mochawesome report. 
+      - name: Generate mochawesome report.
         run: npm run generate_mochawesome_report
 
-       # Display the results:
+        # Display the results:
       - name: Display results
         run: chmod +x script/results.sh
       - id: vars
@@ -74,7 +74,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           files: report/*.xml
-      
+
       # Slack Notify
       - name: Slack Notify
         uses: rtCamp/action-slack-notify@v2.1.2
@@ -84,6 +84,6 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_ICON: https://github.com/estefafdez/cypress-template/blob/main/script/github.png
           SLACK_USERNAME: "Github Actions"
-          SLACK_FOOTER: 'Github project: https://github.com/estefafdez/cypress-template'
+          SLACK_FOOTER: "Github project: https://github.com/estefafdez/cypress-template"
           SLACK_TITLE: "Test Suite Results:"
           SLACK_MESSAGE: ${{ steps.vars.outputs.testResult }}
