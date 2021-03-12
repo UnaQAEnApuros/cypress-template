@@ -9,8 +9,8 @@
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
 
-const fs = require('fs-extra');
-const path = require('path');
+import fs = require('fs-extra');
+import path = require('path');
 
 
 /**
