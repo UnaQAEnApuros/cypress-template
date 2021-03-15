@@ -15,5 +15,5 @@
     }, 
     "pageLoadTimeout": 60000, 
     "supportFile": "cypress/support/commands.ts", 
-    "projectId": "z54zm2"
+    "projectId": "iyhpy5"
 }

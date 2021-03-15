@@ -6,7 +6,7 @@
   "scripts": {
     "verify": "cypress verify",
     "open": "cypress open --env configFile=qa",
-    "test": "QASE_REPORT=1 cypress run --env configFile=qa --browser chrome --record --key 0364d29d-06e1-40a8-9ba9-a839be2ad071",
+    "test": "QASE_REPORT=1 cypress run --env configFile=qa --browser chrome --record --key 54356502-5013-48cb-96c8-f361904228f2",
     "test:edge": "cypress run --env configFile=qa --browser edge --headless",
     "merge_reports": "mochawesome-merge --reportDir mochawesome-report > mochawesome-report/Final_Report.json",
     "generate_mochawesome_report": "marge mochawesome-report/Final_Report.json"
@@ -42,7 +42,7 @@
     "mochawesome": "^6.2.2",
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
-    "webpack": "^5.25.0"
+    "webpack": "^5.25.1"
   },
   "dependencies": {
     "mocha": "^8.3.2",
