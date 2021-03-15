@@ -42,7 +42,7 @@
     "mochawesome": "^6.2.2",
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
-    "webpack": "^5.25.0"
+    "webpack": "^5.25.1"
   },
   "dependencies": {
     "mocha": "^8.3.2",
