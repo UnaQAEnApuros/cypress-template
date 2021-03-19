@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */2 * * *"
 jobs:
   cypress-run:
     runs-on: ubuntu-16.04
@@ -11,17 +11,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      # Replace API Key from Qase
-      # - name: Replace API Key Qase
-      #   uses: jwsi/secret-parser@v1
-      #   with:
-      #     filename: cypress/config/reporter-config.json
-      #     secret-name: apiToken
-      #     secret-value: ${{ secrets.QASE_API_TOKEN }}
+      # Replace secrets on the project.
 
-      # Check the changes
-      # - name: Check reporter config file
-      #   run: cat cypress/config/reporter-config.json
+      - name: Replace Cypress Dashboard API Key secret on the package.json
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "{CYPRESS_DASHBOARD_APIKEY}"
+          replace: ${{ secrets.CYPRESS_DASHBOARD_APIKEY }}
+
+      - name: Replace Qase API Token secret on the package.json
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "{QASE_API_TOKEN}"
+          replace: ${{ secrets.QASE_API_TOKEN }}
 
       # Install NPM dependencies, cache them correctly
       - name: Install dependencies
