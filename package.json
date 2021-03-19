@@ -45,6 +45,7 @@
     "webpack": "^5.26.3"
   },
   "dependencies": {
+    "depcheck": "^1.4.0",
     "mocha": "^8.3.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0",
