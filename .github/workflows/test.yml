@@ -26,10 +26,11 @@ jobs:
       # Replace Cypress Dashboard API Key secret on the package.json
       #- run: sed -i "s/{CYPRESS_DASHBOARD_APIKEY}/${{ secrets.CYPRESS_DASHBOARD_APIKEY }}" cypress/package.json > cypress/package.json.changed && mv cypress/package.json.changed cypress/package.json
 
-      - name: sed
-        uses: lefherz/action-sed@master
-          with:
-            args: sed -ie "s/{CYPRESS_DASHBOARD_APIKEY}/${{ secrets.CYPRESS_DASHBOARD_APIKEY }}" cypress/package.json > cypress/package.json.changed && mv cypress/package.json.changed cypress/package.json
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "{CYPRESS_DASHBOARD_APIKEY}"
+          replace: ${{ secrets.CYPRESS_DASHBOARD_APIKEY }}
 
       - run: cat cypress/package.json
 
