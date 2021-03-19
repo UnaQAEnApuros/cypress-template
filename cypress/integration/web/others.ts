@@ -9,7 +9,7 @@ describe("Others Tests", function () {
 
   qase(
     [43],
-    it("should visit the web and click on the Drag and Drop Link", function () {
+    it("[43, WEB] should visit the web and click on the Drag and Drop Link", function () {
       home.visit();
       home.isReady();
       home.closePopUp();
@@ -20,7 +20,7 @@ describe("Others Tests", function () {
 
   qase(
     [44],
-    it("should visit the web and click on the Dynamic Data Link", function () {
+    it("[44, WEB] should visit the web and click on the Dynamic Data Link", function () {
       home.visit();
       home.isReady();
       home.closePopUp();
@@ -31,7 +31,7 @@ describe("Others Tests", function () {
 
   qase(
     [45],
-    it("should visit the web and click on the Charts Demo Link", function () {
+    it("[45, WEB] should visit the web and click on the Charts Demo Link", function () {
       home.visit();
       home.isReady();
       home.closePopUp();
