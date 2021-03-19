@@ -24,7 +24,7 @@ jobs:
       #   run: cat cypress/config/reporter-config.json
 
       # Replace Cypress Dashboard API Key secret on the package.json
-      - run: sed "s/{CYPRESS_DASHBOARD_APIKEY}/${{ secrets.CYPRESS_DASHBOARD_APIKEY }}" cypress/package.json > cypress/package.json.changed && mv cypress/package.json.changed cypress/package.json
+      - run: sed -i "s/{CYPRESS_DASHBOARD_APIKEY}/${{ secrets.CYPRESS_DASHBOARD_APIKEY }}" cypress/package.json > cypress/package.json.changed && mv cypress/package.json.changed cypress/package.json
       - run: cat cypress/package.json
 
       # Install NPM dependencies, cache them correctly
