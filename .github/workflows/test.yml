@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */2 * * *"
 jobs:
   cypress-run:
     runs-on: ubuntu-16.04
@@ -22,6 +22,9 @@ jobs:
       # Check the changes
       # - name: Check reporter config file
       #   run: cat cypress/config/reporter-config.json
+
+      #/home/runner/work/cypress-template/cypress-templat
+      - run: pwd
 
       # Install NPM dependencies, cache them correctly
       - name: Install dependencies
