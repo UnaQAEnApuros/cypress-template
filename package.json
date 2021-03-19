@@ -45,6 +45,7 @@
     "webpack": "^5.26.3"
   },
   "dependencies": {
+    "cypress-select-tests": "^1.6.0",
     "depcheck": "^1.4.0",
     "mocha": "^8.3.2",
     "mochawesome-merge": "^4.2.0",
