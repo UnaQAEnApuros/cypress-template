@@ -32,9 +32,7 @@ jobs:
           find: "{CYPRESS_DASHBOARD_APIKEY}"
           replace: ${{ secrets.CYPRESS_DASHBOARD_APIKEY }}
 
-      - run: pwd
-      - run: ls -la
-      - run: cat /home/runner/work/cypress-template/cypress-template/cypress/package.json
+      - run: cat package.json
 
       # Install NPM dependencies, cache them correctly
       - name: Install dependencies
