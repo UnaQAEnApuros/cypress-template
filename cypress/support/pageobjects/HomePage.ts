@@ -1,48 +1,48 @@
-import Header from './Header';
-import Footer from './Footer';
+import Header from "./Header";
+import Footer from "./Footer";
 
 // Input Forms imports
-import AjaxFormSubmitPage from './inputforms/AjaxFormSubmitPage';
-import CheckboxDemoPage from './inputforms/CheckboxDemoPage';
-import InputFormSubmitPage from './inputforms/InputFormSubmitPage';
-import JQuerySelectDropdownPage from './inputforms/JQuerySelectDropdownPage';
-import RadioButtonsDemoPage from './inputforms/RadioButtonsDemoPage';
-import SelectDropdownListPage from './inputforms/SelectDropdownListPage';
-import SimpleFormDemoPage from './inputforms/SimpleFormDemoPage';
+import AjaxFormSubmitPage from "./inputforms/AjaxFormSubmitPage";
+import CheckboxDemoPage from "./inputforms/CheckboxDemoPage";
+import InputFormSubmitPage from "./inputforms/InputFormSubmitPage";
+import JQuerySelectDropdownPage from "./inputforms/JQuerySelectDropdownPage";
+import RadioButtonsDemoPage from "./inputforms/RadioButtonsDemoPage";
+import SelectDropdownListPage from "./inputforms/SelectDropdownListPage";
+import SimpleFormDemoPage from "./inputforms/SimpleFormDemoPage";
 
 // Date Pickers imports
-import BootstrapDatePickerPage from './datepickers/BootstrapDatePickerPage';
-import JQueryDatePickerPage from './datepickers/JQueryDatePickerPage';
+import BootstrapDatePickerPage from "./datepickers/BootstrapDatePickerPage";
+import JQueryDatePickerPage from "./datepickers/JQueryDatePickerPage";
 
 // Table imports
-import TableDataDownloadPage from './table/TableDataDownloadPage';
-import TableDataSearchPage from './table/TableDataSearchPage';
-import TableFilterPage from './table/TableFilterPage';
-import TablePaginationPage from './table/TablePaginationPage';
-import TableSortAndSearchPage from './table/TableSortAndSearchPage';
+import TableDataDownloadPage from "./table/TableDataDownloadPage";
+import TableDataSearchPage from "./table/TableDataSearchPage";
+import TableFilterPage from "./table/TableFilterPage";
+import TablePaginationPage from "./table/TablePaginationPage";
+import TableSortAndSearchPage from "./table/TableSortAndSearchPage";
 
 // Progress Bar
-import BootstrapProgressBarPage from './progressbar/BootstrapProgressBarPage';
-import DragAndDropSlidersPage from './progressbar/DragAndDropSlidersPage';
-import JQueryDownloadProgressBarsPage from './progressbar/JQueryDownloadProgressBarsPage';
+import BootstrapProgressBarPage from "./progressbar/BootstrapProgressBarPage";
+import DragAndDropSlidersPage from "./progressbar/DragAndDropSlidersPage";
+import JQueryDownloadProgressBarsPage from "./progressbar/JQueryDownloadProgressBarsPage";
 
 // Alerts & Modals
-import BootstrapAlertsPage from './alertsandmodals/BootstrapAlertsPage';
-import BootstrapModalsPage from './alertsandmodals/BootstrapModalsPage';
-import FileDownloadPage from './alertsandmodals/FileDownloadPage';
-import JavascriptAlertsPage from './alertsandmodals/JavascriptAlertsPage';
-import ProgressBarModalPage from './alertsandmodals/ProgressBarModalPage';
-import WindowPopupModalPage from './alertsandmodals/WindowPopupModalPage';
+import BootstrapAlertsPage from "./alertsandmodals/BootstrapAlertsPage";
+import BootstrapModalsPage from "./alertsandmodals/BootstrapModalsPage";
+import FileDownloadPage from "./alertsandmodals/FileDownloadPage";
+import JavascriptAlertsPage from "./alertsandmodals/JavascriptAlertsPage";
+import ProgressBarModalPage from "./alertsandmodals/ProgressBarModalPage";
+import WindowPopupModalPage from "./alertsandmodals/WindowPopupModalPage";
 
 // List Box
-import BootstrapListPage from './listbox/BootstrapListPage';
-import DataListFilterPage from './listbox/DataListFilterPage';
-import JQueryListBoxPage from './listbox/JQueryListBoxPage';
+import BootstrapListPage from "./listbox/BootstrapListPage";
+import DataListFilterPage from "./listbox/DataListFilterPage";
+import JQueryListBoxPage from "./listbox/JQueryListBoxPage";
 
 // Get Others
-import ChartsDemoDropdownPage from './others/ChartsDemoDropdownPage';
-import DragAndDropPage from './others/DragAndDropPage';
-import DynamicDataLoadingPage from './others/DynamicDataLoadingPage';
+import ChartsDemoDropdownPage from "./others/ChartsDemoDropdownPage";
+import DragAndDropPage from "./others/DragAndDropPage";
+import DynamicDataLoadingPage from "./others/DynamicDataLoadingPage";
 
 const env = Cypress.env();
 
@@ -51,13 +51,13 @@ class HomePage {
   header: any;
 
   /**
-   * Homepage constructor. We need to create a new instance of the Header and the Footer. 
+   * Homepage constructor. We need to create a new instance of the Header and the Footer.
    */
   constructor() {
     this.header = new Header();
     this.footer = new Footer();
   }
-  
+
   /**
    * Method to visit the webpage URL
    */
@@ -71,20 +71,21 @@ class HomePage {
   isReady() {
     this.header.isReady();
 
-    cy.url().should('eq', 'https://www.seleniumeasy.com/test/');
-    cy.get('body > :nth-child(2)').should('be.visible');
-    cy.get('#easycont > :nth-child(1)').should('be.visible');
+    cy.url().should("eq", "https://www.seleniumeasy.com/test/");
+    cy.get("body > :nth-child(2)").should("be.visible");
+    cy.get("#easycont > :nth-child(1)").should("be.visible");
 
     this.footer.isReady();
   }
 
   /**
-   * Method to click to close the popup once is displayed. 
+   * Method to click to close the popup once is displayed.
    */
-  closePopUp(){
-    const checkPopup = () => cy.get('#at-cv-lightbox-header').should('be.visible');
+  closePopUp() {
+    const checkPopup = () =>
+      cy.get("#at-cv-lightbox-header").should("be.visible");
     cy.waitUntil(checkPopup).then(() => {
-      cy.get('#at-cv-lightbox-close').click();
+      cy.get("#at-cv-lightbox-close").click();
     });
   }
 
@@ -93,9 +94,9 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the Simple Form Demo option on the header menu. 
+   * Method to click on the Simple Form Demo option on the header menu.
    */
-  clickOnSimpleFormDemoLinkHeader(){
+  clickOnSimpleFormDemoLinkHeader() {
     this.header.getInputForm().click();
     this.header.getSimpleFormDemo().click();
 
@@ -104,9 +105,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Checkbox Demo option on the header menu. 
+   * Method to click on the Checkbox Demo option on the header menu.
    */
-  clickOnCheckboxDemoLinkHeader(){
+  clickOnCheckboxDemoLinkHeader() {
     this.header.getInputForm().click();
     this.header.getCheckboxDemo().click();
 
@@ -115,9 +116,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Radio Buttons Demo option on the header menu. 
+   * Method to click on the Radio Buttons Demo option on the header menu.
    */
-  clickOnRadioButtonsDemoLinkHeader(){
+  clickOnRadioButtonsDemoLinkHeader() {
     this.header.getInputForm().click();
     this.header.getRadioButtonsDemo().click();
 
@@ -126,9 +127,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Select Dropdown List option on the header menu. 
+   * Method to click on the Select Dropdown List option on the header menu.
    */
-  clickOnSelectDropdownListLinkHeader(){
+  clickOnSelectDropdownListLinkHeader() {
     this.header.getInputForm().click();
     this.header.getSelectDropdownList().click();
 
@@ -137,9 +138,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Input Form Submit option on the header menu. 
+   * Method to click on the Input Form Submit option on the header menu.
    */
-  clickOnInputFormSubmitLinkHeader(){
+  clickOnInputFormSubmitLinkHeader() {
     this.header.getInputForm().click();
     this.header.getInputFormSubmit().click();
 
@@ -148,9 +149,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Ajax Form Submit option on the header menu. 
+   * Method to click on the Ajax Form Submit option on the header menu.
    */
-  clickOnAjaxFormSubmitLinkHeader(){
+  clickOnAjaxFormSubmitLinkHeader() {
     this.header.getInputForm().click();
     this.header.getAjaxFormSubmit().click();
 
@@ -159,9 +160,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the JQuery Select option on the header menu. 
+   * Method to click on the JQuery Select option on the header menu.
    */
-  clickOnAjaxFormSubmitLinkHeader(){
+  clickOnAjaxFormSubmitLinkHeader() {
     this.header.getInputForm().click();
     this.header.getJQuerySelectDropdown().click();
 
@@ -174,9 +175,9 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the Bootstrap Date Picker option on the header menu. 
+   * Method to click on the Bootstrap Date Picker option on the header menu.
    */
-  clickOnBootstrapDatePickerLinkHeader(){
+  clickOnBootstrapDatePickerLinkHeader() {
     this.header.getDatePickers().click();
     this.header.getBootstrapDatePicker().click();
 
@@ -185,9 +186,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the JQuery Date Picker option on the header menu. 
+   * Method to click on the JQuery Date Picker option on the header menu.
    */
-  clickOnJQueryDatePickerLinkHeader(){
+  clickOnJQueryDatePickerLinkHeader() {
     this.header.getDatePickers().click();
     this.header.getJQueryDatePicker().click();
 
@@ -200,9 +201,9 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the Table Pagination option on the header menu. 
+   * Method to click on the Table Pagination option on the header menu.
    */
-  clickOnTablePaginationLinkHeader(){
+  clickOnTablePaginationLinkHeader() {
     this.header.getTable().click();
     this.header.getTablePagination().click();
 
@@ -211,9 +212,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Table Data Search option on the header menu. 
+   * Method to click on the Table Data Search option on the header menu.
    */
-  clickOnTableDataSearchLinkHeader(){
+  clickOnTableDataSearchLinkHeader() {
     this.header.getTable().click();
     this.header.getTableDataSearch().click();
 
@@ -222,9 +223,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Table Filter option on the header menu. 
+   * Method to click on the Table Filter option on the header menu.
    */
-  clickOnTableFilterLinkHeader(){
+  clickOnTableFilterLinkHeader() {
     this.header.getTable().click();
     this.header.getTableFilter().click();
 
@@ -233,9 +234,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Table Sort & Search option on the header menu. 
+   * Method to click on the Table Sort & Search option on the header menu.
    */
-  clickOnTableSortAndSearchLinkHeader(){
+  clickOnTableSortAndSearchLinkHeader() {
     this.header.getTable().click();
     this.header.getTableSortAndSearch().click();
 
@@ -244,9 +245,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Table Data Download option on the header menu. 
+   * Method to click on the Table Data Download option on the header menu.
    */
-  clickOnTableDataDownloadLinkHeader(){
+  clickOnTableDataDownloadLinkHeader() {
     this.header.getTable().click();
     this.header.getTableDataDownload().click();
 
@@ -259,9 +260,9 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the Demo Home Link option on the header menu. 
+   * Method to click on the Demo Home Link option on the header menu.
    */
-  clickOnDemoHomeLinkHeader(){
+  clickOnDemoHomeLinkHeader() {
     this.header.getDemoHome().click();
   }
 
@@ -270,9 +271,9 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the JQuery Download Progress bars option on the header menu. 
+   * Method to click on the JQuery Download Progress bars option on the header menu.
    */
-  clickOnJQueryDownloadProgressBarsLinkHeader(){
+  clickOnJQueryDownloadProgressBarsLinkHeader() {
     this.header.getProgressBar().click();
     this.header.getJQueryDownloadProgressBars().click();
 
@@ -281,9 +282,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Bootstrap Progress bar option on the header menu. 
+   * Method to click on the Bootstrap Progress bar option on the header menu.
    */
-  clickOnBootstrapProgressBarLinkHeader(){
+  clickOnBootstrapProgressBarLinkHeader() {
     this.header.getProgressBar().click();
     this.header.getBootstrapProgressBar().click();
 
@@ -292,9 +293,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Drag & Drop Sliders option on the header menu. 
+   * Method to click on the Drag & Drop Sliders option on the header menu.
    */
-  clickOnDragAndDropSlidersLinkHeader(){
+  clickOnDragAndDropSlidersLinkHeader() {
     this.header.getProgressBar().click();
     this.header.getDragAndDropSliders().click();
 
@@ -307,9 +308,9 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the Bootstrap Alerts option on the header menu. 
+   * Method to click on the Bootstrap Alerts option on the header menu.
    */
-  clickOnBootstrapAlertsLinkHeader(){
+  clickOnBootstrapAlertsLinkHeader() {
     this.header.getAlertsAndModals().click();
     this.header.getBootstrapAlerts().click();
 
@@ -318,9 +319,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Bootstrap Modals option on the header menu. 
+   * Method to click on the Bootstrap Modals option on the header menu.
    */
-  clickOnBootstrapModalsLinkHeader(){
+  clickOnBootstrapModalsLinkHeader() {
     this.header.getAlertsAndModals().click();
     this.header.getBootstrapModals().click();
 
@@ -329,9 +330,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Window Popup Modal option on the header menu. 
+   * Method to click on the Window Popup Modal option on the header menu.
    */
-  clickOnWindowPopupModalLinkHeader(){
+  clickOnWindowPopupModalLinkHeader() {
     this.header.getAlertsAndModals().click();
     this.header.getWindowPopupModal().click();
 
@@ -340,9 +341,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Progress Bar Modal option on the header menu. 
+   * Method to click on the Progress Bar Modal option on the header menu.
    */
-  clickOnProgressBarModalLinkHeader(){
+  clickOnProgressBarModalLinkHeader() {
     this.header.getAlertsAndModals().click();
     this.header.getProgressBarModal().click();
 
@@ -351,9 +352,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Javascript Alerts option on the header menu. 
+   * Method to click on the Javascript Alerts option on the header menu.
    */
-  clickOnJavascriptAlertsLinkHeader(){
+  clickOnJavascriptAlertsLinkHeader() {
     this.header.getAlertsAndModals().click();
     this.header.getJavascriptAlerts().click();
 
@@ -362,9 +363,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the File Download option on the header menu. 
+   * Method to click on the File Download option on the header menu.
    */
-  clickOnFileDownloadLinkHeader(){
+  clickOnFileDownloadLinkHeader() {
     this.header.getAlertsAndModals().click();
     this.header.getFileDownload().click();
 
@@ -377,9 +378,9 @@ class HomePage {
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the Bootstrap List option on the header menu. 
+   * Method to click on the Bootstrap List option on the header menu.
    */
-  clickOnBootstrapListLinkHeader(){
+  clickOnBootstrapListLinkHeader() {
     this.header.getListBox().click();
     this.header.getBootstrapListBox().click();
 
@@ -388,9 +389,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the JQuery List Box option on the header menu. 
+   * Method to click on the JQuery List Box option on the header menu.
    */
-  clickOnJQueryListBoxLinkHeader(){
+  clickOnJQueryListBoxLinkHeader() {
     this.header.getListBox().click();
     this.header.getJQueryListBox().click();
 
@@ -399,24 +400,24 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Data List Filter option on the header menu. 
+   * Method to click on the Data List Filter option on the header menu.
    */
-  clickOnDataListFilterLinkHeader(){
+  clickOnDataListFilterLinkHeader() {
     this.header.getListBox().click();
     this.header.getDataListFilter().click();
 
     const dataListFilter = new DataListFilterPage();
     return dataListFilter;
   }
-  
+
   /*--------------------------------------------------------------------* 
   |	Get Others Submenu
   *---------------------------------------------------------------------*/
 
   /**
-   * Method to click on the Drag and Drop option on the header menu. 
+   * Method to click on the Drag and Drop option on the header menu.
    */
-  clickOnDragAndDropLinkHeader(){
+  clickOnDragAndDropLinkHeader() {
     this.header.getOthers().click();
     this.header.getDragAndDrop().click();
 
@@ -425,9 +426,9 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Dynamic Data Loading option on the header menu. 
+   * Method to click on the Dynamic Data Loading option on the header menu.
    */
-  clickOnDynamicDataLoadingLinkHeader(){
+  clickOnDynamicDataLoadingLinkHeader() {
     this.header.getOthers().click();
     this.header.getDynamicDataLoading().click();
 
@@ -436,11 +437,12 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Charts Demo dropdown option on the header menu. 
+   * Method to click on the Charts Demo dropdown option on the header menu.
    */
-  clickOnChartsDemoDropdownLinkHeader(){
+  clickOnChartsDemoDropdownLinkHeader() {
     this.header.getOthers().click();
     this.header.getChartsDemo().click();
+    Cypress.on("uncaught:exception", () => false);
 
     const chartsDemoDropdown = new ChartsDemoDropdownPage();
     return chartsDemoDropdown;
