@@ -14,7 +14,7 @@ describe('API POST 200 Request', function () {
           name: 'Estefania',
           job: 'QA Automation Engineer'
         }
-      }).then(response => {
+      }).then((response) => {
         expect(response.status).to.eq(201)
         expect(response.body).property('name').to.equal('Estefania')
         expect(response.body).property('job').to.equal('QA Automation Engineer')
@@ -34,7 +34,7 @@ describe('API POST 200 Request', function () {
           email: 'eve.holt@reqres.in',
           password: 'pistol'
         }
-      }).then(response => {
+      }).then((response) => {
         expect(response.status).to.eq(200)
         expect(response.body).have.property('id')
         expect(response.body).have.property('token')
@@ -52,7 +52,7 @@ describe('API POST 200 Request', function () {
           email: 'eve.holt@reqres.in',
           password: 'cityslicka'
         }
-      }).then(response => {
+      }).then((response) => {
         expect(response.status).to.eq(200)
         expect(response.body).property('token').to.eq('QpwL5tke4Pnpja7X4')
       })
@@ -71,7 +71,7 @@ describe('API POST 4xx Request', function () {
           email: 'sydney@fife'
         },
         failOnStatusCode: false
-      }).then(response => {
+      }).then((response) => {
         expect(response.status).to.eq(400)
         expect(response.body).property('error').to.eq('Missing password')
       })
@@ -88,7 +88,7 @@ describe('API POST 4xx Request', function () {
           email: 'peter@klaven'
         },
         failOnStatusCode: false
-      }).then(response => {
+      }).then((response) => {
         expect(response.status).to.eq(400)
         expect(response.body).property('error').to.eq('Missing password')
       })
