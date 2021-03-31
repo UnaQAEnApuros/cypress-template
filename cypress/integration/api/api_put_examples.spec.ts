@@ -14,7 +14,7 @@ describe('API PUT 200 Request', function () {
           name: 'morpheus',
           job: 'zion resident'
         }
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(200)
         expect(response.body).property('name').to.equal('morpheus')
         expect(response.body).property('job').to.equal('zion resident')
