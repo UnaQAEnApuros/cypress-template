@@ -88,7 +88,7 @@ describe('Input Form Tests', function () {
       home.visit()
       home.isReady()
       home.closePopUp()
-      const jQuerySelectDropdown = home.clickOnAjaxFormSubmitLinkHeader()
+      const jQuerySelectDropdown = home.clickOnJqueryFormSubmitLinkHeader()
       jQuerySelectDropdown.isReady()
     })
   )
