@@ -1,0 +1,7 @@
+{
+    "env": {
+        "name": "local", 
+        "apiURL": "https://reqres.in",
+        "webURL": "https://www.seleniumeasy.com/test/"
+    }
+}

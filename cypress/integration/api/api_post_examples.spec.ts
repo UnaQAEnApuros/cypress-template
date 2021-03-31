@@ -1,99 +1,97 @@
 /* global cy, Cypress */
 /// <reference types="Cypress" />
-const env = Cypress.env();
-import { qase } from "cypress-qase-reporter/dist/mocha";
+const env = Cypress.env()
+import { qase } from 'cypress-qase-reporter/dist/mocha'
 
-describe("API POST 200 Request", function () {
+describe('API POST 200 Request', function () {
   qase(
     [8],
-    it("[8, API] should get a 201 response after a POST request to create a new user", function () {
+    it('[8, API] should get a 201 response after a POST request to create a new user', function () {
       cy.request({
-        method: "POST",
-        url: env.apiURL + "/api/users",
+        method: 'POST',
+        url: env.apiURL + '/api/users',
         body: {
-          name: "Estefania",
-          job: "QA Automation Engineer",
-        },
+          name: 'Estefania',
+          job: 'QA Automation Engineer'
+        }
       }).then((response) => {
-        expect(response.status).to.eq(201);
-        expect(response.body).property("name").to.equal("Estefania");
-        expect(response.body)
-          .property("job")
-          .to.equal("QA Automation Engineer");
-        expect(response.body).have.property("id");
-        expect(response.body).have.property("createdAt");
-      });
+        expect(response.status).to.eq(201)
+        expect(response.body).property('name').to.equal('Estefania')
+        expect(response.body).property('job').to.equal('QA Automation Engineer')
+        expect(response.body).have.property('id')
+        expect(response.body).have.property('createdAt')
+      })
     })
-  );
+  )
 
   qase(
     [9],
-    it("[9, API] should get a 200 response after a POST request to register a new user successfully", function () {
+    it('[9, API] should get a 200 response after a POST request to register a new user successfully', function () {
       cy.request({
-        method: "POST",
-        url: env.apiURL + "/api/register",
+        method: 'POST',
+        url: env.apiURL + '/api/register',
         body: {
-          email: "eve.holt@reqres.in",
-          password: "pistol",
-        },
+          email: 'eve.holt@reqres.in',
+          password: 'pistol'
+        }
       }).then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response.body).have.property("id");
-        expect(response.body).have.property("token");
-      });
+        expect(response.status).to.eq(200)
+        expect(response.body).have.property('id')
+        expect(response.body).have.property('token')
+      })
     })
-  );
+  )
 
   qase(
     [11],
-    it("[11, API] should get a 200 response after a POST request to login with a user successfully", function () {
+    it('[11, API] should get a 200 response after a POST request to login with a user successfully', function () {
       cy.request({
-        method: "POST",
-        url: env.apiURL + "/api/login",
+        method: 'POST',
+        url: env.apiURL + '/api/login',
         body: {
-          email: "eve.holt@reqres.in",
-          password: "cityslicka",
-        },
+          email: 'eve.holt@reqres.in',
+          password: 'cityslicka'
+        }
       }).then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response.body).property("token").to.eq("QpwL5tke4Pnpja7X4");
-      });
+        expect(response.status).to.eq(200)
+        expect(response.body).property('token').to.eq('QpwL5tke4Pnpja7X4')
+      })
     })
-  );
-});
+  )
+})
 
-describe("API POST 4xx Request", function () {
+describe('API POST 4xx Request', function () {
   qase(
     [10],
-    it("[10, API] should get a 400 response after a POST request to register a new user without a password set unsuccessfully", function () {
+    it('[10, API] should get a 400 response after a POST request to register a new user without a password set unsuccessfully', function () {
       cy.request({
-        method: "POST",
-        url: env.apiURL + "/api/register",
+        method: 'POST',
+        url: env.apiURL + '/api/register',
         body: {
-          email: "sydney@fife",
+          email: 'sydney@fife'
         },
-        failOnStatusCode: false,
+        failOnStatusCode: false
       }).then((response) => {
-        expect(response.status).to.eq(400);
-        expect(response.body).property("error").to.eq("Missing password");
-      });
+        expect(response.status).to.eq(400)
+        expect(response.body).property('error').to.eq('Missing password')
+      })
     })
-  );
+  )
 
   qase(
     [12],
-    it("[12, API] should get a 400 response after a POST request to login with a user without a password set unsuccessfully", function () {
+    it('[12, API] should get a 400 response after a POST request to login with a user without a password set unsuccessfully', function () {
       cy.request({
-        method: "POST",
-        url: env.apiURL + "/api/login",
+        method: 'POST',
+        url: env.apiURL + '/api/login',
         body: {
-          email: "peter@klaven",
+          email: 'peter@klaven'
         },
-        failOnStatusCode: false,
+        failOnStatusCode: false
       }).then((response) => {
-        expect(response.status).to.eq(400);
-        expect(response.body).property("error").to.eq("Missing password");
-      });
+        expect(response.status).to.eq(400)
+        expect(response.body).property('error').to.eq('Missing password')
+      })
     })
-  );
-});
+  )
+})

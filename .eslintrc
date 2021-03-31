@@ -1,0 +1,21 @@
+{
+    "env": {
+      "node": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "rules": {
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "linebreak-style": ["error", "unix"],
+      "quotes": ["error", "single"],
+      "semi": ["error", "never"],
+      "no-console": ["warn", { "allow": ["info", "error"] }],
+      "arrow-parens": ["error", "as-needed"]
+    }
+}

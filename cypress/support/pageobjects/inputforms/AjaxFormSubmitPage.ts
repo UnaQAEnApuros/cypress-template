@@ -1,14 +1,16 @@
 class AjaxFormSubmitPage {
-
-    /**
-    * Method to check if the AjaxFormSubmitPage is visible
-    */
-    isReady(){
-        cy.url().should('eq', 'https://www.seleniumeasy.com/test/ajax-form-submit-demo.html');
-        cy.get('h1').contains('Ajax Form Submit with Loading icon').should('be.visible');
-    }
-
-
+  /**
+   * Method to check if the AjaxFormSubmitPage is visible
+   */
+  isReady() {
+    cy.url().should(
+      'eq',
+      'https://www.seleniumeasy.com/test/ajax-form-submit-demo.html'
+    )
+    cy.get('h1')
+      .contains('Ajax Form Submit with Loading icon')
+      .should('be.visible')
   }
-  
-  export default AjaxFormSubmitPage;
+}
+
+export default AjaxFormSubmitPage

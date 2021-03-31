@@ -16,30 +16,30 @@
 // Import commands.js using ES2015 syntax:
 // @ts-check
 
-import "./commands";
-import "@bahmutov/cy-api/support";
-import "@testing-library/cypress/add-commands";
-import "cypress-wait-until";
-import "pretty-console-colors";
-import "cypress-wait-until";
+import './commands'
+import '@bahmutov/cy-api/support'
+import '@testing-library/cypress/add-commands'
+import 'cypress-wait-until'
+import 'pretty-console-colors'
+import 'cypress-wait-until'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-require("cypress-xpath");
-require("mochawesome/addContext");
-require("@cypress/skip-test/support");
+require('cypress-xpath')
+require('mochawesome/addContext')
+require('@cypress/skip-test/support')
 
-const addContext = require("mochawesome/addContext"); // add failed screenshot to mochawesome report
+const addContext = require('mochawesome/addContext') // add failed screenshot to mochawesome report
 
-Cypress.on("test:after:run", (test, runnable) => {
-  if (test.state === "failed") {
-    const screenshotFileName = `${runnable.parent.title} -- ${test.title} (failed).png`;
-    addContext({ test }, `assets/${Cypress.spec.name}/${screenshotFileName}`);
+Cypress.on('test:after:run', (test, runnable) => {
+  if (test.state === 'failed') {
+    const screenshotFileName = `${runnable.parent.title} -- ${test.title} (failed).png`
+    addContext({ test }, `assets/${Cypress.spec.name}/${screenshotFileName}`)
   }
-});
+})
 
 /**
  * Method to avoid a failure on the tests due to uncaught exceptions.
  * More info here: https://docs.cypress.io/guides/references/error-messages.html#Uncaught-exceptions-from-your-application
  */
-Cypress.on("uncaught:exception", () => false);
+Cypress.on('uncaught:exception', () => false)
