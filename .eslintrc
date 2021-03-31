@@ -1,0 +1,16 @@
+{
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "linebreak-style": ["error", "unix"],
+      "quotes": ["error", "single"],
+      "semi": ["error", "never"],
+      "no-console": ["warn", { "allow": ["info", "error"] }],
+      "arrow-parens": ["error", "as-needed"]
+    }
+}
