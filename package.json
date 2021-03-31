@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "verify": "cypress verify",
-    "open": "cypress open --env configFile=qa",
+    "open": "cypress open --env configFile=local",
     "test": "QASE_REPORT=1 cypress run --env configFile=qa --record --key {CYPRESS_DASHBOARD_APIKEY} --parallel",
     "test:local": "cypress run --env configFile=local",
     "test:edge": "cypress run --env configFile=qa --browser edge --headless",

@@ -162,7 +162,7 @@ class HomePage {
   /**
    * Method to click on the JQuery Select option on the header menu.
    */
-  clickOnAjaxFormSubmitLinkHeader() {
+  clickOnJqueryFormSubmitLinkHeader() {
     this.header.getInputForm().click()
     this.header.getJQuerySelectDropdown().click()
 
