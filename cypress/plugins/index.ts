@@ -9,8 +9,8 @@
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
 
-const fs = require("fs-extra");
-const path = require("path");
+const fs = require('fs-extra')
+const path = require('path')
 
 /**
  * Method to get the configuration files for each environment.
@@ -20,24 +20,24 @@ const path = require("path");
 function getConfigurationByFile(filename) {
   const pathToConfigFile = path.resolve(
     __dirname,
-    "../config",
+    '../config',
     `${filename}.json`
-  );
-  return fs.readJson(pathToConfigFile);
+  )
+  return fs.readJson(pathToConfigFile)
 }
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 module.exports = async (on, config) => {
-  const filename = config.env.configFile || "qa";
-  const customConfig = await getConfigurationByFile(filename);
-  config = Object.assign(config, customConfig);
-  console.info("\n> Cypress config:", config);
+  const filename = config.env.configFile || 'qa'
+  const customConfig = await getConfigurationByFile(filename)
+  config = Object.assign(config, customConfig)
+  console.info('\n> Cypress config:', config)
   //on("file:preprocessor", selectTestsWithGrep(config));
-  return config;
-};
+  return config
+}
 
 /**
  * Method to run tests according to their labels
  */
-const selectTestsWithGrep = require("cypress-select-tests/grep");
+const selectTestsWithGrep = require('cypress-select-tests/grep')

@@ -3,22 +3,22 @@ class Header {
    * Method to check if the Header is visible
    */
   isReady() {
-    cy.get(".topper").should("be.visible");
-    cy.get(".navbar").should("be.visible");
+    cy.get('.topper').should('be.visible')
+    cy.get('.navbar').should('be.visible')
   }
 
   /**
    * Method to get the Selenium Easy Logo
    */
   getSeleniumEasyLogo() {
-    return cy.get(".logo > a > img");
+    return cy.get('.logo > a > img')
   }
 
   /**
    * Method to get the Cross Browser Testing Logo
    */
   getCrossBrowerTestingLogo() {
-    return cy.get(".cbt");
+    return cy.get('.cbt')
   }
 
   /*--------------------------------------------------------------------* 
@@ -30,8 +30,8 @@ class Header {
    */
   getInputForm() {
     return cy
-      .get(":nth-child(1) > :nth-child(1) > .dropdown-toggle")
-      .contains("Input Forms");
+      .get(':nth-child(1) > :nth-child(1) > .dropdown-toggle')
+      .contains('Input Forms')
   }
 
   /*--------------------------------------------------------------------* 
@@ -43,8 +43,8 @@ class Header {
    */
   getSimpleFormDemo() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(1) > a")
-      .contains("Simple Form Demo");
+      .get('.open > .dropdown-menu > :nth-child(1) > a')
+      .contains('Simple Form Demo')
   }
 
   /**
@@ -52,8 +52,8 @@ class Header {
    */
   getCheckboxDemo() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(2) > a")
-      .contains("Checkbox Demo");
+      .get('.open > .dropdown-menu > :nth-child(2) > a')
+      .contains('Checkbox Demo')
   }
 
   /**
@@ -61,8 +61,8 @@ class Header {
    */
   getRadioButtonsDemo() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(3) > a")
-      .contains("Radio Buttons Demo");
+      .get('.open > .dropdown-menu > :nth-child(3) > a')
+      .contains('Radio Buttons Demo')
   }
 
   /**
@@ -70,8 +70,8 @@ class Header {
    */
   getSelectDropdownList() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(4) > a")
-      .contains("Select Dropdown List");
+      .get('.open > .dropdown-menu > :nth-child(4) > a')
+      .contains('Select Dropdown List')
   }
 
   /**
@@ -79,8 +79,8 @@ class Header {
    */
   getInputFormSubmit() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(5) > a")
-      .contains("Input Form Submit");
+      .get('.open > .dropdown-menu > :nth-child(5) > a')
+      .contains('Input Form Submit')
   }
 
   /**
@@ -88,8 +88,8 @@ class Header {
    */
   getAjaxFormSubmit() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(6) > a")
-      .contains("Ajax Form Submit");
+      .get('.open > .dropdown-menu > :nth-child(6) > a')
+      .contains('Ajax Form Submit')
   }
 
   /**
@@ -97,8 +97,8 @@ class Header {
    */
   getJQuerySelectDropdown() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(7) > a")
-      .contains("JQuery Select dropdown");
+      .get('.open > .dropdown-menu > :nth-child(7) > a')
+      .contains('JQuery Select dropdown')
   }
 
   /*--------------------------------------------------------------------* 
@@ -110,8 +110,8 @@ class Header {
    */
   getDatePickers() {
     return cy
-      .get(":nth-child(1) > :nth-child(2) > .dropdown-toggle")
-      .contains("Date pickers");
+      .get(':nth-child(1) > :nth-child(2) > .dropdown-toggle')
+      .contains('Date pickers')
   }
 
   /*--------------------------------------------------------------------* 
@@ -123,8 +123,8 @@ class Header {
    */
   getBootstrapDatePicker() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(1) > a")
-      .contains("Bootstrap Date Picker");
+      .get('.open > .dropdown-menu > :nth-child(1) > a')
+      .contains('Bootstrap Date Picker')
   }
 
   /**
@@ -132,8 +132,8 @@ class Header {
    */
   getJQueryDatePicker() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(2) > a")
-      .contains("JQuery Date Picker");
+      .get('.open > .dropdown-menu > :nth-child(2) > a')
+      .contains('JQuery Date Picker')
   }
 
   /*--------------------------------------------------------------------* 
@@ -145,8 +145,8 @@ class Header {
    */
   getTable() {
     return cy
-      .get(":nth-child(1) > :nth-child(3) > .dropdown-toggle")
-      .contains("Table");
+      .get(':nth-child(1) > :nth-child(3) > .dropdown-toggle')
+      .contains('Table')
   }
 
   /*--------------------------------------------------------------------* 
@@ -158,8 +158,8 @@ class Header {
    */
   getTablePagination() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(1) > a")
-      .contains("Table Pagination");
+      .get('.open > .dropdown-menu > :nth-child(1) > a')
+      .contains('Table Pagination')
   }
 
   /**
@@ -167,8 +167,8 @@ class Header {
    */
   getTableDataSearch() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(2) > a")
-      .contains("Table Data Search");
+      .get('.open > .dropdown-menu > :nth-child(2) > a')
+      .contains('Table Data Search')
   }
 
   /**
@@ -176,8 +176,8 @@ class Header {
    */
   getTableFilter() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(3) > a")
-      .contains("Table Filter");
+      .get('.open > .dropdown-menu > :nth-child(3) > a')
+      .contains('Table Filter')
   }
 
   /**
@@ -185,8 +185,8 @@ class Header {
    */
   getTableSortAndSearch() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(4) > a")
-      .contains("Table Sort & Search");
+      .get('.open > .dropdown-menu > :nth-child(4) > a')
+      .contains('Table Sort & Search')
   }
 
   /**
@@ -194,8 +194,8 @@ class Header {
    */
   getTableDataDownload() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(5) > a")
-      .contains("Table Data Download");
+      .get('.open > .dropdown-menu > :nth-child(5) > a')
+      .contains('Table Data Download')
   }
 
   /*--------------------------------------------------------------------* 
@@ -206,7 +206,7 @@ class Header {
    * Method to get the Demo Home option on the header.
    */
   getDemoHome() {
-    return cy.get(".navbar-brand").contains("Demo Home");
+    return cy.get('.navbar-brand').contains('Demo Home')
   }
 
   /*--------------------------------------------------------------------* 
@@ -218,8 +218,8 @@ class Header {
    */
   getProgressBar() {
     return cy
-      .get(".navbar-right > :nth-child(1) > .dropdown-toggle")
-      .contains("Progress Bars");
+      .get('.navbar-right > :nth-child(1) > .dropdown-toggle')
+      .contains('Progress Bars')
   }
 
   /*--------------------------------------------------------------------* 
@@ -231,8 +231,8 @@ class Header {
    */
   getJQueryDownloadProgressBars() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(1) > a")
-      .contains("JQuery Download Progress bars");
+      .get('.open > .dropdown-menu > :nth-child(1) > a')
+      .contains('JQuery Download Progress bars')
   }
 
   /**
@@ -240,8 +240,8 @@ class Header {
    */
   getBootstrapProgressBar() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(2) > a")
-      .contains("Bootstrap Progress bar");
+      .get('.open > .dropdown-menu > :nth-child(2) > a')
+      .contains('Bootstrap Progress bar')
   }
 
   /**
@@ -249,8 +249,8 @@ class Header {
    */
   getDragAndDropSliders() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(3) > a")
-      .contains("Drag & Drop Sliders");
+      .get('.open > .dropdown-menu > :nth-child(3) > a')
+      .contains('Drag & Drop Sliders')
   }
 
   /*--------------------------------------------------------------------* 
@@ -262,8 +262,8 @@ class Header {
    */
   getAlertsAndModals() {
     return cy
-      .get(".navbar-right > :nth-child(2) > .dropdown-toggle")
-      .contains("Alerts & Modals");
+      .get('.navbar-right > :nth-child(2) > .dropdown-toggle')
+      .contains('Alerts & Modals')
   }
 
   /*--------------------------------------------------------------------* 
@@ -275,8 +275,8 @@ class Header {
    */
   getBootstrapAlerts() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(1) > a")
-      .contains("Bootstrap Alerts");
+      .get('.open > .dropdown-menu > :nth-child(1) > a')
+      .contains('Bootstrap Alerts')
   }
 
   /**
@@ -284,8 +284,8 @@ class Header {
    */
   getBootstrapModals() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(2) > a")
-      .contains("Bootstrap Modals");
+      .get('.open > .dropdown-menu > :nth-child(2) > a')
+      .contains('Bootstrap Modals')
   }
 
   /**
@@ -293,8 +293,8 @@ class Header {
    */
   getWindowPopupModal() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(3) > a")
-      .contains("Window Popup Modal");
+      .get('.open > .dropdown-menu > :nth-child(3) > a')
+      .contains('Window Popup Modal')
   }
 
   /**
@@ -302,8 +302,8 @@ class Header {
    */
   getProgressBarModal() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(4) > a")
-      .contains("Progress Bar Modal");
+      .get('.open > .dropdown-menu > :nth-child(4) > a')
+      .contains('Progress Bar Modal')
   }
 
   /**
@@ -311,8 +311,8 @@ class Header {
    */
   getJavascriptAlerts() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(5) > a")
-      .contains("Javascript Alerts");
+      .get('.open > .dropdown-menu > :nth-child(5) > a')
+      .contains('Javascript Alerts')
   }
 
   /**
@@ -320,8 +320,8 @@ class Header {
    */
   getFileDownload() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(6) > a")
-      .contains("File Download");
+      .get('.open > .dropdown-menu > :nth-child(6) > a')
+      .contains('File Download')
   }
 
   /*--------------------------------------------------------------------* 
@@ -333,8 +333,8 @@ class Header {
    */
   getListBox() {
     return cy
-      .get(".navbar-right > :nth-child(3) > .dropdown-toggle")
-      .contains("List Box");
+      .get('.navbar-right > :nth-child(3) > .dropdown-toggle')
+      .contains('List Box')
   }
 
   /*--------------------------------------------------------------------* 
@@ -346,8 +346,8 @@ class Header {
    */
   getBootstrapListBox() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(1) > a")
-      .contains("Bootstrap List Box");
+      .get('.open > .dropdown-menu > :nth-child(1) > a')
+      .contains('Bootstrap List Box')
   }
 
   /**
@@ -355,8 +355,8 @@ class Header {
    */
   getJQueryListBox() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(2) > a")
-      .contains("JQuery List Box");
+      .get('.open > .dropdown-menu > :nth-child(2) > a')
+      .contains('JQuery List Box')
   }
 
   /**
@@ -364,8 +364,8 @@ class Header {
    */
   getDataListFilter() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(3) > a")
-      .contains("Data List Filter");
+      .get('.open > .dropdown-menu > :nth-child(3) > a')
+      .contains('Data List Filter')
   }
 
   /*--------------------------------------------------------------------* 
@@ -376,7 +376,7 @@ class Header {
    * Method to get the Others option on the header.
    */
   getOthers() {
-    return cy.get(":nth-child(4) > .dropdown-toggle").contains("Others");
+    return cy.get(':nth-child(4) > .dropdown-toggle').contains('Others')
   }
 
   /*--------------------------------------------------------------------* 
@@ -388,8 +388,8 @@ class Header {
    */
   getDragAndDrop() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(1) > a")
-      .contains("Drag and Drop");
+      .get('.open > .dropdown-menu > :nth-child(1) > a')
+      .contains('Drag and Drop')
   }
 
   /**
@@ -397,8 +397,8 @@ class Header {
    */
   getDynamicDataLoading() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(2) > a")
-      .contains("Dynamic Data Loading");
+      .get('.open > .dropdown-menu > :nth-child(2) > a')
+      .contains('Dynamic Data Loading')
   }
 
   /**
@@ -406,9 +406,9 @@ class Header {
    */
   getChartsDemo() {
     return cy
-      .get(".open > .dropdown-menu > :nth-child(3) > a")
-      .contains("Charts Demo");
+      .get('.open > .dropdown-menu > :nth-child(3) > a')
+      .contains('Charts Demo')
   }
 }
 
-export default Header;
+export default Header

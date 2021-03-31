@@ -10,5 +10,5 @@
 //
 //
 /* global Cypress, cy */
-const env = Cypress.env();
-import 'cypress-wait-until';
+const env = Cypress.env()
+import 'cypress-wait-until'
