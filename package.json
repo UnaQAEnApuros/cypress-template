@@ -4,8 +4,6 @@
   "description": "Example of E2E tests with Cypress",
   "main": "index.js",
   "scripts": {
-    "commit": "commitlint -e",
-    "pre-commit": "lint-staged",
     "verify": "cypress verify",
     "open": "cypress open --env configFile=qa",
     "test": "QASE_REPORT=1 cypress run --env configFile=qa --record --key {CYPRESS_DASHBOARD_APIKEY} --parallel",
@@ -22,7 +20,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit": "commitlint -e"
     }
   },
   "repository": {
