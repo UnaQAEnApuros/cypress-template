@@ -3,6 +3,28 @@
 const env = Cypress.env()
 import { qase } from 'cypress-qase-reporter/dist/mocha'
 
+let user1
+let user2
+let user3
+let user4
+
+before(() => {
+  cy.fixture('users/user1').then(fixUser1 => {
+    user1 = fixUser1
+  })
+
+  cy.fixture('users/user2').then(fixUser2 => {
+    user2 = fixUser2
+  })
+  cy.fixture('users/user3').then(fixUser3 => {
+    user3 = fixUser3
+  })
+
+  cy.fixture('users/user4').then(fixUser4 => {
+    user4 = fixUser4
+  })
+})
+
 describe('API POST 200 Request', function () {
   qase(
     [8],
@@ -11,8 +33,8 @@ describe('API POST 200 Request', function () {
         method: 'POST',
         url: env.apiURL + '/api/users',
         body: {
-          name: 'Estefania',
-          job: 'QA Automation Engineer'
+          name: user1.name,
+          job: user1.job
         }
       }).then(response => {
         expect(response.status).to.eq(201)
@@ -31,8 +53,8 @@ describe('API POST 200 Request', function () {
         method: 'POST',
         url: env.apiURL + '/api/register',
         body: {
-          email: 'eve.holt@reqres.in',
-          password: 'pistol'
+          email: user1.email,
+          password: user1.password
         }
       }).then(response => {
         expect(response.status).to.eq(200)
@@ -49,8 +71,8 @@ describe('API POST 200 Request', function () {
         method: 'POST',
         url: env.apiURL + '/api/login',
         body: {
-          email: 'eve.holt@reqres.in',
-          password: 'cityslicka'
+          email: user2.email,
+          password: user2.password
         }
       }).then(response => {
         expect(response.status).to.eq(200)
@@ -68,7 +90,7 @@ describe('API POST 4xx Request', function () {
         method: 'POST',
         url: env.apiURL + '/api/register',
         body: {
-          email: 'sydney@fife'
+          email: user3.email
         },
         failOnStatusCode: false
       }).then(response => {
@@ -85,7 +107,7 @@ describe('API POST 4xx Request', function () {
         method: 'POST',
         url: env.apiURL + '/api/login',
         body: {
-          email: 'peter@klaven'
+          email: user4.email
         },
         failOnStatusCode: false
       }).then(response => {
