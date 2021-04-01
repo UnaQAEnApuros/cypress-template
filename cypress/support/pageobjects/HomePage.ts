@@ -44,7 +44,6 @@ import JQueryListBoxPage from './listbox/JQueryListBoxPage'
 import ChartsDemoDropdownPage from './others/ChartsDemoDropdownPage'
 import DragAndDropPage from './others/DragAndDropPage'
 import DynamicDataLoadingPage from './others/DynamicDataLoadingPage'
-import Menu from '../elements/Menu'
 
 const env = Cypress.env()
 
