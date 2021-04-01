@@ -10,7 +10,7 @@ describe('API GET 200 Request', function () {
       cy.request({
         method: 'GET',
         url: env.apiURL + '/api/users?page=2'
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(200)
         expect(response.body).property('page').to.equal(2)
         expect(response.body).property('per_page').to.equal(6)
@@ -36,7 +36,7 @@ describe('API GET 200 Request', function () {
       cy.request({
         method: 'GET',
         url: env.apiURL + '/api/users/2'
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(200)
         expect(response.body).property('data')
         expect(response.body.data).property('id').to.equal(2)
@@ -68,7 +68,7 @@ describe('API GET 200 Request', function () {
       cy.request({
         method: 'GET',
         url: env.apiURL + '/api/unknown'
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(200)
         expect(response.body).property('page').to.equal(1)
         expect(response.body).property('per_page').to.equal(6)
@@ -96,7 +96,7 @@ describe('API GET 200 Request', function () {
       cy.request({
         method: 'GET',
         url: env.apiURL + '/api/unknown/2'
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(200)
 
         expect(response.body.data).property('id').to.equal(2)
@@ -124,7 +124,7 @@ describe('API GET 200 Request', function () {
       cy.request({
         method: 'GET',
         url: env.apiURL + '/api/unknown/2?delay=3'
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(200)
 
         expect(response.body.data).property('id').to.equal(2)
@@ -155,7 +155,7 @@ describe('API GET 4xx Request', function () {
         method: 'GET',
         url: env.apiURL + '/api/users/23',
         failOnStatusCode: false
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(404)
       })
     })
@@ -168,7 +168,7 @@ describe('API GET 4xx Request', function () {
         method: 'GET',
         url: env.apiURL + '/api/unknown/23',
         failOnStatusCode: false
-      }).then((response) => {
+      }).then(response => {
         expect(response.status).to.eq(404)
       })
     })

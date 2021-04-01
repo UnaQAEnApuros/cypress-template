@@ -12,7 +12,8 @@
     "merge_reports": "mochawesome-merge --reportDir mochawesome-report > mochawesome-report/Final_Report.json",
     "generate_mochawesome_report": "marge mochawesome-report/Final_Report.json",
     "format": "prettier --config .prettierrc --write '**/*.ts'",
-    "lint": "eslint --config .eslintrc --fix '**/*.ts'"
+    "lint": "eslint --config .eslintrc --fix '**/*.ts'", 
+    "lint-staged": "npm run format && npm run lint"
   },
   "husky": {
     "hooks": {
