@@ -68,7 +68,7 @@
     "prettier": "^2.2.1",
     "ts-loader": "^8.1.0",
     "typescript": "^4.2.3",
-    "webpack": "^5.28.0"
+    "webpack": "^5.29.0"
   },
   "dependencies": {
     "cypress-select-tests": "^1.7.0",
