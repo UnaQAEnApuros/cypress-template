@@ -20,6 +20,7 @@
     }
   },
   "lint-staged": {
+    "run": "npm run format && npm run lint",
     "*.js": [
       "eslint --config .eslintrc --fix",
       "prettier --config .prettierrc --write",
