@@ -33,11 +33,5 @@ module.exports = async (on, config) => {
   const customConfig = await getConfigurationByFile(filename)
   config = Object.assign(config, customConfig)
   console.info('\n> Cypress config:', config)
-  //on("file:preprocessor", selectTestsWithGrep(config));
   return config
 }
-
-/**
- * Method to run tests according to their labels
- */
-const selectTestsWithGrep = require('cypress-select-tests/grep')

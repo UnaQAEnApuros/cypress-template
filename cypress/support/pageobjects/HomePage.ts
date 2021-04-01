@@ -1,5 +1,6 @@
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../elements/Header'
+import Footer from '../elements/Footer'
+import Menu from '../elements/Menu'
 
 // Input Forms imports
 import AjaxFormSubmitPage from './inputforms/AjaxFormSubmitPage'
@@ -43,12 +44,14 @@ import JQueryListBoxPage from './listbox/JQueryListBoxPage'
 import ChartsDemoDropdownPage from './others/ChartsDemoDropdownPage'
 import DragAndDropPage from './others/DragAndDropPage'
 import DynamicDataLoadingPage from './others/DynamicDataLoadingPage'
+import Menu from '../elements/Menu'
 
 const env = Cypress.env()
 
 class HomePage {
   footer: any
   header: any
+  menu: any
 
   /**
    * Homepage constructor. We need to create a new instance of the Header and the Footer.
@@ -56,6 +59,7 @@ class HomePage {
   constructor() {
     this.header = new Header()
     this.footer = new Footer()
+    this.menu = new Menu()
   }
 
   /**
@@ -99,18 +103,14 @@ class HomePage {
    * Check that the Selenium Easy Logo is visible.
    */
   checkSeleniumEasyLogoIsVisible() {
-    const seleniumEasyLogo = () =>
-      cy
-        .xpath('//div[@id=\'site-name\' and contains(., \'Selenium Easy\')]')
-        .should('be.visible')
+    return this.header.getSeleniumEasyLogo().should('be.visible')
   }
 
   /**
    * Check that the CrossBrowserTesting Logo is visible.
    */
   checkCrossBrowserTestingLogoIsVisible() {
-    const crossBrowserTestingLogo = () =>
-      cy.xpath('//img[@class=\'cbt\']').should('be.visible')
+    return this.header.getCrossBrowerTestingLogo().should('be.visible')
   }
 
   /*---------------------------MENU LIST--------------------------------*/
@@ -119,84 +119,56 @@ class HomePage {
    * Check that the All examples menu option is visible.
    */
   checkAllExamplesMenuOptionIsVisible() {
-    const menuAllExamplesOption = () =>
-      cy
-        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'All Examples\')]')
-        .should('be.visible')
+    return this.menu.getAllExamplesMenuOption().should('be.visible')
   }
 
   /**
    * Check that the Input Form menu option is visible.
    */
   checkInputFormMenuOptionIsVisible() {
-    const menuInputFormsOption = () =>
-      cy
-        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Input Forms\')]')
-        .should('be.visible')
+    return this.menu.getInputFormMenuOption().should('be.visible')
   }
 
   /**
    * Check that the Date Pickers menu option is visible.
    */
   checkDatePickersMenuOptionIsVisible() {
-    const menuDatePickersOption = () =>
-      cy
-        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Date pickers\')]')
-        .should('be.visible')
+    return this.menu.getDatePickersMenuOption().should('be.visible')
   }
 
   /**
    * Check that the Table menu option is visible.
    */
   checkTableMenuOptionIsVisible() {
-    const menuTableOption = () =>
-      cy
-        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Table\')]')
-        .should('be.visible')
+    return this.menu.getTableMenuOption().should('be.visible')
   }
 
   /**
    * Check that the Progress Bars & Sliders menu option is visible.
    */
   checkProgressBarsSlidersMenuOptionIsVisible() {
-    const menuProgressBarsSlidersOption = () =>
-      cy
-        .xpath(
-          '//li[@class=\'tree-branch\']/a[contains(text(),\'Progress Bars & Sliders\')]'
-        )
-        .should('be.visible')
+    return this.menu.getProgressBarsSlidersMenuOption().should('be.visible')
   }
 
   /**
    * Check that the Alerts & Modals menu option is visible.
    */
   checkAlertsModalsmMenuOptionIsVisible() {
-    const menuAlertsAndModalsOption = () =>
-      cy
-        .xpath(
-          '//li[@class=\'tree-branch\']/a[contains(text(),\'Alerts & Modals\')]'
-        )
-        .should('be.visible')
+    return this.menu.getAlertsModalsmMenuOption().should('be.visible')
   }
 
   /**
    * Check that the List Box menu option is visible.
    */
   checkListBoxMenuOptionIsVisible() {
-    const menuListBoxOption = () =>
-      cy
-        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'List Box\')]')
-        .should('be.visible')
+    return this.menu.getListBoxMenuOption().should('be.visible')
   }
 
   /**
    * Check that the Others menu option is visible.
    */
   checkOthersMenuOptionIsVisible() {
-    const menuInputFormsOption = () =>
-      cy
-        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Others\')]')
-        .should('be.visible')
+    return this.menu.getOthersMenuOption().should('be.visible')
   }
 
   /*--------------------------------------------------------------------* 
