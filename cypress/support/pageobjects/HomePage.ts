@@ -89,6 +89,116 @@ class HomePage {
     })
   }
 
+  /*--------------------------------------------------------------------*
+	|      CHECK METHODS                                    
+	*---------------------------------------------------------------------*/
+
+  /*-----------------------------HEADER---------------------------------*/
+
+  /**
+   * Check that the Selenium Easy Logo is visible.
+   */
+  checkSeleniumEasyLogoIsVisible() {
+    const seleniumEasyLogo = () =>
+      cy
+        .xpath('//div[@id=\'site-name\' and contains(., \'Selenium Easy\')]')
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the CrossBrowserTesting Logo is visible.
+   */
+  checkCrossBrowserTestingLogoIsVisible() {
+    const crossBrowserTestingLogo = () =>
+      cy.xpath('//img[@class=\'cbt\']').should('be.visible')
+  }
+
+  /*---------------------------MENU LIST--------------------------------*/
+
+  /**
+   * Check that the All examples menu option is visible.
+   */
+  checkAllExamplesMenuOptionIsVisible() {
+    const menuAllExamplesOption = () =>
+      cy
+        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'All Examples\')]')
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the Input Form menu option is visible.
+   */
+  checkInputFormMenuOptionIsVisible() {
+    const menuInputFormsOption = () =>
+      cy
+        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Input Forms\')]')
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the Date Pickers menu option is visible.
+   */
+  checkDatePickersMenuOptionIsVisible() {
+    const menuDatePickersOption = () =>
+      cy
+        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Date pickers\')]')
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the Table menu option is visible.
+   */
+  checkTableMenuOptionIsVisible() {
+    const menuTableOption = () =>
+      cy
+        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Table\')]')
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the Progress Bars & Sliders menu option is visible.
+   */
+  checkProgressBarsSlidersMenuOptionIsVisible() {
+    const menuProgressBarsSlidersOption = () =>
+      cy
+        .xpath(
+          '//li[@class=\'tree-branch\']/a[contains(text(),\'Progress Bars & Sliders\')]'
+        )
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the Alerts & Modals menu option is visible.
+   */
+  checkAlertsModalsmMenuOptionIsVisible() {
+    const menuAlertsAndModalsOption = () =>
+      cy
+        .xpath(
+          '//li[@class=\'tree-branch\']/a[contains(text(),\'Alerts & Modals\')]'
+        )
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the List Box menu option is visible.
+   */
+  checkListBoxMenuOptionIsVisible() {
+    const menuListBoxOption = () =>
+      cy
+        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'List Box\')]')
+        .should('be.visible')
+  }
+
+  /**
+   * Check that the Others menu option is visible.
+   */
+  checkOthersMenuOptionIsVisible() {
+    const menuInputFormsOption = () =>
+      cy
+        .xpath('//li[@class=\'tree-branch\']/a[contains(text(),\'Others\')]')
+        .should('be.visible')
+  }
+
   /*--------------------------------------------------------------------* 
   |	Input Form Submenu
   *---------------------------------------------------------------------*/
