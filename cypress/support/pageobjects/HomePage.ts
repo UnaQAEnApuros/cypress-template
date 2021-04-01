@@ -44,7 +44,6 @@ import JQueryListBoxPage from './listbox/JQueryListBoxPage'
 import ChartsDemoDropdownPage from './others/ChartsDemoDropdownPage'
 import DragAndDropPage from './others/DragAndDropPage'
 import DynamicDataLoadingPage from './others/DynamicDataLoadingPage'
-import Menu from '../elements/Menu'
 
 const env = Cypress.env()
 
@@ -182,8 +181,7 @@ class HomePage {
     this.header.getInputForm().click()
     this.header.getSimpleFormDemo().click()
 
-    const simpleFormDemo = new SimpleFormDemoPage()
-    return simpleFormDemo
+    return new SimpleFormDemoPage()
   }
 
   /**
@@ -193,8 +191,7 @@ class HomePage {
     this.header.getInputForm().click()
     this.header.getCheckboxDemo().click()
 
-    const checkboxDemo = new CheckboxDemoPage()
-    return checkboxDemo
+    return new CheckboxDemoPage()
   }
 
   /**
@@ -204,8 +201,7 @@ class HomePage {
     this.header.getInputForm().click()
     this.header.getRadioButtonsDemo().click()
 
-    const radioButtonsDemo = new RadioButtonsDemoPage()
-    return radioButtonsDemo
+    return new RadioButtonsDemoPage()
   }
 
   /**
@@ -215,8 +211,7 @@ class HomePage {
     this.header.getInputForm().click()
     this.header.getSelectDropdownList().click()
 
-    const selectDropdownList = new SelectDropdownListPage()
-    return selectDropdownList
+    return new SelectDropdownListPage()
   }
 
   /**
@@ -226,8 +221,7 @@ class HomePage {
     this.header.getInputForm().click()
     this.header.getInputFormSubmit().click()
 
-    const inputFormSubmit = new InputFormSubmitPage()
-    return inputFormSubmit
+    return new InputFormSubmitPage()
   }
 
   /**
@@ -237,8 +231,7 @@ class HomePage {
     this.header.getInputForm().click()
     this.header.getAjaxFormSubmit().click()
 
-    const ajaxFormSubmit = new AjaxFormSubmitPage()
-    return ajaxFormSubmit
+    return new AjaxFormSubmitPage()
   }
 
   /**
@@ -248,8 +241,7 @@ class HomePage {
     this.header.getInputForm().click()
     this.header.getJQuerySelectDropdown().click()
 
-    const jQuerySelectDropdown = new JQuerySelectDropdownPage()
-    return jQuerySelectDropdown
+    return new JQuerySelectDropdownPage()
   }
 
   /*--------------------------------------------------------------------* 
@@ -263,8 +255,7 @@ class HomePage {
     this.header.getDatePickers().click()
     this.header.getBootstrapDatePicker().click()
 
-    const bootstrapDatePicker = new BootstrapDatePickerPage()
-    return bootstrapDatePicker
+    return new BootstrapDatePickerPage()
   }
 
   /**
@@ -274,8 +265,7 @@ class HomePage {
     this.header.getDatePickers().click()
     this.header.getJQueryDatePicker().click()
 
-    const jQueryDatePicker = new JQueryDatePickerPage()
-    return jQueryDatePicker
+    return new JQueryDatePickerPage()
   }
 
   /*--------------------------------------------------------------------* 
@@ -289,8 +279,7 @@ class HomePage {
     this.header.getTable().click()
     this.header.getTablePagination().click()
 
-    const tablePagination = new TablePaginationPage()
-    return tablePagination
+    return new TablePaginationPage()
   }
 
   /**
@@ -300,8 +289,7 @@ class HomePage {
     this.header.getTable().click()
     this.header.getTableDataSearch().click()
 
-    const tableDataSearch = new TableDataSearchPage()
-    return tableDataSearch
+    return new TableDataSearchPage()
   }
 
   /**
@@ -311,8 +299,7 @@ class HomePage {
     this.header.getTable().click()
     this.header.getTableFilter().click()
 
-    const tableFilter = new TableFilterPage()
-    return tableFilter
+    return new TableFilterPage()
   }
 
   /**
@@ -322,8 +309,7 @@ class HomePage {
     this.header.getTable().click()
     this.header.getTableSortAndSearch().click()
 
-    const tableSortAndSearch = new TableSortAndSearchPage()
-    return tableSortAndSearch
+    return new TableSortAndSearchPage()
   }
 
   /**
@@ -333,8 +319,7 @@ class HomePage {
     this.header.getTable().click()
     this.header.getTableDataDownload().click()
 
-    const tableDataDownload = new TableDataDownloadPage()
-    return tableDataDownload
+    return new TableDataDownloadPage()
   }
 
   /*--------------------------------------------------------------------* 
@@ -359,8 +344,7 @@ class HomePage {
     this.header.getProgressBar().click()
     this.header.getJQueryDownloadProgressBars().click()
 
-    const jQueryDownloadProgressBars = new JQueryDownloadProgressBarsPage()
-    return jQueryDownloadProgressBars
+    return new JQueryDownloadProgressBarsPage()
   }
 
   /**
@@ -370,8 +354,7 @@ class HomePage {
     this.header.getProgressBar().click()
     this.header.getBootstrapProgressBar().click()
 
-    const bootstrapProgressBar = new BootstrapProgressBarPage()
-    return bootstrapProgressBar
+    return new BootstrapProgressBarPage()
   }
 
   /**
@@ -381,8 +364,7 @@ class HomePage {
     this.header.getProgressBar().click()
     this.header.getDragAndDropSliders().click()
 
-    const dragAndDropSliders = new DragAndDropSlidersPage()
-    return dragAndDropSliders
+    return new DragAndDropSlidersPage()
   }
 
   /*--------------------------------------------------------------------* 
@@ -396,8 +378,7 @@ class HomePage {
     this.header.getAlertsAndModals().click()
     this.header.getBootstrapAlerts().click()
 
-    const bootstrapAlerts = new BootstrapAlertsPage()
-    return bootstrapAlerts
+    return new BootstrapAlertsPage()
   }
 
   /**
@@ -407,8 +388,7 @@ class HomePage {
     this.header.getAlertsAndModals().click()
     this.header.getBootstrapModals().click()
 
-    const bootstrapModals = new BootstrapModalsPage()
-    return bootstrapModals
+    return new BootstrapModalsPage()
   }
 
   /**
@@ -418,8 +398,7 @@ class HomePage {
     this.header.getAlertsAndModals().click()
     this.header.getWindowPopupModal().click()
 
-    const windowPopupModal = new WindowPopupModalPage()
-    return windowPopupModal
+    return new WindowPopupModalPage()
   }
 
   /**
@@ -429,8 +408,7 @@ class HomePage {
     this.header.getAlertsAndModals().click()
     this.header.getProgressBarModal().click()
 
-    const progressBarModal = new ProgressBarModalPage()
-    return progressBarModal
+    return new ProgressBarModalPage()
   }
 
   /**
@@ -440,8 +418,7 @@ class HomePage {
     this.header.getAlertsAndModals().click()
     this.header.getJavascriptAlerts().click()
 
-    const javascriptAlerts = new JavascriptAlertsPage()
-    return javascriptAlerts
+    return new JavascriptAlertsPage()
   }
 
   /**
@@ -451,8 +428,7 @@ class HomePage {
     this.header.getAlertsAndModals().click()
     this.header.getFileDownload().click()
 
-    const fileDownload = new FileDownloadPage()
-    return fileDownload
+    return new FileDownloadPage()
   }
 
   /*--------------------------------------------------------------------* 
@@ -466,8 +442,7 @@ class HomePage {
     this.header.getListBox().click()
     this.header.getBootstrapListBox().click()
 
-    const bootstrapList = new BootstrapListPage()
-    return bootstrapList
+    return new BootstrapListPage()
   }
 
   /**
@@ -477,8 +452,7 @@ class HomePage {
     this.header.getListBox().click()
     this.header.getJQueryListBox().click()
 
-    const jQueryListBox = new JQueryListBoxPage()
-    return jQueryListBox
+    return new JQueryListBoxPage()
   }
 
   /**
@@ -488,8 +462,7 @@ class HomePage {
     this.header.getListBox().click()
     this.header.getDataListFilter().click()
 
-    const dataListFilter = new DataListFilterPage()
-    return dataListFilter
+    return new DataListFilterPage()
   }
 
   /*--------------------------------------------------------------------* 
@@ -503,8 +476,7 @@ class HomePage {
     this.header.getOthers().click()
     this.header.getDragAndDrop().click()
 
-    const dragAndDrop = new DragAndDropPage()
-    return dragAndDrop
+    return new DragAndDropPage()
   }
 
   /**
@@ -514,8 +486,7 @@ class HomePage {
     this.header.getOthers().click()
     this.header.getDynamicDataLoading().click()
 
-    const dynamicDataLoading = new DynamicDataLoadingPage()
-    return dynamicDataLoading
+    return new DynamicDataLoadingPage()
   }
 
   /**
@@ -526,8 +497,7 @@ class HomePage {
     this.header.getChartsDemo().click()
     Cypress.on('uncaught:exception', () => false)
 
-    const chartsDemoDropdown = new ChartsDemoDropdownPage()
-    return chartsDemoDropdown
+    return new ChartsDemoDropdownPage()
   }
 }
 
