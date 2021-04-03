@@ -2,7 +2,7 @@
 /// <reference types="Cypress" />
 const env = Cypress.env()
 import { qase } from 'cypress-qase-reporter/dist/mocha'
-import HomePage from '../../support/pageobjects/HomePage'
+import HomePage from '../../../support/pageobjects/HomePage'
 
 describe('Input Form Tests', function () {
   const home = new HomePage()
