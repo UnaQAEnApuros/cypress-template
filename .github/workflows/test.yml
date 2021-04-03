@@ -51,13 +51,16 @@ jobs:
 
       # Create mochawesome report and json to get the results
       - name: Merge mochawesome report
+        if: always()
         run: npm run merge_reports
 
       - name: Generate mochawesome report.
+        if: always()
         run: npm run generate_mochawesome_report
 
-        # Display the results:
+      # Display the results:
       - name: Display results
+        if: always()
         run: chmod +x script/results.sh
       - id: vars
         run: echo ::set-output name=testResult::$(./script/results.sh)
