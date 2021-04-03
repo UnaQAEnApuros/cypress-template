@@ -31,6 +31,12 @@ class CheckboxDemoPage {
       .getFirstSucessMessage()
       .contains('Success - Check box is checked')
   }
+
+  clickOnSelectAllButton() {
+    this.checkBox.getClickAllButton().click()
+  }
+
+  check
 }
 
 export default CheckboxDemoPage

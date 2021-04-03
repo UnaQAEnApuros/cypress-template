@@ -3,7 +3,7 @@ name: Post-Build Action
 on:
   workflow_run:
     workflows:
-      - cypress-run
+      - Test
     types:
       - completed
 

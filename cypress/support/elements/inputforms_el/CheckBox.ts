@@ -30,7 +30,7 @@ class Checkbox {
     return cy.get('#check1')
   }
 
-  getInpitChecked() {
+  getInputChecked() {
     return cy.xpath("//input[@id='isChkd']")
   }
 }
