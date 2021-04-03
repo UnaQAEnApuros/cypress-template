@@ -1,6 +1,5 @@
-name: End-to-end tests with Cypress
+name: Test
 on:
-  workflow_dispatch:
   push:
   schedule:
     - cron: '0 */6 * * *'

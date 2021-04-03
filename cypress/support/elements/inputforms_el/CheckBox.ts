@@ -1,9 +1,29 @@
 class Checkbox {
   /**
-   * Method to get the Cross Browser Testing Logo
+   * Method to get
    */
-  getUserMessageInput() {
-    return cy.get('.form-group > #user-message')
+  getFirstCheckbox() {
+    return cy.get('#isAgeSelected')
+  }
+
+  getFirstSucessMessage() {
+    return cy.get('#txtAge')
+  }
+
+  getCheckboxOption1() {
+    return cy.get(':nth-child(3) > label').contains('Option 1')
+  }
+
+  getCheckboxOption2() {
+    return cy.get(':nth-child(4) > label').contains('Option 2')
+  }
+
+  getCheckboxOption3() {
+    return cy.get(':nth-child(5) > label').contains('Option 3')
+  }
+
+  getCheckboxOption4() {
+    return cy.get(':nth-child(6) > label').contains('Option 4')
   }
 }
 
