@@ -49,4 +49,4 @@ class SimpleFormDemoPage {
   }
 }
 
-export default SimpleForm
+export default SimpleFormDemoPage

@@ -1,4 +1,4 @@
-import Checkbox from '../../elements/inputforms_el/Checkbox'
+import Checkbox from '../../elements/inputforms_el/CheckBox'
 
 class CheckboxDemoPage {
   checkBox: any
