@@ -22,21 +22,42 @@ class CheckboxDemoPage {
       .should('be.visible')
   }
 
+  /**
+   * Method to click on the first checkbox button
+   */
   clickOnFirstCheckbox() {
     this.checkBox.getFirstCheckbox().click()
   }
 
+  /**
+   * Method to check the first checkbox message
+   */
   checkFirstCheckboxMessage() {
     this.checkBox
       .getFirstSucessMessage()
       .contains('Success - Check box is checked')
   }
 
+  /**
+   * Method to click on select all button
+   */
   clickOnSelectAllButton() {
     this.checkBox.getClickAllButton().click()
   }
 
-  check
+  /**
+   * Method to check that all the checks are not selected
+   */
+  checkAllButtonsAreNotSelected() {
+    this.checkBox.getInputChecked().should('have.value', 'false')
+  }
+
+  /**
+   * Method to check that all the checks are selected
+   */
+  checkAllButtonsAreSelected() {
+    this.checkBox.getInputChecked().should('have.value', 'true')
+  }
 }
 
 export default CheckboxDemoPage
