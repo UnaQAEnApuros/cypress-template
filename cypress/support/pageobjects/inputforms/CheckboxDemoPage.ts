@@ -1,4 +1,12 @@
+import Checkbox from '../../elements/inputforms_el/Checkbox'
+
 class CheckboxDemoPage {
+  checkBox: any
+
+  constructor() {
+    this.checkBox = new Checkbox()
+  }
+
   /**
    * Method to check if the CheckboxDemoPage is visible
    */
@@ -12,6 +20,16 @@ class CheckboxDemoPage {
         'This would be a basic example to start with checkboxes using selenium.'
       )
       .should('be.visible')
+  }
+
+  clickOnFirstCheckbox() {
+    this.checkBox.getFirstCheckbox().click()
+  }
+
+  checkFirstCheckboxMessage() {
+    this.checkBox
+      .getFirstSucessMessage()
+      .contains('Success - Check box is checked')
   }
 }
 

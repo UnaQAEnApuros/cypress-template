@@ -25,6 +25,14 @@ class Checkbox {
   getCheckboxOption4() {
     return cy.get(':nth-child(6) > label').contains('Option 4')
   }
+
+  getClickAllButton() {
+    return cy.get('#check1')
+  }
+
+  getInpitChecked() {
+    return cy.xpath("//input[@id='isChkd']")
+  }
 }
 
 export default Checkbox
