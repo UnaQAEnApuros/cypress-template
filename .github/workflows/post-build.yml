@@ -2,7 +2,7 @@ name: Post-Build Action
 
 on:
   workflow_run:
-    workflows: ['End-to-end tests with Cypress']
+    workflows: ['cypress-run']
     types: [completed]
 
 jobs:

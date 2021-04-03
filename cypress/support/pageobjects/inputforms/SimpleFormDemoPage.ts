@@ -1,4 +1,4 @@
-import SimpleFormDemoElements from '../../elements/inputforms_el/SimpleFormDemoElements'
+import SimpleFormDemoElements from '../../elements/inputforms_el/SimpleForm'
 
 class SimpleFormDemoPage {
   simpleFormDemo: any
