@@ -1,14 +1,14 @@
-import SimpleFormDemoElements from '../../elements/inputforms_el/SimpleFormDemoElements'
+import SimpleForm from '../../elements/inputforms_el/SimpleForm'
 
 class SimpleFormDemoPage {
-  simpleFormDemo: any
+  simpleForm: any
 
   constructor() {
-    this.simpleFormDemo = new SimpleFormDemoElements()
+    this.simpleForm = new SimpleForm()
   }
 
   /**
-   * Method to check if the SimpleFormDemoPage is visible
+   * Method to check if the simpleFormPage is visible
    */
   isReady() {
     cy.url().should(
@@ -21,31 +21,31 @@ class SimpleFormDemoPage {
   }
 
   enterMessage(message: string) {
-    this.simpleFormDemo.getUserMessageInput().click().clear().type(message)
+    this.simpleForm.getUserMessageInput().click().clear().type(message)
   }
 
   clickOnShowMessage() {
-    this.simpleFormDemo.getShowMessageButton().click()
+    this.simpleForm.getShowMessageButton().click()
   }
 
   checkYourMessageIsCorrect(message: string) {
-    this.simpleFormDemo.getYourMessageText().should('have.text', message)
+    this.simpleForm.getYourMessageText().should('have.text', message)
   }
 
   enterValueA(a: number) {
-    this.simpleFormDemo.getInput1Sum().click().clear().type(a)
+    this.simpleForm.getInput1Sum().click().clear().type(a)
   }
 
   enterValueB(b: number) {
-    this.simpleFormDemo.getInput2Sum().click().clear().type(b)
+    this.simpleForm.getInput2Sum().click().clear().type(b)
   }
 
   clickOnGetTotalutton() {
-    this.simpleFormDemo.getTotalButton().click()
+    this.simpleForm.getTotalButton().click()
   }
 
   checkTotalResultIsCorrect(total: number) {
-    this.simpleFormDemo.getTotalResult().should('have.text', total)
+    this.simpleForm.getTotalResult().should('have.text', total)
   }
 }
 

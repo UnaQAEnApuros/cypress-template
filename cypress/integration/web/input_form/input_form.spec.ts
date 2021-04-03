@@ -22,8 +22,8 @@ describe('Input Form Tests', function () {
       home.visit()
       home.isReady()
       home.closePopUp()
-      const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader()
-      simpleFormDemo.isReady()
+      const simpleForm = home.clickOnSimpleFormDemoLinkHeader()
+      simpleForm.isReady()
     })
   )
 

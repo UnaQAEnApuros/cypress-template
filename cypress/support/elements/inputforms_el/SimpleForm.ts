@@ -1,4 +1,4 @@
-class SimpleFormDemoElements {
+class SimpleForm {
   /**
    * Method to get the Cross Browser Testing Logo
    */
@@ -31,4 +31,4 @@ class SimpleFormDemoElements {
   }
 }
 
-export default SimpleFormDemoElements
+export default SimpleForm

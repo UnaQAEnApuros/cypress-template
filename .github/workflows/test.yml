@@ -1,11 +1,11 @@
-name: End-to-end tests with Cypress
+name: Test
 on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: '0 */6 * * *'
 jobs:
-  cypress-run:
+  test:
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout
@@ -16,13 +16,13 @@ jobs:
       - name: Replace Cypress Dashboard API Key secret on the package.json
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "{CYPRESS_DASHBOARD_APIKEY}"
+          find: '{CYPRESS_DASHBOARD_APIKEY}'
           replace: ${{ secrets.CYPRESS_DASHBOARD_APIKEY }}
 
       - name: Replace Qase API Token secret on the package.json
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "{QASE_API_TOKEN}"
+          find: '{QASE_API_TOKEN}'
           replace: ${{ secrets.QASE_API_TOKEN }}
 
       # Install NPM dependencies, cache them correctly
@@ -51,13 +51,16 @@ jobs:
 
       # Create mochawesome report and json to get the results
       - name: Merge mochawesome report
+        if: always()
         run: npm run merge_reports
 
       - name: Generate mochawesome report.
+        if: always()
         run: npm run generate_mochawesome_report
 
-        # Display the results:
+      # Display the results:
       - name: Display results
+        if: always()
         run: chmod +x script/results.sh
       - id: vars
         run: echo ::set-output name=testResult::$(./script/results.sh)
@@ -85,7 +88,7 @@ jobs:
           SLACK_CHANNEL: travis-ci
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_ICON: https://github.com/estefafdez/cypress-template/blob/main/script/github.png
-          SLACK_USERNAME: "Github Actions"
-          SLACK_FOOTER: "Github project: https://github.com/estefafdez/cypress-template"
-          SLACK_TITLE: "Test Suite Results:"
+          SLACK_USERNAME: 'Github Actions'
+          SLACK_FOOTER: 'Github project: https://github.com/estefafdez/cypress-template'
+          SLACK_TITLE: 'Test Suite Results:'
           SLACK_MESSAGE: ${{ steps.vars.outputs.testResult }}
