@@ -1,10 +1,10 @@
-import Checkbox from '../../elements/inputforms_el/CheckBox'
+import CheckboxElements from '../../elements/inputforms/CheckBoxElements'
 
 class CheckboxDemoPage {
   checkBox: any
 
   constructor() {
-    this.checkBox = new Checkbox()
+    this.checkBox = new CheckboxElements()
   }
 
   /**

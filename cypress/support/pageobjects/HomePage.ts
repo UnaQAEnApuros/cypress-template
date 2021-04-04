@@ -1,6 +1,6 @@
-import Header from '../elements/Header'
-import Footer from '../elements/Footer'
-import Menu from '../elements/Menu'
+import HeaderElements from '../elements/HeaderElements'
+import FooterElements from '../elements/FooterElements'
+import MenuElements from '../elements/MenuElements'
 
 // Input Forms imports
 import AjaxFormSubmitPage from './inputforms/AjaxFormSubmitPage'
@@ -56,9 +56,9 @@ class HomePage {
    * Homepage constructor. We need to create a new instance of the Header and the Footer.
    */
   constructor() {
-    this.header = new Header()
-    this.footer = new Footer()
-    this.menu = new Menu()
+    this.header = new HeaderElements()
+    this.footer = new FooterElements()
+    this.menu = new MenuElements()
   }
 
   /**

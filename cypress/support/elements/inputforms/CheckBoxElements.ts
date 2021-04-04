@@ -1,4 +1,4 @@
-class Checkbox {
+class CheckboxElements {
   /**
    * Method to get
    */
@@ -35,4 +35,4 @@ class Checkbox {
   }
 }
 
-export default Checkbox
+export default CheckboxElements

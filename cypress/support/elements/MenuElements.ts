@@ -1,4 +1,4 @@
-class Menu {
+class MenuElements {
   /**
    * Method to get the All examples menu option
    */
@@ -66,4 +66,4 @@ class Menu {
   }
 }
 
-export default Menu
+export default MenuElements
