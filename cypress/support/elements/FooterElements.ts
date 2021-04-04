@@ -1,4 +1,4 @@
-class Footer {
+class FooterElements {
   /**
    * Method to check if the Footer is visible
    */
@@ -7,4 +7,4 @@ class Footer {
   }
 }
 
-export default Footer
+export default FooterElements

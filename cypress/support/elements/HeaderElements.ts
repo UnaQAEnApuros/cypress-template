@@ -1,4 +1,4 @@
-class Header {
+class HeaderElements {
   /**
    * Method to check if the Header is visible
    */
@@ -411,4 +411,4 @@ class Header {
   }
 }
 
-export default Header
+export default HeaderElements

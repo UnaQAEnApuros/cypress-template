@@ -1,10 +1,10 @@
-import SimpleForm from '../../elements/inputforms_el/SimpleForm'
+import SimpleFormElements from '../../elements/inputforms/SimpleFormElements'
 
 class SimpleFormDemoPage {
   simpleForm: any
 
   constructor() {
-    this.simpleForm = new SimpleForm()
+    this.simpleForm = new SimpleFormElements()
   }
 
   /**
