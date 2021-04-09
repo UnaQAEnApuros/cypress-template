@@ -34,7 +34,7 @@ class CheckboxDemoPage {
    */
   checkFirstCheckboxMessage() {
     this.checkBox
-      .getFirstSucessMessage()
+      .getFirstSuccessMessage()
       .contains('Success - Check box is checked')
   }
 
