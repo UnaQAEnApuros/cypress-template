@@ -53,6 +53,7 @@ jobs:
         if: always()
         run: chmod +x script/results.sh
       - id: vars
+        if: always()
         run: echo ::set-output name=testResult::$(./script/results.sh)
 
       # Test run video was always captured, so this action uses "always()" condition
