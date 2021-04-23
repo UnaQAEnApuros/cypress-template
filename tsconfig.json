@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
       "target": "es5",
+      "downlevelIteration": true,
       "lib": ["es5", "dom"],
       "types": ["cypress", "node", "cypress-wait-until"], 
       "typeRoots": [ "../node_modules/@types" ], 
