@@ -74,7 +74,7 @@ class HomePage {
   isReady() {
     this.header.isReady()
 
-    cy.url().should('eq', 'https://www.seleniumeasy.com/test/')
+    cy.url().should('eq', 'https://demo.seleniumeasy.com/')
     cy.get('body > :nth-child(2)').should('be.visible')
     cy.get('#easycont > :nth-child(1)').should('be.visible')
 

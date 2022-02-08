@@ -5,7 +5,7 @@ class BootstrapListPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/bootstrap-dual-list-box-demo.html'
+      'https://demo.seleniumeasy.com/bootstrap-dual-list-box-demo.html'
     )
     cy.get('h3').contains('Dual List Box Example').should('be.visible')
   }

@@ -13,7 +13,7 @@ class CheckboxDemoPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/basic-checkbox-demo.html'
+      'https://demo.seleniumeasy.com/basic-checkbox-demo.html'
     )
     cy.get('h3')
       .contains(

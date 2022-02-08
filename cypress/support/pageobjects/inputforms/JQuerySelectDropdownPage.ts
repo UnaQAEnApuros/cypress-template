@@ -5,7 +5,7 @@ class JQuerySelectDropdownPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/jquery-dropdown-search-demo.html'
+      'https://demo.seleniumeasy.com/jquery-dropdown-search-demo.html'
     )
     cy.get('h2')
       .contains('Single Select - Search and Select country')

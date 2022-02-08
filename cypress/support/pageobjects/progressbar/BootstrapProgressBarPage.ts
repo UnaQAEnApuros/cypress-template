@@ -5,7 +5,7 @@ class BootstrapProgressBarPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/bootstrap-download-progress-demo.html'
+      'https://demo.seleniumeasy.com/bootstrap-download-progress-demo.html'
     )
     cy.get('h3')
       .contains('Stylish progress bar demo for the automation')

@@ -5,7 +5,7 @@ class RadioButtonsDemoPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/basic-radiobutton-demo.html'
+      'https://demo.seleniumeasy.com/basic-radiobutton-demo.html'
     )
     cy.get('h3')
       .contains(

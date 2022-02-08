@@ -5,7 +5,7 @@ class TableSortAndSearchPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/table-sort-search-demo.html'
+      'https://demo.seleniumeasy.com/table-sort-search-demo.html'
     )
     cy.get('h2').contains('Table Sort And Search Demo').should('be.visible')
   }

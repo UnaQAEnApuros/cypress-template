@@ -5,7 +5,7 @@ class SelectDropdownListPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html'
+      'https://demo.seleniumeasy.com/basic-select-dropdown-demo.html'
     )
     cy.get('h3')
       .contains(

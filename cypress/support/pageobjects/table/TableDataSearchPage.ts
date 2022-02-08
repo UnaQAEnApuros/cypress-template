@@ -5,7 +5,7 @@ class TableDataSearchPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/table-search-filter-demo.html'
+      'https://demo.seleniumeasy.com/table-search-filter-demo.html'
     )
     cy.get('h2')
       .contains(

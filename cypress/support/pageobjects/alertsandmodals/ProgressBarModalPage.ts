@@ -5,7 +5,7 @@ class ProgressBarModalPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/bootstrap-progress-bar-dialog-demo.html'
+      'https://demo.seleniumeasy.com/bootstrap-progress-bar-dialog-demo.html'
     )
     cy.get('h2').contains('Modal dialog with progress bar').should('be.visible')
   }

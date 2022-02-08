@@ -5,7 +5,7 @@ class WindowPopupModalPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/window-popup-modal-demo.html'
+      'https://demo.seleniumeasy.com/window-popup-modal-demo.html'
     )
     cy.get('h2')
       .contains('Window popup Modal Example for Automation')

@@ -5,7 +5,7 @@ class JQueryListBoxPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/jquery-dual-list-box-demo.html'
+      'https://demo.seleniumeasy.com/jquery-dual-list-box-demo.html'
     )
     cy.get('h2').contains('JQuery Dual List Box Demo').should('be.visible')
   }

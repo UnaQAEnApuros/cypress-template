@@ -5,7 +5,7 @@ class ChartsDemoDropdownPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/charts-mouse-hover-demo.html'
+      'https://demo.seleniumeasy.com/charts-mouse-hover-demo.html'
     )
   }
 }

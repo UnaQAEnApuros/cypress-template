@@ -5,7 +5,7 @@ class JQueryDatePickerPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/jquery-date-picker-demo.html'
+      'https://demo.seleniumeasy.com/jquery-date-picker-demo.html'
     )
     cy.get('h2').contains('JQuery Date Picker Demo').should('be.visible')
   }
