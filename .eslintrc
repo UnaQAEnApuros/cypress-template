@@ -1,21 +1,45 @@
 {
-    "env": {
-      "node": true
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "sourceType": "module",
-      "ecmaVersion": 6,
-      "ecmaFeatures": {
-        "experimentalObjectRestSpread": true
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "func-names": "off",
+    "jest/expect-expect": "off",
+    "jest/valid-expect": 1,
+    "lines-between-class-members": "off",
+    "max-len": [1, 200, 2],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "no-useless-constructor": "off",
+    "no-underscore-dangle": "off",
+    "import/first": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "import/order": "error",
+    "dot-notation": "off",
+    "camelcase": "off",
+    "consistent-return": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
       }
-    },
-    "rules": {
-      "indent": ["error", 2, { "SwitchCase": 1 }],
-      "linebreak-style": ["error", "unix"],
-      "quotes": ["error", "single"],
-      "semi": ["error", "never"],
-      "no-console": ["warn", { "allow": ["info", "error"] }],
-      "arrow-parens": ["error", "as-needed"]
-    }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": false,
+        "allowSeparatedGroups": true,
+        "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+      }
+    ],
+    "no-console": ["warn", { "allow": ["info", "error"] }]
+  },
+  "ignorePatterns": ["**/*.d.ts", "**/api/dist/**/*"],
+  "plugins": ["@typescript-eslint", "cypress", "unused-imports", "@typescript-eslint/tslint"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:cypress/recommended"]
 }
