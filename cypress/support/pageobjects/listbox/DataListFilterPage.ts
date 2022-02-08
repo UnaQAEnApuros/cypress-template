@@ -5,7 +5,7 @@ class DataListFilterPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/data-list-filter-demo.html'
+      'https://demo.seleniumeasy.com/data-list-filter-demo.html'
     )
     cy.get('h2').contains('Data List Filter ').should('be.visible')
   }

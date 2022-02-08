@@ -5,7 +5,7 @@ class BootstrapAlertsPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html'
+      'https://demo.seleniumeasy.com/bootstrap-alert-messages-demo.html'
     )
     cy.get('h2').contains('Bootstrap Alert messages').should('be.visible')
   }

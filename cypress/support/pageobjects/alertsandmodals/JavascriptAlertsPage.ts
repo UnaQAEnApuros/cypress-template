@@ -5,7 +5,7 @@ class JavascriptAlertsPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/javascript-alert-box-demo.html'
+      'https://demo.seleniumeasy.com/javascript-alert-box-demo.html'
     )
     cy.get('h3')
       .contains(

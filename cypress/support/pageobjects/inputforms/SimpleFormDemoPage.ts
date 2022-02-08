@@ -13,7 +13,7 @@ class SimpleFormDemoPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/basic-first-form-demo.html'
+      'https://demo.seleniumeasy.com/basic-first-form-demo.html'
     )
     cy.get('h3')
       .contains('This would be your first example to start with Selenium.')

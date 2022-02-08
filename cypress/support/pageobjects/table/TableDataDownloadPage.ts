@@ -5,7 +5,7 @@ class TableDataDownloadPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/table-data-download-demo.html'
+      'https://demo.seleniumeasy.com/table-data-download-demo.html'
     )
     cy.get('h2')
       .contains(' Data Table with Download / Print Demo')

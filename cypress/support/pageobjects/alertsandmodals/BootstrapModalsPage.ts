@@ -5,7 +5,7 @@ class BootstrapModalsPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/bootstrap-modal-demo.html'
+      'https://demo.seleniumeasy.com/bootstrap-modal-demo.html'
     )
     cy.get('h2')
       .contains('Bootstrap Modal Example for Automation')

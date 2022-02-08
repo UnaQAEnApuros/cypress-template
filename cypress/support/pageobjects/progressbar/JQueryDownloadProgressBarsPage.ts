@@ -5,7 +5,7 @@ class JQueryDownloadProgressBarsPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/jquery-download-progress-bar-demo.html'
+      'https://demo.seleniumeasy.com/jquery-download-progress-bar-demo.html'
     )
     cy.get('h2')
       .contains('JQuery UI Progress bar - Download Dialog')

@@ -5,7 +5,7 @@ class AjaxFormSubmitPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/ajax-form-submit-demo.html'
+      'https://demo.seleniumeasy.com/ajax-form-submit-demo.html'
     )
     cy.get('h1')
       .contains('Ajax Form Submit with Loading icon')

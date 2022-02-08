@@ -5,7 +5,7 @@ class TablePaginationPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/table-pagination-demo.html'
+      'https://demo.seleniumeasy.com/table-pagination-demo.html'
     )
     cy.get('h2').contains('Table with Pagination Example').should('be.visible')
   }

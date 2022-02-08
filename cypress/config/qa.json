@@ -2,7 +2,7 @@
     "env": {
         "name": "qa", 
         "apiURL": "https://reqres.in",
-        "webURL": "https://www.seleniumeasy.com/test/"
+        "webURL": "https://demo.seleniumeasy.com/"
     },
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {

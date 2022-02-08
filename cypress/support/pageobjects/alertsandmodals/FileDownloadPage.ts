@@ -5,7 +5,7 @@ class FileDownloadPage {
   isReady() {
     cy.url().should(
       'eq',
-      'https://www.seleniumeasy.com/test/generate-file-to-download-demo.html'
+      'https://demo.seleniumeasy.com/generate-file-to-download-demo.html'
     )
     cy.get('h2')
       .contains('File Download Demo for Automation')
