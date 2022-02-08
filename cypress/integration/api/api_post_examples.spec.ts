@@ -1,29 +1,30 @@
 /* global cy, Cypress */
 /// <reference types="Cypress" />
-const env = Cypress.env()
-import { qase } from 'cypress-qase-reporter/dist/mocha'
+const env = Cypress.env();
+import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { User } from '../../types/user';
 
-let user1
-let user2
-let user3
-let user4
+let user1: User;
+let user2: User;
+let user3: User;
+let user4: User;
 
 before(() => {
   cy.fixture('users/user1').then(fixUser1 => {
-    user1 = fixUser1
-  })
+    user1 = fixUser1;
+  });
 
   cy.fixture('users/user2').then(fixUser2 => {
-    user2 = fixUser2
-  })
+    user2 = fixUser2;
+  });
   cy.fixture('users/user3').then(fixUser3 => {
-    user3 = fixUser3
-  })
+    user3 = fixUser3;
+  });
 
   cy.fixture('users/user4').then(fixUser4 => {
-    user4 = fixUser4
-  })
-})
+    user4 = fixUser4;
+  });
+});
 
 describe('API POST 200 Request', function () {
   qase(
@@ -37,14 +38,14 @@ describe('API POST 200 Request', function () {
           job: user1.job
         }
       }).then(response => {
-        expect(response.status).to.eq(201)
-        expect(response.body).property('name').to.equal('Estefania')
-        expect(response.body).property('job').to.equal('QA Automation Engineer')
-        expect(response.body).have.property('id')
-        expect(response.body).have.property('createdAt')
-      })
+        expect(response.status).to.eq(201);
+        expect(response.body).property('name').to.equal('Estefania');
+        expect(response.body).property('job').to.equal('QA Automation Engineer');
+        expect(response.body).have.property('id');
+        expect(response.body).have.property('createdAt');
+      });
     })
-  )
+  );
 
   qase(
     [9],
@@ -57,12 +58,12 @@ describe('API POST 200 Request', function () {
           password: user1.password
         }
       }).then(response => {
-        expect(response.status).to.eq(200)
-        expect(response.body).have.property('id')
-        expect(response.body).have.property('token')
-      })
+        expect(response.status).to.eq(200);
+        expect(response.body).have.property('id');
+        expect(response.body).have.property('token');
+      });
     })
-  )
+  );
 
   qase(
     [11],
@@ -75,12 +76,12 @@ describe('API POST 200 Request', function () {
           password: user2.password
         }
       }).then(response => {
-        expect(response.status).to.eq(200)
-        expect(response.body).property('token').to.eq('QpwL5tke4Pnpja7X4')
-      })
+        expect(response.status).to.eq(200);
+        expect(response.body).property('token').to.eq('QpwL5tke4Pnpja7X4');
+      });
     })
-  )
-})
+  );
+});
 
 describe('API POST 4xx Request', function () {
   qase(
@@ -94,11 +95,11 @@ describe('API POST 4xx Request', function () {
         },
         failOnStatusCode: false
       }).then(response => {
-        expect(response.status).to.eq(400)
-        expect(response.body).property('error').to.eq('Missing password')
-      })
+        expect(response.status).to.eq(400);
+        expect(response.body).property('error').to.eq('Missing password');
+      });
     })
-  )
+  );
 
   qase(
     [12],
@@ -111,9 +112,9 @@ describe('API POST 4xx Request', function () {
         },
         failOnStatusCode: false
       }).then(response => {
-        expect(response.status).to.eq(400)
-        expect(response.body).property('error').to.eq('Missing password')
-      })
+        expect(response.status).to.eq(400);
+        expect(response.body).property('error').to.eq('Missing password');
+      });
     })
-  )
-})
+  );
+});
