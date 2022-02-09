@@ -26,7 +26,7 @@ jobs:
 
       # Install NPM dependencies, cache them correctly
       - name: Install dependencies
-        run: npm install --force
+        run: npm install
 
       # Verify Cypress binary
       - name: Verify Cypress
