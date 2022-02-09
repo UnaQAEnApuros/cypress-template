@@ -25,6 +25,14 @@ jobs:
           replace: ${{ secrets.QASE_API_TOKEN }}
 
       # Install NPM dependencies, cache them correctly
+      - name: Install cypress
+        run: npm install cypress --save-dev
+
+      # Verify e-mail.
+      - name: Verify cypress
+        run: cypress verify
+
+      # Install NPM dependencies, cache them correctly
       - name: Install dependencies
         run: npm install
 
