@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 1 * * 1-5'
 jobs:
   test:
     runs-on: ubuntu-20.04
@@ -24,9 +24,13 @@ jobs:
           find: '{QASE_API_TOKEN}'
           replace: ${{ secrets.QASE_API_TOKEN }}
 
+      # Install Cypress
+      - name: Install Cypress
+        run: npm i cypress
+
       # Install NPM dependencies, cache them correctly
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       # Verify Cypress binary
       - name: Verify Cypress
