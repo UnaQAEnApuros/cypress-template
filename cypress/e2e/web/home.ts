@@ -1,5 +1,3 @@
-/* global cy, Cypress */
-/// <reference types="Cypress" />
 const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
 import HomePage from '../../support/pageobjects/HomePage';

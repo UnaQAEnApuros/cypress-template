@@ -1,7 +1,5 @@
-/* global cy, Cypress */
-/// <reference types="Cypress" />
-const env = Cypress.env()
-import { qase } from 'cypress-qase-reporter/dist/mocha'
+const env = Cypress.env();
+import { qase } from 'cypress-qase-reporter/dist/mocha';
 
 describe('API PUT 200 Request', function () {
   qase(
@@ -15,11 +13,11 @@ describe('API PUT 200 Request', function () {
           job: 'zion resident'
         }
       }).then(response => {
-        expect(response.status).to.eq(200)
-        expect(response.body).property('name').to.equal('morpheus')
-        expect(response.body).property('job').to.equal('zion resident')
-        expect(response.body).have.property('updatedAt')
-      })
+        expect(response.status).to.eq(200);
+        expect(response.body).property('name').to.equal('morpheus');
+        expect(response.body).property('job').to.equal('zion resident');
+        expect(response.body).have.property('updatedAt');
+      });
     })
-  )
-})
+  );
+});

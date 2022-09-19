@@ -1,7 +1,5 @@
-/* global cy, Cypress */
-/// <reference types="Cypress" />
-const env = Cypress.env()
-import { qase } from 'cypress-qase-reporter/dist/mocha'
+const env = Cypress.env();
+import { qase } from 'cypress-qase-reporter/dist/mocha';
 
 describe('API DELETE 200 Request', function () {
   qase(
@@ -11,8 +9,8 @@ describe('API DELETE 200 Request', function () {
         method: 'DELETE',
         url: env.apiURL + '/api/users/2'
       }).then(response => {
-        expect(response.status).to.eq(204)
-      })
+        expect(response.status).to.eq(204);
+      });
     })
-  )
-})
+  );
+});
