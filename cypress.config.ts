@@ -22,6 +22,7 @@ export default defineConfig({
   e2e: {
     setupNodeEvents,
     supportFile: 'cypress/support/commands.ts',
-    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}'
+    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
+    experimentalWebKitSupport: true
   }
 });
