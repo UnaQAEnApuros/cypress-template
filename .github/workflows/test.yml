@@ -9,17 +9,16 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-
+        uses: actions/checkout@v2
       # Replace secrets on the project.
       - name: Replace Cypress Dashboard API Key secret on the package.json
-        uses: jacobtomlinson/gha-find-replace@master
+        uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: '{CYPRESS_DASHBOARD_APIKEY}'
           replace: ${{ secrets.CYPRESS_DASHBOARD_APIKEY }}
 
       - name: Replace Qase API Token secret on the package.json
-        uses: jacobtomlinson/gha-find-replace@master
+        uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: '{QASE_API_TOKEN}'
           replace: ${{ secrets.QASE_API_TOKEN }}
