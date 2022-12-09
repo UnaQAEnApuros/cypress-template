@@ -23,13 +23,13 @@ jobs:
           find: '{QASE_API_TOKEN}'
           replace: ${{ secrets.QASE_API_TOKEN }}
 
-      # Install Cypress
-      - name: Install Cypress
-        run: npm i cypress
+      # Clean node modules
+      - name: Clean node modules
+        run: npm cache clean --force
 
       # Install NPM dependencies, cache them correctly
       - name: Install dependencies
-        run: npm ci
+        run: npm install --force
 
       # Verify Cypress binary
       - name: Verify Cypress
