@@ -3,22 +3,15 @@ class HeaderElements {
    * Method to check if the Header is visible
    */
   isReady() {
-    cy.get('.topper').should('be.visible')
-    cy.get('.navbar').should('be.visible')
+    cy.get('.topper').should('be.visible');
+    cy.get('.navbar').should('be.visible');
   }
 
   /**
    * Method to get the Selenium Easy Logo
    */
   getSeleniumEasyLogo() {
-    return cy.get('.logo > a > img')
-  }
-
-  /**
-   * Method to get the Cross Browser Testing Logo
-   */
-  getCrossBrowerTestingLogo() {
-    return cy.get('.cbt')
+    return cy.get('.logo > a > img');
   }
 
   /*--------------------------------------------------------------------* 
@@ -29,9 +22,7 @@ class HeaderElements {
    * Method to get the Input Form option on the header.
    */
   getInputForm() {
-    return cy
-      .get(':nth-child(1) > :nth-child(1) > .dropdown-toggle')
-      .contains('Input Forms')
+    return cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms');
   }
 
   /*--------------------------------------------------------------------* 
@@ -42,63 +33,49 @@ class HeaderElements {
    * Method to get the Simple Form Demo sub-option from the Input Form option on the header.
    */
   getSimpleFormDemo() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(1) > a')
-      .contains('Simple Form Demo')
+    return cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Simple Form Demo');
   }
 
   /**
    * Method to get the Checkbox Demo sub-option from the Input Form option on the header.
    */
   getCheckboxDemo() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(2) > a')
-      .contains('Checkbox Demo')
+    return cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo');
   }
 
   /**
    * Method to get the Radio Buttons Demo sub-option from the Input Form option on the header.
    */
   getRadioButtonsDemo() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(3) > a')
-      .contains('Radio Buttons Demo')
+    return cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Radio Buttons Demo');
   }
 
   /**
    * Method to get the Select Dropdown List sub-option from the Input Form option on the header.
    */
   getSelectDropdownList() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(4) > a')
-      .contains('Select Dropdown List')
+    return cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Select Dropdown List');
   }
 
   /**
    * Method to get the Input Form Submit sub-option from the Input Form option on the header.
    */
   getInputFormSubmit() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(5) > a')
-      .contains('Input Form Submit')
+    return cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Input Form Submit');
   }
 
   /**
    * Method to get the Ajax Form Submit sub-option from the Input Form option on the header.
    */
   getAjaxFormSubmit() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(6) > a')
-      .contains('Ajax Form Submit')
+    return cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('Ajax Form Submit');
   }
 
   /**
    * Method to get the JQuery Select dropdown sub-option from the Input Form option on the header.
    */
   getJQuerySelectDropdown() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(7) > a')
-      .contains('JQuery Select dropdown')
+    return cy.get('.open > .dropdown-menu > :nth-child(7) > a').contains('JQuery Select dropdown');
   }
 
   /*--------------------------------------------------------------------* 
@@ -109,9 +86,7 @@ class HeaderElements {
    * Method to get the Date Pickers option on the header.
    */
   getDatePickers() {
-    return cy
-      .get(':nth-child(1) > :nth-child(2) > .dropdown-toggle')
-      .contains('Date pickers')
+    return cy.get(':nth-child(1) > :nth-child(2) > .dropdown-toggle').contains('Date pickers');
   }
 
   /*--------------------------------------------------------------------* 
@@ -122,18 +97,14 @@ class HeaderElements {
    * Method to get the Bootstrap Date Picker dropdown sub-option from the Date Pickers option on the header.
    */
   getBootstrapDatePicker() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(1) > a')
-      .contains('Bootstrap Date Picker')
+    return cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Date Picker');
   }
 
   /**
    * Method to get the JQuery Date Picker dropdown sub-option from the Date Pickers option on the header.
    */
   getJQueryDatePicker() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(2) > a')
-      .contains('JQuery Date Picker')
+    return cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery Date Picker');
   }
 
   /*--------------------------------------------------------------------* 
@@ -144,9 +115,7 @@ class HeaderElements {
    * Method to get the Table option on the header.
    */
   getTable() {
-    return cy
-      .get(':nth-child(1) > :nth-child(3) > .dropdown-toggle')
-      .contains('Table')
+    return cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table');
   }
 
   /*--------------------------------------------------------------------* 
@@ -157,45 +126,35 @@ class HeaderElements {
    * Method to get the Table Pagination dropdown sub-option from the Table option on the header.
    */
   getTablePagination() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(1) > a')
-      .contains('Table Pagination')
+    return cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Table Pagination');
   }
 
   /**
    * Method to get the Table Data Search dropdown sub-option from the Table option on the header.
    */
   getTableDataSearch() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(2) > a')
-      .contains('Table Data Search')
+    return cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Table Data Search');
   }
 
   /**
    * Method to get the Table Filter dropdown sub-option from the Table option on the header.
    */
   getTableFilter() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(3) > a')
-      .contains('Table Filter')
+    return cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Table Filter');
   }
 
   /**
    * Method to get the Table Sort & Search dropdown sub-option from the Table option on the header.
    */
   getTableSortAndSearch() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(4) > a')
-      .contains('Table Sort & Search')
+    return cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Table Sort & Search');
   }
 
   /**
    * Method to get the Table Data Download dropdown sub-option from the Table option on the header.
    */
   getTableDataDownload() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(5) > a')
-      .contains('Table Data Download')
+    return cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Table Data Download');
   }
 
   /*--------------------------------------------------------------------* 
@@ -206,7 +165,7 @@ class HeaderElements {
    * Method to get the Demo Home option on the header.
    */
   getDemoHome() {
-    return cy.get('.navbar-brand').contains('Demo Home')
+    return cy.get('.navbar-brand').contains('Demo Home');
   }
 
   /*--------------------------------------------------------------------* 
@@ -217,9 +176,7 @@ class HeaderElements {
    * Method to get the Progress Bar option on the header.
    */
   getProgressBar() {
-    return cy
-      .get('.navbar-right > :nth-child(1) > .dropdown-toggle')
-      .contains('Progress Bars')
+    return cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars');
   }
 
   /*--------------------------------------------------------------------* 
@@ -230,27 +187,21 @@ class HeaderElements {
    * Method to get the JQuery Download Progress bars dropdown sub-option from the Progress Bar option on the header.
    */
   getJQueryDownloadProgressBars() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(1) > a')
-      .contains('JQuery Download Progress bars')
+    return cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('JQuery Download Progress bars');
   }
 
   /**
    * Method to get the Bootstrap Progress bar dropdown sub-option from the Progress Bar option on the header.
    */
   getBootstrapProgressBar() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(2) > a')
-      .contains('Bootstrap Progress bar')
+    return cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Progress bar');
   }
 
   /**
    * Method to get the Drag & Drop Sliders dropdown sub-option from the Progress Bar option on the header.
    */
   getDragAndDropSliders() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(3) > a')
-      .contains('Drag & Drop Sliders')
+    return cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Drag & Drop Sliders');
   }
 
   /*--------------------------------------------------------------------* 
@@ -261,9 +212,7 @@ class HeaderElements {
    * Method to get the Alerts and Modals option on the header.
    */
   getAlertsAndModals() {
-    return cy
-      .get('.navbar-right > :nth-child(2) > .dropdown-toggle')
-      .contains('Alerts & Modals')
+    return cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals');
   }
 
   /*--------------------------------------------------------------------* 
@@ -274,54 +223,42 @@ class HeaderElements {
    * Method to get the Bootstrap Alerts dropdown sub-option from the Alerts & Modals option on the header.
    */
   getBootstrapAlerts() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(1) > a')
-      .contains('Bootstrap Alerts')
+    return cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Alerts');
   }
 
   /**
    * Method to get the Bootstrap Modals dropdown sub-option from the Alerts & Modals option on the header.
    */
   getBootstrapModals() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(2) > a')
-      .contains('Bootstrap Modals')
+    return cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Modals');
   }
 
   /**
    * Method to get the Window Popup Modal dropdown sub-option from the Alerts & Modals option on the header.
    */
   getWindowPopupModal() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(3) > a')
-      .contains('Window Popup Modal')
+    return cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Window Popup Modal');
   }
 
   /**
    * Method to get the Progress Bar Modal dropdown sub-option from the Alerts & Modals option on the header.
    */
   getProgressBarModal() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(4) > a')
-      .contains('Progress Bar Modal')
+    return cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Progress Bar Modal');
   }
 
   /**
    * Method to get the Javascript Alerts dropdown sub-option from the Alerts & Modals option on the header.
    */
   getJavascriptAlerts() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(5) > a')
-      .contains('Javascript Alerts')
+    return cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Javascript Alerts');
   }
 
   /**
    * Method to get the File Download dropdown sub-option from the Alerts & Modals option on the header.
    */
   getFileDownload() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(6) > a')
-      .contains('File Download')
+    return cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('File Download');
   }
 
   /*--------------------------------------------------------------------* 
@@ -332,9 +269,7 @@ class HeaderElements {
    * Method to get the List Box option on the header.
    */
   getListBox() {
-    return cy
-      .get('.navbar-right > :nth-child(3) > .dropdown-toggle')
-      .contains('List Box')
+    return cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box');
   }
 
   /*--------------------------------------------------------------------* 
@@ -345,27 +280,21 @@ class HeaderElements {
    * Method to get the Bootstrap List Box dropdown sub-option from the List Box Submenu option on the header.
    */
   getBootstrapListBox() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(1) > a')
-      .contains('Bootstrap List Box')
+    return cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap List Box');
   }
 
   /**
    * Method to get the JQuery List Box dropdown sub-option from the List Box Submenu option on the header.
    */
   getJQueryListBox() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(2) > a')
-      .contains('JQuery List Box')
+    return cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery List Box');
   }
 
   /**
    * Method to get the Data List Filter dropdown sub-option from the List Box Submenu option on the header.
    */
   getDataListFilter() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(3) > a')
-      .contains('Data List Filter')
+    return cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Data List Filter');
   }
 
   /*--------------------------------------------------------------------* 
@@ -376,7 +305,7 @@ class HeaderElements {
    * Method to get the Others option on the header.
    */
   getOthers() {
-    return cy.get(':nth-child(4) > .dropdown-toggle').contains('Others')
+    return cy.get(':nth-child(4) > .dropdown-toggle').contains('Others');
   }
 
   /*--------------------------------------------------------------------* 
@@ -387,28 +316,22 @@ class HeaderElements {
    * Method to get the Drag and Drop dropdown sub-option from the Get Others Submenu option on the header.
    */
   getDragAndDrop() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(1) > a')
-      .contains('Drag and Drop')
+    return cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Drag and Drop');
   }
 
   /**
    * Method to get the Dynamic Data Loading dropdown sub-option from the Get Others Submenu option on the header.
    */
   getDynamicDataLoading() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(2) > a')
-      .contains('Dynamic Data Loading')
+    return cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Dynamic Data Loading');
   }
 
   /**
    * Method to get the Charts Demo dropdown sub-option from the Get Others Submenu option on the header.
    */
   getChartsDemo() {
-    return cy
-      .get('.open > .dropdown-menu > :nth-child(3) > a')
-      .contains('Charts Demo')
+    return cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Charts Demo');
   }
 }
 
-export default HeaderElements
+export default HeaderElements;
