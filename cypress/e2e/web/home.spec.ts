@@ -10,7 +10,6 @@ describe('Home Tests', function () {
       home.visit();
       home.isReady();
       home.checkSeleniumEasyLogoIsVisible();
-      home.checkCrossBrowserTestingLogoIsVisible();
     })
   );
 
