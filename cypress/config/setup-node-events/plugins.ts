@@ -1,10 +1,5 @@
 import { TestExecutionResult } from 'cypress-debugger';
 const { debuggerPlugin } = require('cypress-debugger');
-import '@bahmutov/cy-api/support';
-import '@testing-library/cypress/add-commands';
-import 'pretty-console-colors';
-import '@testing-library/cypress/add-commands';
-import 'cypress-xpath';
 
 /**
  * The collection of plugins to use with Cypress
