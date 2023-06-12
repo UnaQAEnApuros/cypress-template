@@ -1,4 +1,4 @@
-import { debuggerSupport } from 'cypress-debugger';
+//import { debuggerSupport } from 'cypress-debugger';
 
 require('mochawesome/addContext');
 import 'cypress-xpath';
@@ -26,4 +26,4 @@ Cypress.on('uncaught:exception', () => false);
 /** Debugger Plugin by Sorry Cypress. 
 // https://github.com/currents-dev/cypress-debugger
 */
-debuggerSupport();
+//debuggerSupport();
