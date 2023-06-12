@@ -1,11 +1,10 @@
 import { TestExecutionResult } from 'cypress-debugger';
 const { debuggerPlugin } = require('cypress-debugger');
-import 'cypress-wait-until';
-import 'cypress-xpath';
 import '@bahmutov/cy-api/support';
 import '@testing-library/cypress/add-commands';
-import 'cypress-wait-until';
 import 'pretty-console-colors';
+import '@testing-library/cypress/add-commands';
+import 'cypress-xpath';
 
 /**
  * The collection of plugins to use with Cypress

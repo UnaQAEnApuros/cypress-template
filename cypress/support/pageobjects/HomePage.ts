@@ -85,9 +85,12 @@ class HomePage {
    * Method to click to close the popup once is displayed.
    */
   closePopUp() {
-    const checkPopup = () => cy.get('#at-cv-lightbox-header').should('be.visible');
-    cy.waitUntil(checkPopup).then(() => {
-      cy.get('#at-cv-lightbox-close').click();
+    cy.get('#at-cv-lightbox-header').then($popup => {
+      if (Cypress.dom.isVisible($popup)) {
+        cy.log('The popup is displayed').then(() => {
+          cy.get('#at-cv-lightbox-close').click();
+        });
+      }
     });
   }
 

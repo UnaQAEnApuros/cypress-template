@@ -1,8 +1,6 @@
 import { defineConfig } from 'cypress';
 import { plugins } from './cypress/config/setup-node-events/plugins';
 
-//const setupNodeEvents = require('./cypress/plugins/index.ts');
-
 export default defineConfig({
   chromeWebSecurity: false,
   defaultCommandTimeout: 30000,
@@ -25,6 +23,7 @@ export default defineConfig({
     setupNodeEvents(on) {
       plugins(on);
     },
+    supportFile: false,
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}'
   }
 });
