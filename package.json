@@ -54,6 +54,7 @@
     "@bahmutov/cy-api": "^2.2.4",
     "@cypress/skip-test": "^2.6.1",
     "@testing-library/cypress": "^9.0.0",
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "^18.15.11",
     "babel-eslint": "^10.1.0",
     "cypress": "^12.10.0",
@@ -77,6 +78,7 @@
     "webpack": "^5.79.0"
   },
   "dependencies": {
+    "cypress-debugger": "^1.0.3",
     "cypress-select-tests": "1.7.1",
     "depcheck": "1.4.3",
     "ncu": "0.2.1",
