@@ -1,5 +1,6 @@
 import { defineConfig } from 'cypress';
 import { plugins } from './cypress/config/setup-node-events/plugins';
+import { mergeConfigWithConfigFromFile } from './cypress/config/setup-node-events/mergeConfigWithConfigFromFile';
 
 export default defineConfig({
   chromeWebSecurity: false,
@@ -20,10 +21,14 @@ export default defineConfig({
   viewportWidth: 1920,
   watchForFileChanges: false,
   e2e: {
-    setupNodeEvents(on) {
+    baseUrl: 'https://demo.seleniumeasy.com/',
+    testIsolation: true,
+    setupNodeEvents(on, config) {
+      const newConfig = mergeConfigWithConfigFromFile(config);
       plugins(on);
+      console.info('\n> Cypress config:\n', newConfig);
+      return newConfig;
     },
-    supportFile: false,
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}'
   }
 });
