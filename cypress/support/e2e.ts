@@ -1,11 +1,6 @@
-/* global Cypress, cy */
-const env = Cypress.env();
 import { debuggerSupport } from 'cypress-debugger';
 
 require('mochawesome/addContext');
-require('@cypress/skip-test/support');
-import '@testing-library/cypress/add-commands';
-import 'pretty-console-colors';
 import 'cypress-xpath';
 
 const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report

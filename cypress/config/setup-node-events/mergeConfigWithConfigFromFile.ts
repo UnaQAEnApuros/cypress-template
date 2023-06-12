@@ -6,7 +6,7 @@ import fs from 'fs-extra';
  * Documentation: https://docs.cypress.io/api/plugins/configuration-api.html#Switch-between-multiple-configuration-files
  */
 const getConfigurationByFile = (file: string) => {
-  const pathToConfigFile = path.resolve(__dirname, '../../config', `${file}.json`);
+  const pathToConfigFile = path.resolve(__dirname, '../', `${file}.json`);
   return fs.readJsonSync(pathToConfigFile);
 };
 
@@ -15,15 +15,12 @@ export const mergeConfigWithConfigFromFile = (config: Cypress.PluginConfigOption
   const file = config.env.configFile || 'qa';
   const configFromFile = getConfigurationByFile(file);
 
-  const {
-    e2e: { env: envFromFile },
-    ...restConfigFromFile
-  } = configFromFile;
+  const { ...restConfigFromFile } = configFromFile;
 
   const newConfig = {
     ...config,
     ...restConfigFromFile,
-    env: { ...config.env, ...envFromFile }
+    env: { ...config.env }
   };
 
   return newConfig;
