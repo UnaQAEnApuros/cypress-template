@@ -4,7 +4,6 @@ import { debuggerSupport } from 'cypress-debugger';
 
 require('mochawesome/addContext');
 require('@cypress/skip-test/support');
-import '@bahmutov/cy-api/support';
 import '@testing-library/cypress/add-commands';
 import 'pretty-console-colors';
 import 'cypress-xpath';
