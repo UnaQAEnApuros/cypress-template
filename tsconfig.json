@@ -17,6 +17,6 @@
     "esModuleInterop": true
   },
   "jsdoc": "jsdoc",
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["**/*.ts", "currents.config.js"],
+  "exclude": ["node_modules", "babel-polyfill"]
 }
