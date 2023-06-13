@@ -1,7 +1,5 @@
 //import { debuggerSupport } from 'cypress-debugger';
 
-// Import commands.js using ES2015 syntax:
-// @ts-check
 require('mochawesome/addContext');
 import 'cypress-xpath';
 
