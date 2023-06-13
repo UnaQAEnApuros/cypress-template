@@ -76,7 +76,6 @@
     "webpack": "^5.86.0"
   },
   "dependencies": {
-    "cypress-select-tests": "1.7.1",
     "depcheck": "1.4.3",
     "ncu": "0.2.1",
     "pretty-console-colors": "2.0.0"
