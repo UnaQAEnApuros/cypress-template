@@ -1,7 +1,8 @@
 //import { debuggerSupport } from 'cypress-debugger';
 
-require('mochawesome/addContext');
+import './commands';
 import 'cypress-xpath';
+require('mochawesome/addContext');
 
 const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report
 
