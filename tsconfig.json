@@ -1,24 +1,22 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "downlevelIteration": true,
-      "lib": ["es5", "dom"],
-      "types": ["cypress", "node", "cypress-wait-until"], 
-      "typeRoots": [ "../node_modules/@types" ], 
-      "moduleResolution": "node",
-      "module": "es6",
-      "allowJs": true, 
-      "skipLibCheck": true,
-      "noEmit": true,
-      "strict": true,
-      "noImplicitAny": true,
-      "strictPropertyInitialization": false,
-      "resolveJsonModule": true,
-      "esModuleInterop": true
-    },
-    "jsdoc": "jsdoc",
-    "include": [
-      "**/*.ts"
-    ], 
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "es5",
+    "downlevelIteration": true,
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "typeRoots": ["../node_modules/@types"],
+    "moduleResolution": "node",
+    "module": "es6",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "jsdoc": "jsdoc",
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }
