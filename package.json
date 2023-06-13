@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "verify": "cypress verify",
-    "open": "npm run compile && cypress open --env configFile=local",
+    "open": "npm run compile && ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 cypress open --env configFile=local",
     "test": "npm run compile && QASE_REPORT=1 cypress run --env configFile=qa --record --key {CYPRESS_DASHBOARD_APIKEY} --parallel",
     "test:local": "cypress run --env configFile=local --spec 'cypress/integration/api/api_delete_examples.spec.ts'",
     "test:edge": "cypress run --env configFile=qa --browser edge --headless",
@@ -33,6 +33,7 @@
   "homepage": "https://github.com/estefafdez/cypress-template#readme",
   "dependencies": {
     "cypress": "^12.14.0",
+    "cypress-debugger": "^1.0.3",
     "cypress-junit-reporter": "^1.3.1",
     "cypress-multi-reporters": "^1.6.3",
     "cypress-qase-reporter": "^1.4.1",
