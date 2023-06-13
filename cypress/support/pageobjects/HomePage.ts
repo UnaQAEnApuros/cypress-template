@@ -85,9 +85,12 @@ class HomePage {
    * Method to click to close the popup once is displayed.
    */
   closePopUp() {
-    const checkPopup = () => cy.get('#at-cv-lightbox-header').should('be.visible');
-    cy.waitUntil(checkPopup).then(() => {
-      cy.get('#at-cv-lightbox-close').click();
+    cy.get('#at-cv-lightbox-header', { timeout: 30_000 }).then($popup => {
+      if (Cypress.dom.isVisible($popup)) {
+        cy.log('The popup is displayed').then(() => {
+          cy.get('#at-cv-lightbox-close').click();
+        });
+      }
     });
   }
 
@@ -487,8 +490,6 @@ class HomePage {
   clickOnChartsDemoDropdownLinkHeader() {
     this.header.getOthers().click();
     this.header.getChartsDemo().click();
-    Cypress.on('uncaught:exception', () => false);
-
     return new ChartsDemoDropdownPage();
   }
 }
