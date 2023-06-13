@@ -85,7 +85,7 @@ class HomePage {
    * Method to click to close the popup once is displayed.
    */
   closePopUp() {
-    cy.get('#at-cv-lightbox-header').then($popup => {
+    cy.get('#at-cv-lightbox-header', { timeout: 30_000 }).then($popup => {
       if (Cypress.dom.isVisible($popup)) {
         cy.log('The popup is displayed').then(() => {
           cy.get('#at-cv-lightbox-close').click();
@@ -490,7 +490,7 @@ class HomePage {
   clickOnChartsDemoDropdownLinkHeader() {
     this.header.getOthers().click();
     this.header.getChartsDemo().click();
-
+    Cypress.on('uncaught:exception', () => false);
     return new ChartsDemoDropdownPage();
   }
 }

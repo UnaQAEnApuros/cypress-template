@@ -1,5 +1,12 @@
 //import { debuggerSupport } from 'cypress-debugger';
 
+// Import commands.js using ES2015 syntax:
+// @ts-check
+
+import '@bahmutov/cy-api/support';
+import '@testing-library/cypress/add-commands';
+import 'pretty-console-colors';
+require('cypress-xpath');
 require('mochawesome/addContext');
 import 'cypress-xpath';
 
