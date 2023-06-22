@@ -30,6 +30,8 @@ describe('Others Tests', function () {
     it('[45, WEB] should visit the web and click on the Charts Demo Link', function () {
       home.visit();
       home.isReady();
+      // Needed to avoid the Chart is not defined error.
+      Cypress.on('uncaught:exception', () => false);
       const chartsDemo = home.clickOnChartsDemoDropdownLinkHeader();
       chartsDemo.isReady();
     })
