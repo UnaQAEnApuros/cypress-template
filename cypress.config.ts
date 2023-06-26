@@ -1,6 +1,6 @@
 import { defineConfig } from 'cypress';
-import { plugins } from './cypress/config/setup-node-events/plugins';
 import { mergeConfigWithConfigFromFile } from './cypress/config/setup-node-events/mergeConfigWithConfigFromFile';
+import { plugins } from './cypress/config/setup-node-events/plugins';
 
 export default defineConfig({
   chromeWebSecurity: false,
@@ -21,7 +21,6 @@ export default defineConfig({
   viewportWidth: 1920,
   watchForFileChanges: false,
   e2e: {
-    baseUrl: 'https://demo.seleniumeasy.com/',
     testIsolation: true,
     setupNodeEvents(on, config) {
       const newConfig = mergeConfigWithConfigFromFile(config);

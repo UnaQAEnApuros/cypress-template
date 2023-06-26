@@ -15,12 +15,15 @@ export const mergeConfigWithConfigFromFile = (config: Cypress.PluginConfigOption
   const file = config.env.configFile || 'qa';
   const configFromFile = getConfigurationByFile(file);
 
-  const { ...restConfigFromFile } = configFromFile;
+  const {
+    e2e: { env: envFromFile },
+    ...restConfigFromFile
+  } = configFromFile;
 
   const newConfig = {
     ...config,
     ...restConfigFromFile,
-    env: { ...config.env }
+    env: { ...config.env, ...envFromFile }
   };
 
   return newConfig;

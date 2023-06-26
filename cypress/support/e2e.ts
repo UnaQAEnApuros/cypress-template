@@ -13,6 +13,7 @@ import 'pretty-console-colors';
 require('cypress-xpath');
 require('mochawesome/addContext');
 import 'cypress-xpath';
+require('mochawesome/addContext');
 
 const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report
 

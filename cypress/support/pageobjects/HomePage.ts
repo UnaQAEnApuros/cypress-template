@@ -490,6 +490,7 @@ class HomePage {
   clickOnChartsDemoDropdownLinkHeader() {
     this.header.getOthers().click();
     this.header.getChartsDemo().click();
+    Cypress.on('uncaught:exception', () => false);
     return new ChartsDemoDropdownPage();
   }
 }

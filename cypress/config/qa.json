@@ -1,11 +1,13 @@
 {
+  "e2e": {
     "env": {
-        "name": "qa", 
-        "apiURL": "https://reqres.in",
-        "webURL": "https://demo.seleniumeasy.com/"
+      "name": "qa",
+      "apiURL": "https://reqres.in",
+      "webURL": "https://demo.seleniumeasy.com/"
     },
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
-        "configFile": "cypress/config/reporter-config.json"
+      "configFile": "cypress/config/reporter-config.json"
     }
+  }
 }
