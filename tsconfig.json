@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
+    "types": ["node", "cypress"],
     "target": "es5",
     "downlevelIteration": true,
     "lib": ["es5", "dom"],
-    "types": ["cypress", "node"],
-    "typeRoots": ["../node_modules/@types"],
+    "typeRoots": ["./node_modules/@types"],
     "moduleResolution": "node",
     "module": "es6",
     "allowJs": true,
@@ -17,6 +17,6 @@
     "esModuleInterop": true
   },
   "jsdoc": "jsdoc",
-  "include": ["**/*.ts", "currents.config.js"],
-  "exclude": ["node_modules", "babel-polyfill"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }
