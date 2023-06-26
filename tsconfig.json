@@ -17,6 +17,6 @@
     "esModuleInterop": true
   },
   "jsdoc": "jsdoc",
-  "include": ["**/*.ts", "currents.config.js"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }
