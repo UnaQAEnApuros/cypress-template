@@ -1,17 +1,5 @@
 import { debuggerSupport } from 'cypress-debugger';
-
-// Import commands.js using ES2015 syntax:
-// @ts-check
-
-import '@testing-library/cypress/add-commands';
-import 'pretty-console-colors';
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-require('cypress-xpath');
-require('mochawesome/addContext');
 import 'cypress-xpath';
-require('mochawesome/addContext');
 
 const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report
 
