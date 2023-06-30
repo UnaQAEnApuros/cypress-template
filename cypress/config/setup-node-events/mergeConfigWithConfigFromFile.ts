@@ -6,9 +6,11 @@ import fs from 'fs-extra';
  * Documentation: https://docs.cypress.io/api/plugins/configuration-api.html#Switch-between-multiple-configuration-files
  */
 const getConfigurationByFile = (file: string) => {
-  const pathToConfigFile = path.resolve(__dirname, '../', `${file}.json`);
+  const pathToConfigFile = path.resolve(__dirname, '../../config', `${file}.json`);
   return fs.readJsonSync(pathToConfigFile);
 };
+
+//'/Volumes/Seguridad/ProyectosQA/cypress-template/cypress/config/setup-node-events/cypress/config/local.json'
 
 export const mergeConfigWithConfigFromFile = (config: Cypress.PluginConfigOptions): Cypress.PluginConfigOptions => {
   // Accept a configFile value or use qa by default

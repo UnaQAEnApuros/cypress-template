@@ -28,6 +28,6 @@ export default defineConfig({
       console.info('\n> Cypress config:\n', newConfig);
       return newConfig;
     },
-    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}'
+    specPattern: 'cypress/e2e/**/*.ts'
   }
 });
