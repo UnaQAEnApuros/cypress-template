@@ -1,28 +1,31 @@
 import { defineConfig } from 'cypress';
-const setupNodeEvents = require('./cypress/plugins/index.ts');
+import { mergeConfigWithConfigFromFile } from './cypress/config/setup-node-events/mergeConfigWithConfigFromFile';
 
 export default defineConfig({
-  watchForFileChanges: false,
-  video: false,
-  viewportWidth: 1920,
-  viewportHeight: 1080,
-  defaultCommandTimeout: 30000,
-  screenshotsFolder: 'mochawesome-report/assets',
   chromeWebSecurity: false,
-  retries: {
-    runMode: 2,
-    openMode: 0
-  },
+  defaultCommandTimeout: 30000,
   pageLoadTimeout: 60000,
   projectId: 'iyhpy5',
   reporter: 'cypress-multi-reporters',
   reporterOptions: {
     configFile: 'cypress/config/reporter-config.json'
   },
+  retries: {
+    runMode: 2,
+    openMode: 0
+  },
+  screenshotsFolder: 'mochawesome-report/assets',
+  video: false,
+  viewportHeight: 1080,
+  viewportWidth: 1920,
+  watchForFileChanges: false,
   e2e: {
-    setupNodeEvents,
-    supportFile: 'cypress/support/commands.ts',
-    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
-    experimentalWebKitSupport: true
+    testIsolation: true,
+    setupNodeEvents(on, config) {
+      const newConfig = mergeConfigWithConfigFromFile(config);
+      console.info('\n> Cypress config:\n', newConfig);
+      return newConfig;
+    },
+    specPattern: 'cypress/e2e/**/*.ts'
   }
 });

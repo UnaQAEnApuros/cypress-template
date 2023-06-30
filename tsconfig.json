@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node", "cypress"],
+    "types": ["node"],
     "target": "es5",
     "downlevelIteration": true,
     "lib": ["es5", "dom"],
