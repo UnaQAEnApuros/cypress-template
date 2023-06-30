@@ -1,7 +1,9 @@
 {
+  "e2e": {
     "env": {
-        "name": "local", 
-        "apiURL": "https://reqres.in",
-        "webURL": "https://demo.seleniumeasy.com/"
+      "name": "local",
+      "apiURL": "https://reqres.in",
+      "webURL": "https://demo.seleniumeasy.com/"
     }
+  }
 }
