@@ -1,4 +1,4 @@
-import { TestExecutionResult } from 'cypress-debugger';
+const { TestExecutionResult } = require('cypress-debugger');
 const { debuggerPlugin } = require('cypress-debugger');
 
 /**
@@ -9,9 +9,10 @@ const { debuggerPlugin } = require('cypress-debugger');
 export const plugins = (on: Cypress.PluginEvents): Cypress.PluginConfigOptions => ({
   ...debuggerPlugin(on, {
     meta: { key: 'value' },
-    callback: (path: string, data: TestExecutionResult) => {
+    callback: (path: string, data: typeof TestExecutionResult) => {
       console.info('\t🎥 Trace file %s', data, path);
     },
+    failedTestsOnly: true,
     targetDirectory: 'cypress/report/debugger'
   })
 });

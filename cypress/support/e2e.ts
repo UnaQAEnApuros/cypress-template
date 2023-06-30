@@ -18,7 +18,9 @@
 
 import 'pretty-console-colors';
 import 'cypress-xpath';
-import { debuggerSupport } from 'cypress-debugger';
+
+const { debuggerSupport } = require('cypress-debugger');
+debuggerSupport();
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
