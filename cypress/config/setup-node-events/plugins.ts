@@ -13,6 +13,6 @@ export const plugins = (on: Cypress.PluginEvents): Cypress.PluginConfigOptions =
       console.info('\t🎥 Trace file %s', data, path);
     },
     failedTestsOnly: true,
-    targetDirectory: 'cypress/report/debugger'
+    targetDirectory: 'report/debugger'
   })
 });
