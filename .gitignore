@@ -1,7 +1,6 @@
 *.mp4
 *.png
+report	
 dist
 mochawesome-report
 node_modules
-report
-report/debugger/*
