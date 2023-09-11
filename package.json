@@ -6,7 +6,7 @@
   "scripts": {
     "verify": "cypress verify",
     "open": "npm run compile && cypress open --env configFile=local",
-    "test": "npm run compile && QASE_REPORT=1  cypress run --env configFile=qa --record --key {CYPRESS_DASHBOARD_APIKEY} --parallel",
+    "test": "npm run compile && QASE_REPORT=1 cypress run --env configFile=qa --record --key {CYPRESS_DASHBOARD_APIKEY} --parallel",
     "test:local": "cypress run --env configFile=local --spec 'cypress/integration/api/api_delete_examples.spec.ts'",
     "test:edge": "cypress run --env configFile=qa --browser edge --headless",
     "test:webkit": "cypress run --env configFile=qa --browser webkit --headless",
