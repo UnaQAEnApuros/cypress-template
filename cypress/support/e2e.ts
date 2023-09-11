@@ -16,8 +16,8 @@
 // Import commands.js using ES2015 syntax:
 // @ts-check
 
-import 'pretty-console-colors';
 import 'cypress-xpath';
+import 'pretty-console-colors';
 
 const { debuggerSupport } = require('cypress-debugger');
 debuggerSupport();
