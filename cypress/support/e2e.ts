@@ -18,8 +18,8 @@
 
 import 'cypress-xpath';
 
-const { debuggerSupport } = require('cypress-debugger');
-debuggerSupport();
+// const { debuggerSupport } = require('cypress-debugger');
+// debuggerSupport();
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -49,4 +49,4 @@ Cypress.on('uncaught:exception', () => false);
 /** Debugger Plugin by Sorry Cypress. 
 // https://github.com/currents-dev/cypress-debugger
 */
-debuggerSupport();
+// debuggerSupport();
