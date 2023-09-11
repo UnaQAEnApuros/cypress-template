@@ -23,6 +23,7 @@ export default defineConfig({
     testIsolation: true,
     setupNodeEvents(on, config) {
       const newConfig = mergeConfigWithConfigFromFile(config);
+      //plugins(on);
       console.info('\n> Cypress config:\n', newConfig);
       return newConfig;
     },

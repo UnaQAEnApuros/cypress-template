@@ -1,6 +1,6 @@
-node_modules
 *.mp4
 *.png
-report
-mochawesome-report
+report	
 dist
+mochawesome-report
+node_modules

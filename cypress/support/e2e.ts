@@ -16,8 +16,10 @@
 // Import commands.js using ES2015 syntax:
 // @ts-check
 
-import 'pretty-console-colors';
 import 'cypress-xpath';
+
+// const { debuggerSupport } = require('cypress-debugger');
+// debuggerSupport();
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -43,3 +45,8 @@ Cypress.on('test:after:run', (test, runnable) => {
  * More info here: https://docs.cypress.io/guides/references/error-messages.html#Uncaught-exceptions-from-your-application
  */
 Cypress.on('uncaught:exception', () => false);
+
+/** Debugger Plugin by Sorry Cypress. 
+// https://github.com/currents-dev/cypress-debugger
+*/
+// debuggerSupport();
