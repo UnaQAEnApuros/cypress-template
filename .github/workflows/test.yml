@@ -6,10 +6,10 @@ on:
     - cron: '0 1 * * 1-5'
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       # Replace secrets on the project.
       - name: Replace Cypress Dashboard API Key secret on the package.json
         uses: jacobtomlinson/gha-find-replace@v3
@@ -89,7 +89,7 @@ jobs:
 
       # Slack Notify
       - name: Slack Notify
-        uses: rtCamp/action-slack-notify@v2.2.0
+        uses: rtCamp/action-slack-notify@v2.2.1
         if: always()
         env:
           SLACK_CHANNEL: travis-ci
