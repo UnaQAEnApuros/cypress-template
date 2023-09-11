@@ -1,6 +1,6 @@
 {
   "name": "cypress-template",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Example of E2E tests with Cypress",
   "main": "index.js",
   "scripts": {
