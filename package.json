@@ -56,7 +56,6 @@
   "dependencies": {
     "@types/fs-extra": "^11.0.1",
     "@types/node": "^20.6.0",
-    "depcheck": "1.4.5",
-    "pretty-console-colors": "2.0.0"
+    "depcheck": "1.4.5"
   }
 }

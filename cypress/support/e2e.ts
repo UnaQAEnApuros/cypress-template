@@ -17,7 +17,6 @@
 // @ts-check
 
 import 'cypress-xpath';
-import 'pretty-console-colors';
 
 const { debuggerSupport } = require('cypress-debugger');
 debuggerSupport();
