@@ -1,25 +1,12 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../support/pageobjects/HomePage';
 
 describe('List Box Tests', function () {
-  const home = new HomePage();
-
   qase(
     [40],
     it('[40, WEB] should visit the web and click on the List Box Link', function () {
       cy.visitHomePage();
-
-      home.clickOnJQueryListBoxLinkHeader();
-    })
-  );
-
-  qase(
-    [41],
-    it('[41, WEB] should visit the web and click on the Jquery List Link', function () {
-      cy.visitHomePage();
-
-      home.clickOnJQueryListBoxLinkHeader();
+      cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery List Box').click();
     })
   );
 
@@ -27,8 +14,8 @@ describe('List Box Tests', function () {
     [42],
     it('[42, WEB] should visit the web and click on the Data List Filter Link', function () {
       cy.visitHomePage();
-
-      home.clickOnDataListFilterLinkHeader();
+      cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
+      cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Data List Filter').click();
     })
   );
 });

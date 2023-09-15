@@ -56,26 +56,6 @@ class HomePage {
   }
 
   /*--------------------------------------------------------------------* 
-  |	Date Pickers Submenu
-  *---------------------------------------------------------------------*/
-
-  /**
-   * Method to click on the Bootstrap Date Picker option on the header menu.
-   */
-  clickOnBootstrapDatePickerLinkHeader() {
-    cy.get(':nth-child(1) > :nth-child(2) > .dropdown-toggle').contains('Date pickers').click();
-    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Date Picker').click();
-  }
-
-  /**
-   * Method to click on the JQuery Date Picker option on the header menu.
-   */
-  clickOnJQueryDatePickerLinkHeader() {
-    cy.get(':nth-child(1) > :nth-child(2) > .dropdown-toggle').contains('Date pickers').click();
-    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery Date Picker').click();
-  }
-
-  /*--------------------------------------------------------------------* 
   |	Table Submenu
   *---------------------------------------------------------------------*/
 
@@ -168,22 +148,6 @@ class HomePage {
   clickOnBootstrapListLinkHeader() {
     cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
     cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap List Box').click();
-  }
-
-  /**
-   * Method to click on the JQuery List Box option on the header menu.
-   */
-  clickOnJQueryListBoxLinkHeader() {
-    cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
-    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery List Box').click();
-  }
-
-  /**
-   * Method to click on the Data List Filter option on the header menu.
-   */
-  clickOnDataListFilterLinkHeader() {
-    cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
-    cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Data List Filter').click();
   }
 
   /*--------------------------------------------------------------------* 
