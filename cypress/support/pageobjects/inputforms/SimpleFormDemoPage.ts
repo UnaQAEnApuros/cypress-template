@@ -1,52 +1,43 @@
-import SimpleFormElements from '../../elements/inputforms/SimpleFormElements'
-
 class SimpleFormDemoPage {
-  simpleForm: any
+  simpleForm: any;
 
-  constructor() {
-    this.simpleForm = new SimpleFormElements()
-  }
+  constructor() {}
 
   /**
    * Method to check if the simpleFormPage is visible
    */
   isReady() {
-    cy.url().should(
-      'eq',
-      'https://demo.seleniumeasy.com/basic-first-form-demo.html'
-    )
-    cy.get('h3')
-      .contains('This would be your first example to start with Selenium.')
-      .should('be.visible')
+    cy.url().should('eq', 'https://demo.seleniumeasy.com/basic-first-form-demo.html');
+    cy.get('h3').contains('This would be your first example to start with Selenium.').should('be.visible');
   }
 
   enterMessage(message: string) {
-    this.simpleForm.getUserMessageInput().click().clear().type(message)
+    cy.get('.form-group > #user-message').click().clear().type(message);
   }
 
   clickOnShowMessage() {
-    this.simpleForm.getShowMessageButton().click()
+    cy.get('#get-input > .btn').contains('Show Message').click();
   }
 
   checkYourMessageIsCorrect(message: string) {
-    this.simpleForm.getYourMessageText().should('have.text', message)
+    cy.xpath("//span[@id='display']").should('have.text', message);
   }
 
-  enterValueA(a: number) {
-    this.simpleForm.getInput1Sum().click().clear().type(a)
+  enterValueA(a: string) {
+    cy.get('#value1').click().clear().type(a);
   }
 
-  enterValueB(b: number) {
-    this.simpleForm.getInput2Sum().click().clear().type(b)
+  enterValueB(b: string) {
+    cy.get('#value2').click().clear().type(b);
   }
 
   clickOnGetTotalutton() {
-    this.simpleForm.getTotalButton().click()
+    cy.get('#gettotal > .btn').contains('Get Total').click();
   }
 
   checkTotalResultIsCorrect(total: number) {
-    this.simpleForm.getTotalResult().should('have.text', total)
+    cy.xpath("//span[@id='displayvalue']").should('have.text', total);
   }
 }
 
-export default SimpleFormDemoPage
+export default SimpleFormDemoPage;
