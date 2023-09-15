@@ -1,22 +1,20 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "lib": ["ES2022", "dom"],
     "types": ["node"],
-    "target": "es5",
-    "downlevelIteration": true,
-    "lib": ["es5", "dom"],
-    "typeRoots": ["./node_modules/@types"],
-    "moduleResolution": "node",
-    "module": "es6",
-    "allowJs": true,
+    "typeRoots": ["./types", "./node_modules/@types"],
     "skipLibCheck": true,
     "noEmit": true,
     "strict": true,
     "noImplicitAny": true,
     "strictPropertyInitialization": false,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "downlevelIteration": true
   },
-  "jsdoc": "jsdoc",
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }

@@ -1,13 +1,5 @@
 class HeaderElements {
   /**
-   * Method to check if the Header is visible
-   */
-  isReady() {
-    cy.get('.topper').should('be.visible');
-    cy.get('.navbar').should('be.visible');
-  }
-
-  /**
    * Method to get the Selenium Easy Logo
    */
   getSeleniumEasyLogo() {
