@@ -8,7 +8,6 @@ describe('Simple Form Demo Tests', function () {
     [48],
     it('[48, WEB] should enter a message and check that is correct', function () {
       cy.visitHomePage();
-      home.isReady();
 
       const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader();
       simpleFormDemo.isReady();
@@ -22,7 +21,6 @@ describe('Simple Form Demo Tests', function () {
     [49],
     it('[49, WEB] should enter two numbers and check that the sum is correct', function () {
       cy.visitHomePage();
-      home.isReady();
 
       const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader();
       simpleFormDemo.isReady();

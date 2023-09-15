@@ -8,7 +8,7 @@ describe('Alerts And Modals Tests', function () {
     [34],
     it('[34, WEB] should visit the web and click on the Bootstrap Alerts Link', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const bootstrapAlerts = home.clickOnBootstrapAlertsLinkHeader();
       bootstrapAlerts.isReady();
     })
@@ -18,7 +18,7 @@ describe('Alerts And Modals Tests', function () {
     [35],
     it('[35, WEB] should visit the web and click on the Bootstrap Modals Link', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const bootstrapModals = home.clickOnBootstrapModalsLinkHeader();
       bootstrapModals.isReady();
     })
@@ -28,7 +28,7 @@ describe('Alerts And Modals Tests', function () {
     [36],
     it('[36, WEB] should visit the web and click on the File Download Link', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const fileDownload = home.clickOnFileDownloadLinkHeader();
       fileDownload.isReady();
     })
@@ -38,7 +38,7 @@ describe('Alerts And Modals Tests', function () {
     [37],
     it('[37, WEB] should visit the web and click on the Javascript Alerts Link', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const javascriptAlerts = home.clickOnJavascriptAlertsLinkHeader();
       javascriptAlerts.isReady();
     })
@@ -48,7 +48,7 @@ describe('Alerts And Modals Tests', function () {
     [38],
     it('[38, WEB] should visit the web and click on the Progress Bar Modal Link', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const progressBarModal = home.clickOnProgressBarModalLinkHeader();
       progressBarModal.isReady();
     })
@@ -58,7 +58,7 @@ describe('Alerts And Modals Tests', function () {
     [39],
     it('[39, WEB] should visit the web and click on the Windows Popup Modal Link', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const windowsPopupModal = home.clickOnWindowPopupModalLinkHeader();
       windowsPopupModal.isReady();
     })

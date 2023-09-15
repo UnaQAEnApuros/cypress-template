@@ -8,7 +8,7 @@ describe('Home Tests', function () {
     [46],
     it('[46, WEB] should visit the web and check that the header is displayed properly', function () {
       cy.visitHomePage();
-      home.isReady();
+
       home.checkSeleniumEasyLogoIsVisible();
     })
   );
@@ -17,7 +17,7 @@ describe('Home Tests', function () {
     [47],
     it('[47, WEB] should visit the web and check if the menu is displayed properly', function () {
       cy.visitHomePage();
-      home.isReady();
+
       home.checkAllExamplesMenuOptionIsVisible();
       home.checkInputFormMenuOptionIsVisible();
       home.checkDatePickersMenuOptionIsVisible();

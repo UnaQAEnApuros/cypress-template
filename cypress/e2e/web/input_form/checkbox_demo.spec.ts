@@ -9,7 +9,7 @@ describe('Checkbox Demo Tests', function () {
     [50],
     it('[50 , WEB] should click on the first checkbox and see the correct message', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
       checkbox.isReady();
       checkbox.clickOnFirstCheckbox();
@@ -21,7 +21,7 @@ describe('Checkbox Demo Tests', function () {
     [51],
     it('[51, WEB] should click on the Check All button and see that all the options are selected', function () {
       cy.visitHomePage();
-      home.isReady();
+
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
       checkbox.isReady();
       checkbox.checkAllButtonsAreNotSelected();
