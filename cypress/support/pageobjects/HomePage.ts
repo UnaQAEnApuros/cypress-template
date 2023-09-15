@@ -1,5 +1,3 @@
-import HeaderElements from '../elements/HeaderElements';
-
 // Input Forms imports
 import AjaxFormSubmitPage from './inputforms/AjaxFormSubmitPage';
 import CheckboxDemoPage from './inputforms/CheckboxDemoPage';
@@ -53,9 +51,7 @@ class HomePage {
   /**
    * Homepage constructor. We need to create a new instance of the Header and the Footer.
    */
-  constructor() {
-    this.header = new HeaderElements();
-  }
+  constructor() {}
 
   /*---------------------------MENU LIST--------------------------------*/
 
@@ -123,70 +119,56 @@ class HomePage {
    * Method to click on the Simple Form Demo option on the header menu.
    */
   clickOnSimpleFormDemoLinkHeader() {
-    this.header.getInputForm().click();
-    this.header.getSimpleFormDemo().click();
-
-    return new SimpleFormDemoPage();
+    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Simple Form Demo').click();
   }
 
   /**
    * Method to click on the Checkbox Demo option on the header menu.
    */
   clickOnCheckboxDemoLinkHeader() {
-    this.header.getInputForm().click();
-    this.header.getCheckboxDemo().click();
-
-    return new CheckboxDemoPage();
+    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
   }
 
   /**
    * Method to click on the Radio Buttons Demo option on the header menu.
    */
   clickOnRadioButtonsDemoLinkHeader() {
-    this.header.getInputForm().click();
-    this.header.getRadioButtonsDemo().click();
-
-    return new RadioButtonsDemoPage();
+    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+    cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Radio Buttons Demo').click();
   }
 
   /**
    * Method to click on the Select Dropdown List option on the header menu.
    */
   clickOnSelectDropdownListLinkHeader() {
-    this.header.getInputForm().click();
-    this.header.getSelectDropdownList().click();
-
-    return new SelectDropdownListPage();
+    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+    cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Select Dropdown List').click();
   }
 
   /**
    * Method to click on the Input Form Submit option on the header menu.
    */
   clickOnInputFormSubmitLinkHeader() {
-    this.header.getInputForm().click();
-    this.header.getInputFormSubmit().click();
-
-    return new InputFormSubmitPage();
+    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+    cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Input Form Submit').click();
   }
 
   /**
    * Method to click on the Ajax Form Submit option on the header menu.
    */
   clickOnAjaxFormSubmitLinkHeader() {
-    this.header.getInputForm().click();
-    this.header.getAjaxFormSubmit().click();
-
-    return new AjaxFormSubmitPage();
+    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+    cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('Ajax Form Submit').click();
   }
 
   /**
    * Method to click on the JQuery Select option on the header menu.
    */
   clickOnJqueryFormSubmitLinkHeader() {
-    this.header.getInputForm().click();
-    this.header.getJQuerySelectDropdown().click();
-
-    return new JQuerySelectDropdownPage();
+    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+    cy.get('.open > .dropdown-menu > :nth-child(7) > a').contains('JQuery Select dropdown').click();
   }
 
   /*--------------------------------------------------------------------* 
@@ -197,20 +179,16 @@ class HomePage {
    * Method to click on the Bootstrap Date Picker option on the header menu.
    */
   clickOnBootstrapDatePickerLinkHeader() {
-    this.header.getDatePickers().click();
-    this.header.getBootstrapDatePicker().click();
-
-    return new BootstrapDatePickerPage();
+    cy.get(':nth-child(1) > :nth-child(2) > .dropdown-toggle').contains('Date pickers').click();
+    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Date Picker').click();
   }
 
   /**
    * Method to click on the JQuery Date Picker option on the header menu.
    */
   clickOnJQueryDatePickerLinkHeader() {
-    this.header.getDatePickers().click();
-    this.header.getJQueryDatePicker().click();
-
-    return new JQueryDatePickerPage();
+    cy.get(':nth-child(1) > :nth-child(2) > .dropdown-toggle').contains('Date pickers').click();
+    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery Date Picker').click();
   }
 
   /*--------------------------------------------------------------------* 
@@ -221,50 +199,40 @@ class HomePage {
    * Method to click on the Table Pagination option on the header menu.
    */
   clickOnTablePaginationLinkHeader() {
-    this.header.getTable().click();
-    this.header.getTablePagination().click();
-
-    return new TablePaginationPage();
+    cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
+    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Table Pagination').click();
   }
 
   /**
    * Method to click on the Table Data Search option on the header menu.
    */
   clickOnTableDataSearchLinkHeader() {
-    this.header.getTable().click();
-    this.header.getTableDataSearch().click();
-
-    return new TableDataSearchPage();
+    cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
+    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Table Data Search').click();
   }
 
   /**
    * Method to click on the Table Filter option on the header menu.
    */
   clickOnTableFilterLinkHeader() {
-    this.header.getTable().click();
-    this.header.getTableFilter().click();
-
-    return new TableFilterPage();
+    cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
+    cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Table Filter').click();
   }
 
   /**
    * Method to click on the Table Sort & Search option on the header menu.
    */
   clickOnTableSortAndSearchLinkHeader() {
-    this.header.getTable().click();
-    this.header.getTableSortAndSearch().click();
-
-    return new TableSortAndSearchPage();
+    cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
+    cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Table Sort & Search').click();
   }
 
   /**
    * Method to click on the Table Data Download option on the header menu.
    */
   clickOnTableDataDownloadLinkHeader() {
-    this.header.getTable().click();
-    this.header.getTableDataDownload().click();
-
-    return new TableDataDownloadPage();
+    cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
+    cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Table Data Download').click();
   }
 
   /*--------------------------------------------------------------------* 
@@ -275,7 +243,7 @@ class HomePage {
    * Method to click on the Demo Home Link option on the header menu.
    */
   clickOnDemoHomeLinkHeader() {
-    this.header.getDemoHome().click();
+    cy.get('.navbar-brand').contains('Demo Home').click();
   }
 
   /*--------------------------------------------------------------------* 
@@ -286,30 +254,24 @@ class HomePage {
    * Method to click on the JQuery Download Progress bars option on the header menu.
    */
   clickOnJQueryDownloadProgressBarsLinkHeader() {
-    this.header.getProgressBar().click();
-    this.header.getJQueryDownloadProgressBars().click();
-
-    return new JQueryDownloadProgressBarsPage();
+    cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
+    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('JQuery Download Progress bars').click();
   }
 
   /**
    * Method to click on the Bootstrap Progress bar option on the header menu.
    */
   clickOnBootstrapProgressBarLinkHeader() {
-    this.header.getProgressBar().click();
-    this.header.getBootstrapProgressBar().click();
-
-    return new BootstrapProgressBarPage();
+    cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
+    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Progress bar').click();
   }
 
   /**
    * Method to click on the Drag & Drop Sliders option on the header menu.
    */
   clickOnDragAndDropSlidersLinkHeader() {
-    this.header.getProgressBar().click();
-    this.header.getDragAndDropSliders().click();
-
-    return new DragAndDropSlidersPage();
+    cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
+    cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Drag & Drop Sliders').click();
   }
 
   /*--------------------------------------------------------------------* 
@@ -320,60 +282,48 @@ class HomePage {
    * Method to click on the Bootstrap Alerts option on the header menu.
    */
   clickOnBootstrapAlertsLinkHeader() {
-    this.header.getAlertsAndModals().click();
-    this.header.getBootstrapAlerts().click();
-
-    return new BootstrapAlertsPage();
+    cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Alerts').click();
   }
 
   /**
    * Method to click on the Bootstrap Modals option on the header menu.
    */
   clickOnBootstrapModalsLinkHeader() {
-    this.header.getAlertsAndModals().click();
-    this.header.getBootstrapModals().click();
-
-    return new BootstrapModalsPage();
+    cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Modals').click();
   }
 
   /**
    * Method to click on the Window Popup Modal option on the header menu.
    */
   clickOnWindowPopupModalLinkHeader() {
-    this.header.getAlertsAndModals().click();
-    this.header.getWindowPopupModal().click();
-
-    return new WindowPopupModalPage();
+    cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+    cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Window Popup Modal').click();
   }
 
   /**
    * Method to click on the Progress Bar Modal option on the header menu.
    */
   clickOnProgressBarModalLinkHeader() {
-    this.header.getAlertsAndModals().click();
-    this.header.getProgressBarModal().click();
-
-    return new ProgressBarModalPage();
+    cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+    cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Progress Bar Modal').click();
   }
 
   /**
    * Method to click on the Javascript Alerts option on the header menu.
    */
   clickOnJavascriptAlertsLinkHeader() {
-    this.header.getAlertsAndModals().click();
-    this.header.getJavascriptAlerts().click();
-
-    return new JavascriptAlertsPage();
+    cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+    cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Javascript Alerts').click();
   }
 
   /**
    * Method to click on the File Download option on the header menu.
    */
   clickOnFileDownloadLinkHeader() {
-    this.header.getAlertsAndModals().click();
-    this.header.getFileDownload().click();
-
-    return new FileDownloadPage();
+    cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+    cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('File Download').click();
   }
 
   /*--------------------------------------------------------------------* 
@@ -384,30 +334,24 @@ class HomePage {
    * Method to click on the Bootstrap List option on the header menu.
    */
   clickOnBootstrapListLinkHeader() {
-    this.header.getListBox().click();
-    this.header.getBootstrapListBox().click();
-
-    return new BootstrapListPage();
+    cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
+    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap List Box').click();
   }
 
   /**
    * Method to click on the JQuery List Box option on the header menu.
    */
   clickOnJQueryListBoxLinkHeader() {
-    this.header.getListBox().click();
-    this.header.getJQueryListBox().click();
-
-    return new JQueryListBoxPage();
+    cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
+    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery List Box').click();
   }
 
   /**
    * Method to click on the Data List Filter option on the header menu.
    */
   clickOnDataListFilterLinkHeader() {
-    this.header.getListBox().click();
-    this.header.getDataListFilter().click();
-
-    return new DataListFilterPage();
+    cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
+    cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Data List Filter').click();
   }
 
   /*--------------------------------------------------------------------* 
@@ -418,30 +362,25 @@ class HomePage {
    * Method to click on the Drag and Drop option on the header menu.
    */
   clickOnDragAndDropLinkHeader() {
-    this.header.getOthers().click();
-    this.header.getDragAndDrop().click();
-
-    return new DragAndDropPage();
+    cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
+    cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Drag and Drop').click();
   }
 
   /**
    * Method to click on the Dynamic Data Loading option on the header menu.
    */
   clickOnDynamicDataLoadingLinkHeader() {
-    this.header.getOthers().click();
-    this.header.getDynamicDataLoading().click();
-
-    return new DynamicDataLoadingPage();
+    cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
+    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Dynamic Data Loading').click();
   }
 
   /**
    * Method to click on the Charts Demo dropdown option on the header menu.
    */
   clickOnChartsDemoDropdownLinkHeader() {
-    this.header.getOthers().click();
-    this.header.getChartsDemo().click();
+    cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
+    cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Charts Demo').click();
     Cypress.on('uncaught:exception', () => false);
-    return new ChartsDemoDropdownPage();
   }
 }
 

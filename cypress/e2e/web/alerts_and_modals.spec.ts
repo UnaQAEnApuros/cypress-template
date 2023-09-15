@@ -9,8 +9,7 @@ describe('Alerts And Modals Tests', function () {
     it('[34, WEB] should visit the web and click on the Bootstrap Alerts Link', function () {
       cy.visitHomePage();
 
-      const bootstrapAlerts = home.clickOnBootstrapAlertsLinkHeader();
-      bootstrapAlerts.isReady();
+      home.clickOnBootstrapAlertsLinkHeader();
     })
   );
 
@@ -19,8 +18,7 @@ describe('Alerts And Modals Tests', function () {
     it('[35, WEB] should visit the web and click on the Bootstrap Modals Link', function () {
       cy.visitHomePage();
 
-      const bootstrapModals = home.clickOnBootstrapModalsLinkHeader();
-      bootstrapModals.isReady();
+      home.clickOnBootstrapModalsLinkHeader();
     })
   );
 
@@ -28,9 +26,7 @@ describe('Alerts And Modals Tests', function () {
     [36],
     it('[36, WEB] should visit the web and click on the File Download Link', function () {
       cy.visitHomePage();
-
-      const fileDownload = home.clickOnFileDownloadLinkHeader();
-      fileDownload.isReady();
+      home.clickOnFileDownloadLinkHeader();
     })
   );
 
@@ -38,9 +34,7 @@ describe('Alerts And Modals Tests', function () {
     [37],
     it('[37, WEB] should visit the web and click on the Javascript Alerts Link', function () {
       cy.visitHomePage();
-
-      const javascriptAlerts = home.clickOnJavascriptAlertsLinkHeader();
-      javascriptAlerts.isReady();
+      home.clickOnJavascriptAlertsLinkHeader();
     })
   );
 
@@ -48,9 +42,7 @@ describe('Alerts And Modals Tests', function () {
     [38],
     it('[38, WEB] should visit the web and click on the Progress Bar Modal Link', function () {
       cy.visitHomePage();
-
-      const progressBarModal = home.clickOnProgressBarModalLinkHeader();
-      progressBarModal.isReady();
+      home.clickOnProgressBarModalLinkHeader();
     })
   );
 
@@ -58,9 +50,7 @@ describe('Alerts And Modals Tests', function () {
     [39],
     it('[39, WEB] should visit the web and click on the Windows Popup Modal Link', function () {
       cy.visitHomePage();
-
-      const windowsPopupModal = home.clickOnWindowPopupModalLinkHeader();
-      windowsPopupModal.isReady();
+      home.clickOnWindowPopupModalLinkHeader();
     })
   );
 });

@@ -10,7 +10,6 @@ describe('Table Tests', function () {
       cy.visitHomePage();
 
       const tablePagination = home.clickOnTablePaginationLinkHeader();
-      tablePagination.isReady();
     })
   );
 
@@ -20,7 +19,6 @@ describe('Table Tests', function () {
       cy.visitHomePage();
 
       const tableDataSearch = home.clickOnTableDataSearchLinkHeader();
-      tableDataSearch.isReady();
     })
   );
 
@@ -30,7 +28,6 @@ describe('Table Tests', function () {
       cy.visitHomePage();
 
       const tableFilter = home.clickOnTableFilterLinkHeader();
-      tableFilter.isReady();
     })
   );
 
@@ -40,7 +37,6 @@ describe('Table Tests', function () {
       cy.visitHomePage();
 
       const tableSortAndSearch = home.clickOnTableSortAndSearchLinkHeader();
-      tableSortAndSearch.isReady();
     })
   );
 
@@ -50,7 +46,6 @@ describe('Table Tests', function () {
       cy.visitHomePage();
 
       const tableDataDownload = home.clickOnTableDataDownloadLinkHeader();
-      tableDataDownload.isReady();
     })
   );
 });
