@@ -59,15 +59,6 @@ class HomePage {
     this.menu = new MenuElements();
   }
 
-  /*-----------------------------HEADER---------------------------------*/
-
-  /**
-   * Check that the Selenium Easy Logo is visible.
-   */
-  checkSeleniumEasyLogoIsVisible() {
-    return this.header.getSeleniumEasyLogo().should('be.visible');
-  }
-
   /*---------------------------MENU LIST--------------------------------*/
 
   /**

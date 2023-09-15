@@ -8,8 +8,7 @@ describe('Home Tests', function () {
     [46],
     it('[46, WEB] should visit the web and check that the header is displayed properly', function () {
       cy.visitHomePage();
-
-      home.checkSeleniumEasyLogoIsVisible();
+      cy.checkSeleniumEasyLogo();
     })
   );
 

@@ -1,11 +1,4 @@
 class HeaderElements {
-  /**
-   * Method to get the Selenium Easy Logo
-   */
-  getSeleniumEasyLogo() {
-    return cy.get('.logo > a > img');
-  }
-
   /*--------------------------------------------------------------------* 
     |	Input Form
     *---------------------------------------------------------------------*/
