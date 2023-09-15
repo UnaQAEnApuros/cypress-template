@@ -1,5 +1,6 @@
 import { defineConfig } from 'cypress';
 import { mergeConfigWithConfigFromFile } from './cypress/config/setup-node-events/mergeConfigWithConfigFromFile';
+import { plugins } from 'cypress/config/setup-node-events/plugins';
 
 export default defineConfig({
   chromeWebSecurity: false,
@@ -23,7 +24,7 @@ export default defineConfig({
     testIsolation: true,
     setupNodeEvents(on, config) {
       const newConfig = mergeConfigWithConfigFromFile(config);
-      //plugins(on);
+      plugins(on);
       console.info('\n> Cypress config:\n', newConfig);
       return newConfig;
     },

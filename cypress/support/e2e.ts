@@ -1,7 +1,3 @@
-// const { debuggerSupport } = require('cypress-debugger');
-// debuggerSupport();
-
-
 require('mochawesome/addContext');
 
 import * as customCommands from '../commands';
@@ -30,4 +26,5 @@ Cypress.on('uncaught:exception', () => false);
 /** Debugger Plugin by Sorry Cypress. 
 // https://github.com/currents-dev/cypress-debugger
 */
-// debuggerSupport();
+const { debuggerSupport } = require('cypress-debugger');
+debuggerSupport();
