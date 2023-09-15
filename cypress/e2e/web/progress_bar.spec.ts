@@ -8,7 +8,7 @@ describe('Progress Bar Tests', function () {
   qase(
     [26],
     it('[26, WEB] should visit the web and click on the JQuery Download Progress bars Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const jqueryDownloadProgressBar = home.clickOnJQueryDownloadProgressBarsLinkHeader();
       jqueryDownloadProgressBar.isReady();
@@ -18,7 +18,7 @@ describe('Progress Bar Tests', function () {
   qase(
     [27],
     it('[27, WEB] should visit the web and click on the Bootstrap Progress bar Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const bootstrapProgressBar = home.clickOnBootstrapProgressBarLinkHeader();
       bootstrapProgressBar.isReady();
@@ -28,7 +28,7 @@ describe('Progress Bar Tests', function () {
   qase(
     [28],
     it('[28, WEB] should visit the web and click on the Drag & Drop Sliders Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const dragAndDropSlider = home.clickOnDragAndDropSlidersLinkHeader();
       dragAndDropSlider.isReady();

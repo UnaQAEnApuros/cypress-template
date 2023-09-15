@@ -7,7 +7,7 @@ describe('Simple Form Demo Tests', function () {
   qase(
     [48],
     it('[48, WEB] should enter a message and check that is correct', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader();
@@ -21,7 +21,7 @@ describe('Simple Form Demo Tests', function () {
   qase(
     [49],
     it('[49, WEB] should enter two numbers and check that the sum is correct', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader();

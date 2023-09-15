@@ -7,7 +7,7 @@ describe('Input Form Tests', function () {
   qase(
     [16],
     it('[16, WEB] should visit the web and close the popup', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
     })
   );
@@ -15,7 +15,7 @@ describe('Input Form Tests', function () {
   qase(
     [17],
     it('[17, WEB] should visit the web and click on the Simple Form Demo Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const simpleForm = home.clickOnSimpleFormDemoLinkHeader();
@@ -26,7 +26,7 @@ describe('Input Form Tests', function () {
   qase(
     [18],
     it('[18, WEB] should visit the web and click on the Checkbox Demo Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const checkboxDemo = home.clickOnCheckboxDemoLinkHeader();
@@ -37,7 +37,7 @@ describe('Input Form Tests', function () {
   qase(
     [19],
     it('[19, WEB] should visit the web and click on the Radio Buttons Demo Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const radioButtonsDemo = home.clickOnRadioButtonsDemoLinkHeader();
@@ -48,7 +48,7 @@ describe('Input Form Tests', function () {
   qase(
     [20],
     it('[20, WEB] should visit the web and click on the Select Dropdown Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const selectDropdownList = home.clickOnSelectDropdownListLinkHeader();
@@ -59,7 +59,7 @@ describe('Input Form Tests', function () {
   qase(
     [21],
     it('[21, WEB] should visit the web and click on the Input Form Submit Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const inputFormSubmit = home.clickOnInputFormSubmitLinkHeader();
@@ -70,7 +70,7 @@ describe('Input Form Tests', function () {
   qase(
     [22],
     it('[22, WEB] should visit the web and click on the Ajax Form Submit Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const ajaxFormSubmit = home.clickOnAjaxFormSubmitLinkHeader();
@@ -81,7 +81,7 @@ describe('Input Form Tests', function () {
   qase(
     [23],
     it('[23, WEB] should visit the web and click on the JQuery Select Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const jQuerySelectDropdown = home.clickOnJqueryFormSubmitLinkHeader();

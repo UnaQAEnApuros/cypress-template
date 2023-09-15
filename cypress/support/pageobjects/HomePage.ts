@@ -62,13 +62,6 @@ class HomePage {
   }
 
   /**
-   * Method to visit the webpage URL
-   */
-  visit() {
-    cy.visit(env.webURL);
-  }
-
-  /**
    * Method to check if the Homepage is loaded (include the Header and Footer elements)
    */
   isReady() {

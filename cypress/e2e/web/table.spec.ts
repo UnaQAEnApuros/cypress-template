@@ -7,7 +7,7 @@ describe('Table Tests', function () {
   qase(
     [29],
     it('[29, WEB] should visit the web and click on the Table Pagination Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const tablePagination = home.clickOnTablePaginationLinkHeader();
@@ -18,7 +18,7 @@ describe('Table Tests', function () {
   qase(
     [30],
     it('[30, WEB] should visit the web and click on the Table Data Search Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const tableDataSearch = home.clickOnTableDataSearchLinkHeader();
@@ -29,7 +29,7 @@ describe('Table Tests', function () {
   qase(
     [31],
     it('[31, WEB] should visit the web and click on the Table Filter Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const tableFilter = home.clickOnTableFilterLinkHeader();
@@ -40,7 +40,7 @@ describe('Table Tests', function () {
   qase(
     [32],
     it('[32, WEB] should visit the web and click on the Table Sort & Search Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const tableSortAndSearch = home.clickOnTableSortAndSearchLinkHeader();
@@ -51,7 +51,7 @@ describe('Table Tests', function () {
   qase(
     [33],
     it('[33, WEB] should visit the web and click on the Table Data Download Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
 
       const tableDataDownload = home.clickOnTableDataDownloadLinkHeader();

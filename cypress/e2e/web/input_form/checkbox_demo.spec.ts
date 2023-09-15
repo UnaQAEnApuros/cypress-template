@@ -8,7 +8,7 @@ describe('Checkbox Demo Tests', function () {
   qase(
     [50],
     it('[50 , WEB] should click on the first checkbox and see the correct message', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
       checkbox.isReady();
@@ -20,7 +20,7 @@ describe('Checkbox Demo Tests', function () {
   qase(
     [51],
     it('[51, WEB] should click on the Check All button and see that all the options are selected', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
       checkbox.isReady();

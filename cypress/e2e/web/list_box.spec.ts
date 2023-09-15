@@ -8,7 +8,7 @@ describe('List Box Tests', function () {
   qase(
     [40],
     it('[40, WEB] should visit the web and click on the List Box Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const listBox = home.clickOnJQueryListBoxLinkHeader();
       listBox.isReady();
@@ -18,7 +18,7 @@ describe('List Box Tests', function () {
   qase(
     [41],
     it('[41, WEB] should visit the web and click on the Jquery List Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const jqueryList = home.clickOnJQueryListBoxLinkHeader();
       jqueryList.isReady();
@@ -28,7 +28,7 @@ describe('List Box Tests', function () {
   qase(
     [42],
     it('[42, WEB] should visit the web and click on the Data List Filter Link', function () {
-      home.visit();
+      cy.visitHomePage();
       home.isReady();
       const dataListFilter = home.clickOnDataListFilterLinkHeader();
       dataListFilter.isReady();
