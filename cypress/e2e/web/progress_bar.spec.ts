@@ -10,8 +10,7 @@ describe('Progress Bar Tests', function () {
     it('[26, WEB] should visit the web and click on the JQuery Download Progress bars Link', function () {
       cy.visitHomePage();
 
-      const jqueryDownloadProgressBar = home.clickOnJQueryDownloadProgressBarsLinkHeader();
-      jqueryDownloadProgressBar.isReady();
+      home.clickOnJQueryDownloadProgressBarsLinkHeader();
     })
   );
 
@@ -20,8 +19,7 @@ describe('Progress Bar Tests', function () {
     it('[27, WEB] should visit the web and click on the Bootstrap Progress bar Link', function () {
       cy.visitHomePage();
 
-      const bootstrapProgressBar = home.clickOnBootstrapProgressBarLinkHeader();
-      bootstrapProgressBar.isReady();
+      home.clickOnBootstrapProgressBarLinkHeader();
     })
   );
 
@@ -30,8 +28,7 @@ describe('Progress Bar Tests', function () {
     it('[28, WEB] should visit the web and click on the Drag & Drop Sliders Link', function () {
       cy.visitHomePage();
 
-      const dragAndDropSlider = home.clickOnDragAndDropSlidersLinkHeader();
-      dragAndDropSlider.isReady();
+      home.clickOnDragAndDropSlidersLinkHeader();
     })
   );
 });

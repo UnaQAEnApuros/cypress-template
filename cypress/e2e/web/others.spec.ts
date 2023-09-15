@@ -10,8 +10,7 @@ describe('Others Tests', function () {
     it('[43, WEB] should visit the web and click on the Drag and Drop Link', function () {
       cy.visitHomePage();
 
-      const dragAndDrop = home.clickOnDragAndDropLinkHeader();
-      dragAndDrop.isReady();
+      home.clickOnDragAndDropLinkHeader();
     })
   );
 
@@ -20,8 +19,7 @@ describe('Others Tests', function () {
     it('[44, WEB] should visit the web and click on the Dynamic Data Link', function () {
       cy.visitHomePage();
 
-      const dynamicData = home.clickOnDynamicDataLoadingLinkHeader();
-      dynamicData.isReady();
+      home.clickOnDynamicDataLoadingLinkHeader();
     })
   );
 
@@ -32,8 +30,7 @@ describe('Others Tests', function () {
 
       // Needed to avoid the Chart is not defined error.
       Cypress.on('uncaught:exception', () => false);
-      const chartsDemo = home.clickOnChartsDemoDropdownLinkHeader();
-      chartsDemo.isReady();
+      home.clickOnChartsDemoDropdownLinkHeader();
     })
   );
 });

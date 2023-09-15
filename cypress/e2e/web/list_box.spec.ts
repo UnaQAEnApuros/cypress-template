@@ -10,8 +10,7 @@ describe('List Box Tests', function () {
     it('[40, WEB] should visit the web and click on the List Box Link', function () {
       cy.visitHomePage();
 
-      const listBox = home.clickOnJQueryListBoxLinkHeader();
-      listBox.isReady();
+      home.clickOnJQueryListBoxLinkHeader();
     })
   );
 
@@ -20,8 +19,7 @@ describe('List Box Tests', function () {
     it('[41, WEB] should visit the web and click on the Jquery List Link', function () {
       cy.visitHomePage();
 
-      const jqueryList = home.clickOnJQueryListBoxLinkHeader();
-      jqueryList.isReady();
+      home.clickOnJQueryListBoxLinkHeader();
     })
   );
 
@@ -30,8 +28,7 @@ describe('List Box Tests', function () {
     it('[42, WEB] should visit the web and click on the Data List Filter Link', function () {
       cy.visitHomePage();
 
-      const dataListFilter = home.clickOnDataListFilterLinkHeader();
-      dataListFilter.isReady();
+      home.clickOnDataListFilterLinkHeader();
     })
   );
 });

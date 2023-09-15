@@ -9,7 +9,7 @@ describe('Table Tests', function () {
     it('[29, WEB] should visit the web and click on the Table Pagination Link', function () {
       cy.visitHomePage();
 
-      const tablePagination = home.clickOnTablePaginationLinkHeader();
+      home.clickOnTablePaginationLinkHeader();
     })
   );
 
@@ -18,7 +18,7 @@ describe('Table Tests', function () {
     it('[30, WEB] should visit the web and click on the Table Data Search Link', function () {
       cy.visitHomePage();
 
-      const tableDataSearch = home.clickOnTableDataSearchLinkHeader();
+      home.clickOnTableDataSearchLinkHeader();
     })
   );
 
@@ -27,7 +27,7 @@ describe('Table Tests', function () {
     it('[31, WEB] should visit the web and click on the Table Filter Link', function () {
       cy.visitHomePage();
 
-      const tableFilter = home.clickOnTableFilterLinkHeader();
+      home.clickOnTableFilterLinkHeader();
     })
   );
 
@@ -36,7 +36,7 @@ describe('Table Tests', function () {
     it('[32, WEB] should visit the web and click on the Table Sort & Search Link', function () {
       cy.visitHomePage();
 
-      const tableSortAndSearch = home.clickOnTableSortAndSearchLinkHeader();
+      home.clickOnTableSortAndSearchLinkHeader();
     })
   );
 
@@ -45,7 +45,7 @@ describe('Table Tests', function () {
     it('[33, WEB] should visit the web and click on the Table Data Download Link', function () {
       cy.visitHomePage();
 
-      const tableDataDownload = home.clickOnTableDataDownloadLinkHeader();
+      home.clickOnTableDataDownloadLinkHeader();
     })
   );
 });

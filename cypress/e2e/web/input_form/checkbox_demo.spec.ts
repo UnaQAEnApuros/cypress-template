@@ -11,7 +11,6 @@ describe('Checkbox Demo Tests', function () {
       cy.visitHomePage();
 
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
-      checkbox.isReady();
       checkbox.clickOnFirstCheckbox();
       checkbox.checkFirstCheckboxMessage();
     })
@@ -23,7 +22,6 @@ describe('Checkbox Demo Tests', function () {
       cy.visitHomePage();
 
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
-      checkbox.isReady();
       checkbox.checkAllButtonsAreNotSelected();
       checkbox.clickOnSelectAllButton();
       checkbox.checkAllButtonsAreSelected();

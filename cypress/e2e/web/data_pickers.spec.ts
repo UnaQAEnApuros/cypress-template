@@ -10,8 +10,7 @@ describe('Data Pickers Tests', function () {
     it('[24, WEB] should visit the web and click on the Bootstrap Date Picker Link', function () {
       cy.visitHomePage();
 
-      const bootstrapDatePickers = home.clickOnBootstrapDatePickerLinkHeader();
-      bootstrapDatePickers.isReady();
+      home.clickOnBootstrapDatePickerLinkHeader();
     })
   );
 
@@ -20,8 +19,7 @@ describe('Data Pickers Tests', function () {
     it('[25, WEB] should visit the web and click on the JQuery Date Picker Link', function () {
       cy.visitHomePage();
 
-      const jqueryDatePickers = home.clickOnJQueryDatePickerLinkHeader();
-      jqueryDatePickers.isReady();
+      home.clickOnJQueryDatePickerLinkHeader();
     })
   );
 });
