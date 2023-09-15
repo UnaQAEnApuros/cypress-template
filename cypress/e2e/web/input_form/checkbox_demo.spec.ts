@@ -20,10 +20,9 @@ describe('Checkbox Demo Tests', function () {
 
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
-
-      cy.xpath("//input[@id='isChkd']").should('have.value', 'false');
+      cy.get('input[id="isChkd"]').should('have.value', 'false');
       cy.get('#check1').click();
-      cy.xpath("//input[@id='isChkd']").should('have.value', 'true');
+      cy.get('input[id="isChkd"]').should('have.value', 'true');
     })
   );
 });

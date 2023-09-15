@@ -10,7 +10,7 @@ describe('Simple Form Demo Tests', function () {
       cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Simple Form Demo').click();
       cy.get('.form-group > #user-message').click().clear().type('Cypress Example Project');
       cy.get('#get-input > .btn').contains('Show Message').click();
-      cy.xpath("//span[@id='display']").should('have.text', 'Cypress Example Project');
+      cy.get('span[id="displayvalue"]').should('have.text', 'Cypress Example Project');
     })
   );
 
@@ -23,7 +23,7 @@ describe('Simple Form Demo Tests', function () {
       cy.get('#value1').click().clear().type('1');
       cy.get('#value2').click().clear().type('3');
       cy.get('#gettotal > .btn').contains('Get Total').click();
-      cy.xpath("//span[@id='displayvalue']").should('have.text', 1 + 3);
+      cy.get('span[id="displayvalue"]').should('have.text', 1 + 3);
     })
   );
 });
