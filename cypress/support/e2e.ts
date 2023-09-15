@@ -26,6 +26,9 @@ import 'cypress-xpath';
 require('cypress-xpath');
 require('mochawesome/addContext');
 
+import * as customCommands from '../commands';
+Cypress.Commands.addAll(customCommands);
+
 const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report
 
 Cypress.on('test:after:run', (test, runnable) => {
