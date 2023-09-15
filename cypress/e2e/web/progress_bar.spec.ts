@@ -1,16 +1,12 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../support/pageobjects/HomePage';
 
 describe('Progress Bar Tests', function () {
-  const home = new HomePage();
-
   qase(
     [26],
     it('[26, WEB] should visit the web and click on the JQuery Download Progress bars Link', function () {
       cy.visitHomePage();
-
-      home.clickOnJQueryDownloadProgressBarsLinkHeader();
+      cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
+      cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('JQuery Download Progress bars').click();
     })
   );
 
@@ -18,8 +14,8 @@ describe('Progress Bar Tests', function () {
     [27],
     it('[27, WEB] should visit the web and click on the Bootstrap Progress bar Link', function () {
       cy.visitHomePage();
-
-      home.clickOnBootstrapProgressBarLinkHeader();
+      cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Progress bar').click();
     })
   );
 
@@ -27,8 +23,8 @@ describe('Progress Bar Tests', function () {
     [28],
     it('[28, WEB] should visit the web and click on the Drag & Drop Sliders Link', function () {
       cy.visitHomePage();
-
-      home.clickOnDragAndDropSlidersLinkHeader();
+      cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
+      cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Drag & Drop Sliders').click();
     })
   );
 });

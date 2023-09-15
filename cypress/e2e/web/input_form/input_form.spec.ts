@@ -1,9 +1,6 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../../support/pageobjects/HomePage';
 
 describe('Input Form Tests', function () {
-  const home = new HomePage();
   qase(
     [16],
     it('[16, WEB] should visit the web and close the popup', function () {
@@ -15,8 +12,8 @@ describe('Input Form Tests', function () {
     [17],
     it('[17, WEB] should visit the web and click on the Simple Form Demo Link', function () {
       cy.visitHomePage();
-
-      home.clickOnSimpleFormDemoLinkHeader();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Simple Form Demo').click();
     })
   );
 
@@ -24,7 +21,6 @@ describe('Input Form Tests', function () {
     [18],
     it('[18, WEB] should visit the web and click on the Checkbox Demo Link', function () {
       cy.visitHomePage();
-
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
     })
@@ -34,8 +30,8 @@ describe('Input Form Tests', function () {
     [19],
     it('[19, WEB] should visit the web and click on the Radio Buttons Demo Link', function () {
       cy.visitHomePage();
-
-      home.clickOnRadioButtonsDemoLinkHeader();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Radio Buttons Demo').click();
     })
   );
 
@@ -43,8 +39,8 @@ describe('Input Form Tests', function () {
     [20],
     it('[20, WEB] should visit the web and click on the Select Dropdown Link', function () {
       cy.visitHomePage();
-
-      home.clickOnSelectDropdownListLinkHeader();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Select Dropdown List').click();
     })
   );
 
@@ -52,8 +48,8 @@ describe('Input Form Tests', function () {
     [21],
     it('[21, WEB] should visit the web and click on the Input Form Submit Link', function () {
       cy.visitHomePage();
-
-      home.clickOnInputFormSubmitLinkHeader();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Input Form Submit').click();
     })
   );
 
@@ -61,8 +57,8 @@ describe('Input Form Tests', function () {
     [22],
     it('[22, WEB] should visit the web and click on the Ajax Form Submit Link', function () {
       cy.visitHomePage();
-
-      home.clickOnAjaxFormSubmitLinkHeader();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('Ajax Form Submit').click();
     })
   );
 
@@ -70,8 +66,8 @@ describe('Input Form Tests', function () {
     [23],
     it('[23, WEB] should visit the web and click on the JQuery Select Link', function () {
       cy.visitHomePage();
-
-      home.clickOnJqueryFormSubmitLinkHeader();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(7) > a').contains('JQuery Select dropdown').click();
     })
   );
 });

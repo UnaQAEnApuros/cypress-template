@@ -1,16 +1,13 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../support/pageobjects/HomePage';
 
 describe('Others Tests', function () {
-  const home = new HomePage();
-
   qase(
     [43],
     it('[43, WEB] should visit the web and click on the Drag and Drop Link', function () {
       cy.visitHomePage();
 
-      home.clickOnDragAndDropLinkHeader();
+      cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
+      cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Drag and Drop').click();
     })
   );
 
@@ -18,8 +15,8 @@ describe('Others Tests', function () {
     [44],
     it('[44, WEB] should visit the web and click on the Dynamic Data Link', function () {
       cy.visitHomePage();
-
-      home.clickOnDynamicDataLoadingLinkHeader();
+      cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Dynamic Data Loading').click();
     })
   );
 
@@ -30,7 +27,9 @@ describe('Others Tests', function () {
 
       // Needed to avoid the Chart is not defined error.
       Cypress.on('uncaught:exception', () => false);
-      home.clickOnChartsDemoDropdownLinkHeader();
+      cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
+      cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Charts Demo').click();
+      Cypress.on('uncaught:exception', () => false);
     })
   );
 });

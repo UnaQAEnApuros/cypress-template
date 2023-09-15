@@ -1,10 +1,7 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../../support/pageobjects/HomePage';
+import { it } from 'mocha';
 
 describe('Checkbox Demo Tests', function () {
-  const home = new HomePage();
-
   qase(
     [50],
     it('[50 , WEB] should click on the first checkbox and see the correct message', function () {

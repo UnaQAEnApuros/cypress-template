@@ -1,18 +1,16 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../../support/pageobjects/HomePage';
 
 describe('Simple Form Demo Tests', function () {
-  const home = new HomePage();
   qase(
     [48],
     it('[48, WEB] should enter a message and check that is correct', function () {
       cy.visitHomePage();
 
-      const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader();
-      // simpleFormDemo.enterMessage('Cypress Example Project');
-      // simpleFormDemo.clickOnShowMessage();
-      // simpleFormDemo.checkYourMessageIsCorrect('Cypress Example Project');
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Simple Form Demo').click();
+      cy.get('.form-group > #user-message').click().clear().type('Cypress Example Project');
+      cy.get('#get-input > .btn').contains('Show Message').click();
+      cy.xpath("//span[@id='display']").should('have.text', 'Cypress Example Project');
     })
   );
 
@@ -20,12 +18,12 @@ describe('Simple Form Demo Tests', function () {
     [49],
     it('[49, WEB] should enter two numbers and check that the sum is correct', function () {
       cy.visitHomePage();
-
-      const simpleFormDemo = home.clickOnSimpleFormDemoLinkHeader();
-      // simpleFormDemo.enterValueA(1);
-      // simpleFormDemo.enterValueB(3);
-      // simpleFormDemo.clickOnGetTotalutton();
-      // simpleFormDemo.checkTotalResultIsCorrect(1 + 3);
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Simple Form Demo').click();
+      cy.get('#value1').click().clear().type('1');
+      cy.get('#value2').click().clear().type('3');
+      cy.get('#gettotal > .btn').contains('Get Total').click();
+      cy.xpath("//span[@id='displayvalue']").should('have.text', 1 + 3);
     })
   );
 });
