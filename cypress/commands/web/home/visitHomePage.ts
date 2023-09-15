@@ -1,5 +1,3 @@
-import { Log } from 'cypress/utils/log/log';
-
 declare global {
   namespace Cypress {
     interface Chainable {
@@ -12,8 +10,6 @@ declare global {
  * @description Method to visit the webpage URL
  */
 export const visitHomePage = (): Cypress.Chainable => {
-  const log = new Log('Visit HomePage', `Visiting the website homepage...`);
-
   cy.visit(Cypress.env().webURL);
 
   // Check that the header is visible
@@ -25,8 +21,5 @@ export const visitHomePage = (): Cypress.Chainable => {
   cy.get('#easycont > :nth-child(1)').should('be.visible');
 
   // Check that the footer is visible
-  return cy
-    .get('.footer')
-    .should('be.visible')
-    .then(() => log.end());
+  return cy.get('.footer').should('be.visible');
 };
