@@ -1,11 +1,7 @@
-import CheckboxElements from '../../elements/inputforms/CheckBoxElements';
-
 class CheckboxDemoPage {
   checkBox: any;
 
-  constructor() {
-    this.checkBox = new CheckboxElements();
-  }
+  constructor() {}
 
   /**
    * Method to check if the CheckboxDemoPage is visible
@@ -19,35 +15,35 @@ class CheckboxDemoPage {
    * Method to click on the first checkbox button
    */
   clickOnFirstCheckbox() {
-    this.checkBox.getFirstCheckbox().click();
+    cy.get('#isAgeSelected').click();
   }
 
   /**
    * Method to check the first checkbox message
    */
   checkFirstCheckboxMessage() {
-    this.checkBox.getFirstSuccessMessage().contains('Success - Check box is checked');
+    cy.get('#txtAge').contains('Success - Check box is checked');
   }
 
   /**
    * Method to click on select all button
    */
   clickOnSelectAllButton() {
-    this.checkBox.getClickAllButton().click();
+    cy.get('#check1').click();
   }
 
   /**
    * Method to check that all the checks are not selected
    */
   checkAllButtonsAreNotSelected() {
-    this.checkBox.getInputChecked().should('have.value', 'false');
+    cy.xpath("//input[@id='isChkd']").should('have.value', 'false');
   }
 
   /**
    * Method to check that all the checks are selected
    */
   checkAllButtonsAreSelected() {
-    this.checkBox.getInputChecked().should('have.value', 'true');
+    cy.xpath("//input[@id='isChkd']").should('have.value', 'true');
   }
 }
 
