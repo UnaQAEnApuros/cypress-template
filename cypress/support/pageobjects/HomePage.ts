@@ -1,5 +1,4 @@
 import HeaderElements from '../elements/HeaderElements';
-import MenuElements from '../elements/MenuElements';
 
 // Input Forms imports
 import AjaxFormSubmitPage from './inputforms/AjaxFormSubmitPage';
@@ -56,7 +55,6 @@ class HomePage {
    */
   constructor() {
     this.header = new HeaderElements();
-    this.menu = new MenuElements();
   }
 
   /*---------------------------MENU LIST--------------------------------*/
@@ -65,56 +63,56 @@ class HomePage {
    * Check that the All examples menu option is visible.
    */
   checkAllExamplesMenuOptionIsVisible() {
-    return this.menu.getAllExamplesMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'All Examples')]").should('be.visible');
   }
 
   /**
    * Check that the Input Form menu option is visible.
    */
   checkInputFormMenuOptionIsVisible() {
-    return this.menu.getInputFormMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Input Forms')]").should('be.visible');
   }
 
   /**
    * Check that the Date Pickers menu option is visible.
    */
   checkDatePickersMenuOptionIsVisible() {
-    return this.menu.getDatePickersMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Date pickers')]").should('be.visible');
   }
 
   /**
    * Check that the Table menu option is visible.
    */
   checkTableMenuOptionIsVisible() {
-    return this.menu.getTableMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Table')]").should('be.visible');
   }
 
   /**
    * Check that the Progress Bars & Sliders menu option is visible.
    */
   checkProgressBarsSlidersMenuOptionIsVisible() {
-    return this.menu.getProgressBarsSlidersMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Progress Bars & Sliders')]").should('be.visible');
   }
 
   /**
    * Check that the Alerts & Modals menu option is visible.
    */
   checkAlertsModalsmMenuOptionIsVisible() {
-    return this.menu.getAlertsModalsmMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Alerts & Modals')]").should('be.visible');
   }
 
   /**
    * Check that the List Box menu option is visible.
    */
   checkListBoxMenuOptionIsVisible() {
-    return this.menu.getListBoxMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'List Box')]").should('be.visible');
   }
 
   /**
    * Check that the Others menu option is visible.
    */
   checkOthersMenuOptionIsVisible() {
-    return this.menu.getOthersMenuOption().should('be.visible');
+    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Others')]").should('be.visible');
   }
 
   /*--------------------------------------------------------------------* 
