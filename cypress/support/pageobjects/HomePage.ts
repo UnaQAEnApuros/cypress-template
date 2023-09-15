@@ -1,5 +1,4 @@
 import HeaderElements from '../elements/HeaderElements';
-import FooterElements from '../elements/FooterElements';
 import MenuElements from '../elements/MenuElements';
 
 // Input Forms imports
@@ -57,7 +56,6 @@ class HomePage {
    */
   constructor() {
     this.header = new HeaderElements();
-    this.footer = new FooterElements();
     this.menu = new MenuElements();
   }
 
@@ -65,13 +63,9 @@ class HomePage {
    * Method to check if the Homepage is loaded (include the Header and Footer elements)
    */
   isReady() {
-    this.header.isReady();
-
     cy.url().should('eq', 'https://demo.seleniumeasy.com/');
     cy.get('body > :nth-child(2)').should('be.visible');
     cy.get('#easycont > :nth-child(1)').should('be.visible');
-
-    this.footer.isReady();
   }
 
   /**
