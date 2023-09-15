@@ -1,5 +1,3 @@
-import { should } from 'chai';
-
 declare global {
   namespace Cypress {
     interface Chainable {
