@@ -1,15 +1,12 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../support/pageobjects/HomePage';
 
 describe('Alerts And Modals Tests', function () {
-  const home = new HomePage();
   qase(
     [34],
     it('[34, WEB] should visit the web and click on the Bootstrap Alerts Link', function () {
       cy.visitHomePage();
-
-      home.clickOnBootstrapAlertsLinkHeader();
+      cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+      cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Alerts').click();
     })
   );
 
@@ -17,8 +14,8 @@ describe('Alerts And Modals Tests', function () {
     [35],
     it('[35, WEB] should visit the web and click on the Bootstrap Modals Link', function () {
       cy.visitHomePage();
-
-      home.clickOnBootstrapModalsLinkHeader();
+      cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Modals').click();
     })
   );
 
@@ -26,7 +23,8 @@ describe('Alerts And Modals Tests', function () {
     [36],
     it('[36, WEB] should visit the web and click on the File Download Link', function () {
       cy.visitHomePage();
-      home.clickOnFileDownloadLinkHeader();
+      cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+      cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('File Download').click();
     })
   );
 
@@ -34,7 +32,8 @@ describe('Alerts And Modals Tests', function () {
     [37],
     it('[37, WEB] should visit the web and click on the Javascript Alerts Link', function () {
       cy.visitHomePage();
-      home.clickOnJavascriptAlertsLinkHeader();
+      cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+      cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Javascript Alerts').click();
     })
   );
 
@@ -42,7 +41,8 @@ describe('Alerts And Modals Tests', function () {
     [38],
     it('[38, WEB] should visit the web and click on the Progress Bar Modal Link', function () {
       cy.visitHomePage();
-      home.clickOnProgressBarModalLinkHeader();
+      cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+      cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Progress Bar Modal').click();
     })
   );
 
@@ -50,7 +50,8 @@ describe('Alerts And Modals Tests', function () {
     [39],
     it('[39, WEB] should visit the web and click on the Windows Popup Modal Link', function () {
       cy.visitHomePage();
-      home.clickOnWindowPopupModalLinkHeader();
+      cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
+      cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Window Popup Modal').click();
     })
   );
 });
