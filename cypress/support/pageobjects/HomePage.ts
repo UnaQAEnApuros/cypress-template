@@ -53,64 +53,6 @@ class HomePage {
    */
   constructor() {}
 
-  /*---------------------------MENU LIST--------------------------------*/
-
-  /**
-   * Check that the All examples menu option is visible.
-   */
-  checkAllExamplesMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'All Examples')]").should('be.visible');
-  }
-
-  /**
-   * Check that the Input Form menu option is visible.
-   */
-  checkInputFormMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Input Forms')]").should('be.visible');
-  }
-
-  /**
-   * Check that the Date Pickers menu option is visible.
-   */
-  checkDatePickersMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Date pickers')]").should('be.visible');
-  }
-
-  /**
-   * Check that the Table menu option is visible.
-   */
-  checkTableMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Table')]").should('be.visible');
-  }
-
-  /**
-   * Check that the Progress Bars & Sliders menu option is visible.
-   */
-  checkProgressBarsSlidersMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Progress Bars & Sliders')]").should('be.visible');
-  }
-
-  /**
-   * Check that the Alerts & Modals menu option is visible.
-   */
-  checkAlertsModalsmMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Alerts & Modals')]").should('be.visible');
-  }
-
-  /**
-   * Check that the List Box menu option is visible.
-   */
-  checkListBoxMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'List Box')]").should('be.visible');
-  }
-
-  /**
-   * Check that the Others menu option is visible.
-   */
-  checkOthersMenuOptionIsVisible() {
-    return cy.xpath("//li[@class='tree-branch']/a[contains(text(),'Others')]").should('be.visible');
-  }
-
   /*--------------------------------------------------------------------* 
   |	Input Form Submenu
   *---------------------------------------------------------------------*/
