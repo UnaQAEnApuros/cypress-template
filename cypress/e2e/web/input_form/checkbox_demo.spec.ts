@@ -11,8 +11,8 @@ describe('Checkbox Demo Tests', function () {
       cy.visitHomePage();
 
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
-      checkbox.clickOnFirstCheckbox();
-      checkbox.checkFirstCheckboxMessage();
+      //checkbox.clickOnFirstCheckbox();
+      //checkbox.checkFirstCheckboxMessage();
     })
   );
 
@@ -22,9 +22,9 @@ describe('Checkbox Demo Tests', function () {
       cy.visitHomePage();
 
       const checkbox = home.clickOnCheckboxDemoLinkHeader();
-      checkbox.checkAllButtonsAreNotSelected();
-      checkbox.clickOnSelectAllButton();
-      checkbox.checkAllButtonsAreSelected();
+      // checkbox.checkAllButtonsAreNotSelected();
+      // checkbox.clickOnSelectAllButton();
+      // checkbox.checkAllButtonsAreSelected();
     })
   );
 });

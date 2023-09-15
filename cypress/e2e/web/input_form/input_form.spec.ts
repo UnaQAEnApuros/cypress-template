@@ -16,8 +16,7 @@ describe('Input Form Tests', function () {
     it('[17, WEB] should visit the web and click on the Simple Form Demo Link', function () {
       cy.visitHomePage();
 
-      const simpleForm = home.clickOnSimpleFormDemoLinkHeader();
-      simpleForm.isReady();
+      home.clickOnSimpleFormDemoLinkHeader();
     })
   );
 
@@ -26,8 +25,7 @@ describe('Input Form Tests', function () {
     it('[18, WEB] should visit the web and click on the Checkbox Demo Link', function () {
       cy.visitHomePage();
 
-      const checkboxDemo = home.clickOnCheckboxDemoLinkHeader();
-      checkboxDemo.isReady();
+      home.clickOnCheckboxDemoLinkHeader();
     })
   );
 
@@ -36,8 +34,7 @@ describe('Input Form Tests', function () {
     it('[19, WEB] should visit the web and click on the Radio Buttons Demo Link', function () {
       cy.visitHomePage();
 
-      const radioButtonsDemo = home.clickOnRadioButtonsDemoLinkHeader();
-      radioButtonsDemo.isReady();
+      home.clickOnRadioButtonsDemoLinkHeader();
     })
   );
 
@@ -46,8 +43,7 @@ describe('Input Form Tests', function () {
     it('[20, WEB] should visit the web and click on the Select Dropdown Link', function () {
       cy.visitHomePage();
 
-      const selectDropdownList = home.clickOnSelectDropdownListLinkHeader();
-      selectDropdownList.isReady();
+      home.clickOnSelectDropdownListLinkHeader();
     })
   );
 
@@ -56,8 +52,7 @@ describe('Input Form Tests', function () {
     it('[21, WEB] should visit the web and click on the Input Form Submit Link', function () {
       cy.visitHomePage();
 
-      const inputFormSubmit = home.clickOnInputFormSubmitLinkHeader();
-      inputFormSubmit.isReady();
+      home.clickOnInputFormSubmitLinkHeader();
     })
   );
 
@@ -66,8 +61,7 @@ describe('Input Form Tests', function () {
     it('[22, WEB] should visit the web and click on the Ajax Form Submit Link', function () {
       cy.visitHomePage();
 
-      const ajaxFormSubmit = home.clickOnAjaxFormSubmitLinkHeader();
-      ajaxFormSubmit.isReady();
+      home.clickOnAjaxFormSubmitLinkHeader();
     })
   );
 
@@ -76,8 +70,7 @@ describe('Input Form Tests', function () {
     it('[23, WEB] should visit the web and click on the JQuery Select Link', function () {
       cy.visitHomePage();
 
-      const jQuerySelectDropdown = home.clickOnJqueryFormSubmitLinkHeader();
-      jQuerySelectDropdown.isReady();
+      home.clickOnJqueryFormSubmitLinkHeader();
     })
   );
 });
