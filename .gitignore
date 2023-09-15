@@ -4,3 +4,4 @@ report
 dist
 mochawesome-report
 node_modules
+dump

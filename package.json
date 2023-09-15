@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "verify": "cypress verify",
-    "open": "npm run compile && cypress open --env configFile=local",
-    "test": "npm run compile && QASE_REPORT=1 cypress run --env configFile=qa --record --key {CYPRESS_DASHBOARD_APIKEY} --parallel",
-    "test:local": "cypress run --env configFile=local --spec 'cypress/integration/api/api_delete_examples.spec.ts'",
-    "test:edge": "cypress run --env configFile=qa --browser edge --headless",
-    "test:webkit": "cypress run --env configFile=qa --browser webkit --headless",
+    "open": "npm run compile && ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 cypress open --env configFile=local",
+    "test": "npm run compile && QASE_REPORT=1 ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 cypress run --env configFile=qa --record --key {CYPRESS_DASHBOARD_APIKEY} --parallel",
+    "test:local": "ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 cypress run --env configFile=local --spec 'cypress/integration/api/api_delete_examples.spec.ts'",
+    "test:edge": "ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 cypress run --env configFile=qa --browser edge --headless",
     "merge_reports": "mochawesome-merge --reportDir mochawesome-report > mochawesome-report/Final_Report.json",
     "generate_mochawesome_report": "marge mochawesome-report/Final_Report.json",
     "compile": "tsc -p tsconfig.json",
@@ -33,28 +32,21 @@
   },
   "homepage": "https://github.com/estefafdez/cypress-template#readme",
   "devDependencies": {
-    "@types/node": "^20.6.1",
     "cypress": "13.2.0",
     "cypress-junit-reporter": "^1.3.1",
-    "cypress-log-to-output": "^1.1.2",
     "cypress-multi-reporters": "^1.6.3",
     "cypress-qase-reporter": "^1.4.3",
-    "cypress-xpath": "^2.0.1",
+    "cypress-debugger": "^1.0.9",
     "eslint": "^8.49.0",
     "fs-extra": "^11.1.1",
     "mocha": "^10.2.0",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
-    "playwright-webkit": "^1.38.0",
-    "prettier": "^3.0.3",
-    "ts-loader": "^9.4.4",
-    "typescript": "^5.2.2",
-    "webpack": "^5.88.2"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@types/fs-extra": "^11.0.2",
     "@types/node": "^20.6.1",
-    "depcheck": "1.4.6"
+    "@types/fs-extra": "^11.0.2"
   }
 }

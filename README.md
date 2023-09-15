@@ -2,13 +2,9 @@
 
 Example of project with Cypress.
 
-Travis CI build results:
-
-[![Build Status](https://travis-ci.org/estefafdez/cypress-template.svg?branch=main)](https://travis-ci.org/estefafdez/cypress-template)
-
 Github Actions build results:
 
-![End-to-end tests with Cypress](https://github.com/estefafdez/cypress-template/workflows/End-to-end%20tests%20with%20Cypress/badge.svg)
+![End-to-end tests with Cypress](https://github.com/estefafdez/cypress-template/workflows/Test/badge.svg)
 
 ## SonarCloud analysis:
 

@@ -1,27 +1,21 @@
-const env = Cypress.env();
 import { qase } from 'cypress-qase-reporter/dist/mocha';
-import HomePage from '../../support/pageobjects/HomePage';
 
 describe('Data Pickers Tests', function () {
-  const home = new HomePage();
-
   qase(
     [24],
     it('[24, WEB] should visit the web and click on the Bootstrap Date Picker Link', function () {
-      home.visit();
-      home.isReady();
-      const bootstrapDatePickers = home.clickOnBootstrapDatePickerLinkHeader();
-      bootstrapDatePickers.isReady();
+      cy.visitHomePage();
+      cy.get(':nth-child(1) > :nth-child(2) > .dropdown-toggle').contains('Date pickers').click();
+      cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Date Picker').click();
     })
   );
 
   qase(
     [25],
     it('[25, WEB] should visit the web and click on the JQuery Date Picker Link', function () {
-      home.visit();
-      home.isReady();
-      const jqueryDatePickers = home.clickOnJQueryDatePickerLinkHeader();
-      jqueryDatePickers.isReady();
+      cy.visitHomePage();
+      cy.get(':nth-child(1) > :nth-child(2) > .dropdown-toggle').contains('Date pickers').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery Date Picker').click();
     })
   );
 });
