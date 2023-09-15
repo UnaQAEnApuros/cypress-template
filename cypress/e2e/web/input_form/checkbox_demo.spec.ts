@@ -9,10 +9,10 @@ describe('Checkbox Demo Tests', function () {
     [50],
     it('[50 , WEB] should click on the first checkbox and see the correct message', function () {
       cy.visitHomePage();
-
-      const checkbox = home.clickOnCheckboxDemoLinkHeader();
-      //checkbox.clickOnFirstCheckbox();
-      //checkbox.checkFirstCheckboxMessage();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
+      cy.get('#isAgeSelected').click();
+      cy.get('#txtAge').contains('Success - Check box is checked');
     })
   );
 
@@ -21,10 +21,12 @@ describe('Checkbox Demo Tests', function () {
     it('[51, WEB] should click on the Check All button and see that all the options are selected', function () {
       cy.visitHomePage();
 
-      const checkbox = home.clickOnCheckboxDemoLinkHeader();
-      // checkbox.checkAllButtonsAreNotSelected();
-      // checkbox.clickOnSelectAllButton();
-      // checkbox.checkAllButtonsAreSelected();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
+
+      cy.xpath("//input[@id='isChkd']").should('have.value', 'false');
+      cy.get('#check1').click();
+      cy.xpath("//input[@id='isChkd']").should('have.value', 'true');
     })
   );
 });

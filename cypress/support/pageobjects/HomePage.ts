@@ -8,14 +8,6 @@ class HomePage {
   }
 
   /**
-   * Method to click on the Checkbox Demo option on the header menu.
-   */
-  clickOnCheckboxDemoLinkHeader() {
-    cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
-    cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
-  }
-
-  /**
    * Method to click on the Radio Buttons Demo option on the header menu.
    */
   clickOnRadioButtonsDemoLinkHeader() {

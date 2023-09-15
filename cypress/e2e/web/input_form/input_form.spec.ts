@@ -25,7 +25,8 @@ describe('Input Form Tests', function () {
     it('[18, WEB] should visit the web and click on the Checkbox Demo Link', function () {
       cy.visitHomePage();
 
-      home.clickOnCheckboxDemoLinkHeader();
+      cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
+      cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
     })
   );
 
