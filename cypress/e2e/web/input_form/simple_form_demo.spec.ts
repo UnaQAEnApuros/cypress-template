@@ -11,7 +11,7 @@ describe('Simple Form Demo Tests', function () {
       cy.get('.form-group > #user-message').click().clear().type('Cypress Example Project');
       cy.get('#get-input > .btn').contains('Show Message').click();
       cy.get('#display').should('have.text', 'Cypress Example Project');
-    })
+    }),
   );
 
   qase(
@@ -24,6 +24,6 @@ describe('Simple Form Demo Tests', function () {
       cy.get('#value2').click().clear().type('3');
       cy.get('#gettotal > .btn').contains('Get Total').click();
       cy.get('#displayvalue').should('have.text', 1 + 3);
-    })
+    }),
   );
 });

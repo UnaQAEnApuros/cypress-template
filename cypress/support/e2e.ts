@@ -3,6 +3,14 @@ require('mochawesome/addContext');
 import * as customCommands from '../commands';
 Cypress.Commands.addAll(customCommands);
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { onFailHandler } from 'cypress-diff';
+
+Cypress.on('fail', (error, runnable) => {
+  onFailHandler(error, runnable);
+});
+
 const addContext = require('mochawesome/addContext'); // add failed screenshot to mochawesome report
 
 Cypress.on('test:after:run', (test, runnable) => {
