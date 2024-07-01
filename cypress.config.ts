@@ -1,6 +1,6 @@
 import { defineConfig } from 'cypress';
-import { mergeConfigWithConfigFromFile } from './cypress/config/setup-node-events/mergeConfigWithConfigFromFile';
 import { plugins } from 'cypress/config/setup-node-events/plugins';
+import { mergeConfigWithConfigFromFile } from './cypress/config/setup-node-events/mergeConfigWithConfigFromFile';
 
 export default defineConfig({
   chromeWebSecurity: false,
@@ -9,13 +9,13 @@ export default defineConfig({
   projectId: 'iyhpy5',
   reporter: 'cypress-multi-reporters',
   reporterOptions: {
-    configFile: 'cypress/config/reporter-config.json'
+    configFile: 'cypress/config/reporter-config.json',
   },
   retries: {
     runMode: 2,
-    openMode: 0
+    openMode: 0,
   },
-  screenshotsFolder: 'mochawesome-report/assets',
+  screenshotsFolder: 'report/screenshots',
   video: false,
   viewportHeight: 1080,
   viewportWidth: 1920,
@@ -28,6 +28,6 @@ export default defineConfig({
       console.info('\n> Cypress config:\n', newConfig);
       return newConfig;
     },
-    specPattern: 'cypress/e2e/**/*.ts'
-  }
+    specPattern: 'cypress/e2e/**/*.ts',
+  },
 });

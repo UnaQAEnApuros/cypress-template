@@ -1,24 +1,14 @@
 {
-    "reporterEnabled": "cypress-junit-reporter, mochawesome, cypress-qase-reporter",
-    "cypressJunitReporterReporterOptions": {
-        "mochaFile": "report/junit.[hash].xml",
-        "testsuitesTitle": true,
-        "suiteTitleSeparatedBy": "."
-    },
-    "mochawesomeReporterOptions": {
-        "reportDir": "mochawesome-report",
-        "quiet": true,
-        "overwrite": false,
-        "html": false,
-        "json": true,
-        "timestamp": "ddmmyyyy_HHMMss"
-    },
-    "cypressQaseReporterReporterOptions": {
-        "apiToken": "{QASE_API_TOKEN}",
-        "projectCode": "CYEX",
-        "logging": true
-    },
-    "screenshotsFolder": "mochawesome-report/assets"
+  "reporterEnabled": "cypress-junit-reporter, cypress-qase-reporter",
+  "cypressJunitReporterReporterOptions": {
+    "mochaFile": "report/junit.[hash].xml",
+    "testsuitesTitle": true,
+    "suiteTitleSeparatedBy": "."
+  },
+  "cypressQaseReporterReporterOptions": {
+    "apiToken": "{QASE_API_TOKEN}",
+    "projectCode": "CYEX",
+    "logging": true
+  },
+  "screenshotsFolder": "report/screenshots"
 }
-
-
