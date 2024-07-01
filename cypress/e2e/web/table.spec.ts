@@ -1,4 +1,4 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 import { it } from 'mocha';
 
 describe('Table Tests', function () {
@@ -8,7 +8,7 @@ describe('Table Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
       cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Table Pagination').click();
-    })
+    }),
   );
 
   qase(
@@ -17,7 +17,7 @@ describe('Table Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Table Data Search').click();
-    })
+    }),
   );
 
   qase(
@@ -26,7 +26,7 @@ describe('Table Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
       cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Table Filter').click();
-    })
+    }),
   );
 
   qase(
@@ -35,7 +35,7 @@ describe('Table Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
       cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Table Sort & Search').click();
-    })
+    }),
   );
 
   qase(
@@ -44,6 +44,6 @@ describe('Table Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(3) > .dropdown-toggle').contains('Table').click();
       cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Table Data Download').click();
-    })
+    }),
   );
 });

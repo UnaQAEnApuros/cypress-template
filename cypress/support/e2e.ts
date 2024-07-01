@@ -1,5 +1,3 @@
-require('mochawesome/addContext');
-
 import * as customCommands from '../commands';
 Cypress.Commands.addAll(customCommands);
 

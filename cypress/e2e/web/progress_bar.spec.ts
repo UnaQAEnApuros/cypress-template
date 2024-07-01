@@ -1,4 +1,4 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 
 describe('Progress Bar Tests', function () {
   qase(
@@ -7,7 +7,7 @@ describe('Progress Bar Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
       cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('JQuery Download Progress bars').click();
-    })
+    }),
   );
 
   qase(
@@ -16,7 +16,7 @@ describe('Progress Bar Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Progress bar').click();
-    })
+    }),
   );
 
   qase(
@@ -25,6 +25,6 @@ describe('Progress Bar Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(1) > .dropdown-toggle').contains('Progress Bars').click();
       cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Drag & Drop Sliders').click();
-    })
+    }),
   );
 });

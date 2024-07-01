@@ -4,8 +4,8 @@ dist: xenial
 language: node_js
 
 node_js:
-  - "10.15.3"
-  
+  - '10.15.3'
+
 addons:
   apt:
     update: true
@@ -15,9 +15,9 @@ addons:
       - libappindicator1
       - libindicator7
   sonarcloud:
-    organization: "estefafdez"
+    organization: 'estefafdez'
     token:
-       secure: ${SONAR_TOKEN}
+      secure: ${SONAR_TOKEN}
 
 before_install:
   # Setup Microsoft Repository
@@ -27,12 +27,12 @@ before_install:
   - sudo rm microsoft.gpg
   - sudo apt-get update
   - sudo apt install microsoft-edge-dev
-  
+
 cache:
   # cache both npm modules and Cypress binary
   directories:
-  - ~/.npm
-  - ~/.cache
+    - ~/.npm
+    - ~/.cache
 
 before_script:
   # Check Chrome version:
@@ -42,7 +42,7 @@ before_script:
   - firefox --version
 
   # Check Microsoft Edge Version:
-  - microsoft-edge-dev --version  
+  - microsoft-edge-dev --version
 
 script:
   # Run Cypress
@@ -51,15 +51,6 @@ script:
   - npm run test
   #- sonar-scanner
 
-after_script:
-  # Create mochawesome report and json to get the results
-  - npm run merge_reports
-  - npm run generate_mochawesome_report
-  
-  # Display the results:
-  - chmod +x script/results.sh
-  - ./script/results.sh 
-
 after_success:
   - kill $(jobs -p) || true
 
@@ -67,16 +58,16 @@ notifications:
   email:
     recipients:
       - estefafdez@gmail.com
-    on_success: always 
-    on_failure: always 
+    on_success: always
+    on_failure: always
 
   slack:
     - rooms:
-      - secure: ${SLACK_TOKEN}
+        - secure: ${SLACK_TOKEN}
       on_success: always
       on_failure: always
       template:
-        - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
-        - "Execution time: *%{duration}*"
-        - "Commit message: %{commit_message}"
-        - "Message: %{message}"
+        - 'Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`.'
+        - 'Execution time: *%{duration}*'
+        - 'Commit message: %{commit_message}'
+        - 'Message: %{message}'

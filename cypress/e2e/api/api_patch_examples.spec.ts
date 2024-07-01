@@ -1,5 +1,5 @@
 const env = Cypress.env();
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 
 describe('API PATCH 200 Request', function () {
   qase(
@@ -10,14 +10,14 @@ describe('API PATCH 200 Request', function () {
         url: env.apiURL + '/api/users/2',
         body: {
           name: 'morpheus',
-          job: 'zion resident'
-        }
+          job: 'zion resident',
+        },
       }).then(response => {
         expect(response.status).to.eq(200);
         expect(response.body).property('name').to.equal('morpheus');
         expect(response.body).property('job').to.equal('zion resident');
         expect(response.body).have.property('updatedAt');
       });
-    })
+    }),
   );
 });

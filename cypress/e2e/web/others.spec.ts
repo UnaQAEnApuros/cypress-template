@@ -1,4 +1,4 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 
 describe('Others Tests', function () {
   qase(
@@ -8,7 +8,7 @@ describe('Others Tests', function () {
 
       cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
       cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Drag and Drop').click();
-    })
+    }),
   );
 
   qase(
@@ -17,7 +17,7 @@ describe('Others Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Dynamic Data Loading').click();
-    })
+    }),
   );
 
   qase(
@@ -30,6 +30,6 @@ describe('Others Tests', function () {
       cy.get(':nth-child(4) > .dropdown-toggle').contains('Others').click();
       cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Charts Demo').click();
       Cypress.on('uncaught:exception', () => false);
-    })
+    }),
   );
 });

@@ -1,4 +1,4 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 
 describe('Alerts And Modals Tests', function () {
   qase(
@@ -7,7 +7,7 @@ describe('Alerts And Modals Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
       cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Bootstrap Alerts').click();
-    })
+    }),
   );
 
   qase(
@@ -16,7 +16,7 @@ describe('Alerts And Modals Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Bootstrap Modals').click();
-    })
+    }),
   );
 
   qase(
@@ -25,7 +25,7 @@ describe('Alerts And Modals Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
       cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('File Download').click();
-    })
+    }),
   );
 
   qase(
@@ -34,7 +34,7 @@ describe('Alerts And Modals Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
       cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Javascript Alerts').click();
-    })
+    }),
   );
 
   qase(
@@ -43,7 +43,7 @@ describe('Alerts And Modals Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
       cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Progress Bar Modal').click();
-    })
+    }),
   );
 
   qase(
@@ -52,6 +52,6 @@ describe('Alerts And Modals Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(2) > .dropdown-toggle').contains('Alerts & Modals').click();
       cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Window Popup Modal').click();
-    })
+    }),
   );
 });

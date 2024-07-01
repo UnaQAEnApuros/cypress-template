@@ -1,5 +1,5 @@
 const env = Cypress.env();
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 import { User } from '../../types/user';
 
 let user1: User;
@@ -33,8 +33,8 @@ describe('API POST 200 Request', function () {
         url: env.apiURL + '/api/users',
         body: {
           name: user1.name,
-          job: user1.job
-        }
+          job: user1.job,
+        },
       }).then(response => {
         expect(response.status).to.eq(201);
         expect(response.body).property('name').to.equal('Estefania');
@@ -42,7 +42,7 @@ describe('API POST 200 Request', function () {
         expect(response.body).have.property('id');
         expect(response.body).have.property('createdAt');
       });
-    })
+    }),
   );
 
   qase(
@@ -53,14 +53,14 @@ describe('API POST 200 Request', function () {
         url: env.apiURL + '/api/register',
         body: {
           email: user1.email,
-          password: user1.password
-        }
+          password: user1.password,
+        },
       }).then(response => {
         expect(response.status).to.eq(200);
         expect(response.body).have.property('id');
         expect(response.body).have.property('token');
       });
-    })
+    }),
   );
 
   qase(
@@ -71,13 +71,13 @@ describe('API POST 200 Request', function () {
         url: env.apiURL + '/api/login',
         body: {
           email: user2.email,
-          password: user2.password
-        }
+          password: user2.password,
+        },
       }).then(response => {
         expect(response.status).to.eq(200);
         expect(response.body).property('token').to.eq('QpwL5tke4Pnpja7X4');
       });
-    })
+    }),
   );
 });
 
@@ -89,14 +89,14 @@ describe('API POST 4xx Request', function () {
         method: 'POST',
         url: env.apiURL + '/api/register',
         body: {
-          email: user3.email
+          email: user3.email,
         },
-        failOnStatusCode: false
+        failOnStatusCode: false,
       }).then(response => {
         expect(response.status).to.eq(400);
         expect(response.body).property('error').to.eq('Missing password');
       });
-    })
+    }),
   );
 
   qase(
@@ -106,13 +106,13 @@ describe('API POST 4xx Request', function () {
         method: 'POST',
         url: env.apiURL + '/api/login',
         body: {
-          email: user4.email
+          email: user4.email,
         },
-        failOnStatusCode: false
+        failOnStatusCode: false,
       }).then(response => {
         expect(response.status).to.eq(400);
         expect(response.body).property('error').to.eq('Missing password');
       });
-    })
+    }),
   );
 });

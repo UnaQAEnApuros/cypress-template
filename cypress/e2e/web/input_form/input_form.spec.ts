@@ -1,11 +1,11 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 
 describe('Input Form Tests', function () {
   qase(
     [16],
     it('[16, WEB] should visit the web and close the popup', function () {
       cy.visitHomePage();
-    })
+    }),
   );
 
   qase(
@@ -14,7 +14,7 @@ describe('Input Form Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(1) > a').contains('Simple Form Demo').click();
-    })
+    }),
   );
 
   qase(
@@ -23,7 +23,7 @@ describe('Input Form Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
-    })
+    }),
   );
 
   qase(
@@ -32,7 +32,7 @@ describe('Input Form Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Radio Buttons Demo').click();
-    })
+    }),
   );
 
   qase(
@@ -41,7 +41,7 @@ describe('Input Form Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(4) > a').contains('Select Dropdown List').click();
-    })
+    }),
   );
 
   qase(
@@ -50,7 +50,7 @@ describe('Input Form Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(5) > a').contains('Input Form Submit').click();
-    })
+    }),
   );
 
   qase(
@@ -59,7 +59,7 @@ describe('Input Form Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(6) > a').contains('Ajax Form Submit').click();
-    })
+    }),
   );
 
   qase(
@@ -68,6 +68,6 @@ describe('Input Form Tests', function () {
       cy.visitHomePage();
       cy.get(':nth-child(1) > :nth-child(1) > .dropdown-toggle').contains('Input Forms').click();
       cy.get('.open > .dropdown-menu > :nth-child(7) > a').contains('JQuery Select dropdown').click();
-    })
+    }),
   );
 });

@@ -1,4 +1,4 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 
 describe('Simple Form Demo Tests', function () {
   qase(

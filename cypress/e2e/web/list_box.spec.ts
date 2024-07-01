@@ -1,4 +1,4 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 
 describe('List Box Tests', function () {
   qase(
@@ -7,7 +7,7 @@ describe('List Box Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('JQuery List Box').click();
-    })
+    }),
   );
 
   qase(
@@ -16,6 +16,6 @@ describe('List Box Tests', function () {
       cy.visitHomePage();
       cy.get('.navbar-right > :nth-child(3) > .dropdown-toggle').contains('List Box').click();
       cy.get('.open > .dropdown-menu > :nth-child(3) > a').contains('Data List Filter').click();
-    })
+    }),
   );
 });

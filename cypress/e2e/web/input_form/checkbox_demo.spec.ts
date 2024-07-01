@@ -1,4 +1,4 @@
-import { qase } from 'cypress-qase-reporter/dist/mocha';
+import { qase } from 'cypress-qase-reporter/mocha';
 import { it } from 'mocha';
 
 describe('Checkbox Demo Tests', function () {
@@ -10,7 +10,7 @@ describe('Checkbox Demo Tests', function () {
       cy.get('.open > .dropdown-menu > :nth-child(2) > a').contains('Checkbox Demo').click();
       cy.get('#isAgeSelected').click();
       cy.get('#txtAge').contains('Success - Check box is checked');
-    })
+    }),
   );
 
   qase(
@@ -23,6 +23,6 @@ describe('Checkbox Demo Tests', function () {
       cy.get('input[id="isChkd"]').should('have.value', 'false');
       cy.get('#check1').click();
       cy.get('input[id="isChkd"]').should('have.value', 'true');
-    })
+    }),
   );
 });
