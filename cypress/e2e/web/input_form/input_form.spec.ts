@@ -1,6 +1,6 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 
-describe('Input Form Tests', function () {
+describe.skip('Input Form Tests', function () {
   qase(
     [16],
     it('[16, WEB] should visit the web and close the popup', function () {

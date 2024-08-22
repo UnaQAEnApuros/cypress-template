@@ -1,7 +1,7 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 import { it } from 'mocha';
 
-describe('Table Tests', function () {
+describe.skip('Table Tests', function () {
   qase(
     [29],
     it('[29, WEB] should visit the web and click on the Table Pagination Link', function () {

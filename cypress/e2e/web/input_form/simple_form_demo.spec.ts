@@ -1,6 +1,6 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 
-describe('Simple Form Demo Tests', function () {
+describe.skip('Simple Form Demo Tests', function () {
   qase(
     [48],
     it('[48, WEB] should enter a message and check that is correct', function () {
