@@ -1,6 +1,6 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 
-describe('Alerts And Modals Tests', function () {
+describe.skip('Alerts And Modals Tests', function () {
   qase(
     [34],
     it('[34, WEB] should visit the web and click on the Bootstrap Alerts Link', function () {

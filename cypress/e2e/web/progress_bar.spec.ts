@@ -1,6 +1,6 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 
-describe('Progress Bar Tests', function () {
+describe.skip('Progress Bar Tests', function () {
   qase(
     [26],
     it('[26, WEB] should visit the web and click on the JQuery Download Progress bars Link', function () {

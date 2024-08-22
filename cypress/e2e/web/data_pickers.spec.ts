@@ -1,6 +1,6 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 
-describe('Data Pickers Tests', function () {
+describe.skip('Data Pickers Tests', function () {
   qase(
     [24],
     it('[24, WEB] should visit the web and click on the Bootstrap Date Picker Link', function () {

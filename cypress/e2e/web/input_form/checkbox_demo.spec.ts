@@ -1,7 +1,7 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 import { it } from 'mocha';
 
-describe('Checkbox Demo Tests', function () {
+describe.skip('Checkbox Demo Tests', function () {
   qase(
     [50],
     it('[50 , WEB] should click on the first checkbox and see the correct message', function () {

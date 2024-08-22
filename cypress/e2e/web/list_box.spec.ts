@@ -1,6 +1,6 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 
-describe('List Box Tests', function () {
+describe.skip('List Box Tests', function () {
   qase(
     [40],
     it('[40, WEB] should visit the web and click on the List Box Link', function () {

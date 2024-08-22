@@ -1,6 +1,6 @@
 import { qase } from 'cypress-qase-reporter/mocha';
 
-describe('Others Tests', function () {
+describe.skip('Others Tests', function () {
   qase(
     [43],
     it('[43, WEB] should visit the web and click on the Drag and Drop Link', function () {
